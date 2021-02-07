@@ -26,22 +26,22 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-hamburger"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
-                    <li><a href="#">profile</a></li>
+                    <li><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
                     <li><a href="#">add recipe</a></li>
                     <li><a href="#">log out</a></li>
                     <li><a href="#">log in</a></li>
-                    <li><a href="{{ url_for('get_recipes') }}">register</a></li>
+                    <li><a href="{{ url_for('register') }}">register</a></li>
                 </ul>
             </div>
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
-            <li><a href="#">profile</a></li>
+            li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
+            <li><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
             <li><a href="#">add recipe</a></li>
             <li><a href="#">log out</a></li>
             <li><a href="#">log in</a></li>
-            <li><a href="{{ url_for('get_recipes') }}">register</a></li>
+            <li><a href="{{ url_for('register') }}">register</a></li>
         </ul>
 
     </header>
