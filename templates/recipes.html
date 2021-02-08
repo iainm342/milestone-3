@@ -4,87 +4,33 @@
 <div class="row">
     <div class="col s12 m4">all recipes</div>
     <div class="col s12 m4">
+        {% for recipe in recipes%}
         <div class="card large">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ url_for('static', filename='images/glam.jpg') }}">
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Glam Mac and Cheese<i
+                <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}<i
                         class="material-icons right"></i></span>
                 <p><a href="#">find out more?</a></p>
             </div>
             <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Glam Mac and Cheese<i
+                <span class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}<i
                         class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                <p> Chef: {{ recipe.recipe_chef }}<br>
+                    Cookbook: {{ recipe.recipe_cookbook }}<br>
+                    Difficulty: {{ recipe.recipe_difficulty }}<br>
+                    Cooking Time: {{ recipe.recipe_time }}<br>
+                    {{ recipe.recipe_ingredients }}<br>
+                    {{ recipe.recipe_method }}<br>
+                    <a href="#">find out more?</a>
+                </p>
             </div>
         </div>
+        {% endfor %}
     </div>
-    <div class="col s12 m4">
-        <div class="card large">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ url_for('static', filename='images/cullen.jpg') }}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Cullen Skink<i
-                        class="material-icons right"></i></span>
-                <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Cullen Skink<i
-                        class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 m4"></div>
-    <div class="col s12 m4">
-        <div class="card large">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ url_for('static', filename='images/glam.jpg') }}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Glam Mac and Cheese<i
-                        class="material-icons right"></i></span>
-                <p><a href="#">find out more?</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Glam Mac and Cheese<i
-                        class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-        </div>
-    </div>
-    <div class="col s12 m4">
-        <div class="card large">
-            <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="{{ url_for('static', filename='images/cullen.jpg') }}">
-            </div>
-            <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4">Cullen Skink<i
-                        class="material-icons right"></i></span>
-                <p><a href="#">This is a link</a></p>
-            </div>
-            <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">Cullen Skink<i
-                        class="material-icons right">close</i></span>
-                <p>Here is some more information about this product that is only revealed once clicked on.</p>
-            </div>
-        </div>
-    </div>
-</div>
 
-{% for recipe in recipes%}
-{{ recipe.recipe_name }}<br>
-{{ recipe.recipe_chef }}<br>
-{{ recipe.recipe_cookbook }}<br>
-{{ recipe.recipe_image }}<br>
-{{ recipe.recipe_difficulty }}<br>
-{{ recipe.recipe_time }}<br>
-{{ recipe.recipe_ingredients }}<br>
-{{ recipe.recipe_method }}<br>
-{% endfor %}
+
+</div>
 
 {% endblock %}
