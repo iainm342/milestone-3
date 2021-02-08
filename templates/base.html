@@ -25,6 +25,7 @@
                 <a href="#!" class="brand-logo">larder</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-hamburger"></i></a>
                 <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('categories') }}">categories</a></li>
                     <li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
                     <li><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">add recipe</a></li>
@@ -36,7 +37,8 @@
         </nav>
 
         <ul class="sidenav" id="mobile-demo">
-            li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
+            <li><a href="{{ url_for('categories') }}">categories</a></li>
+            <li><a href="{{ url_for('get_recipes') }}">recipes</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
             <li><a href="{{ url_for('add_recipe') }}">add recipe</a></li>
             <li><a href="{{ url_for('logout') }}">log out</a></li>
