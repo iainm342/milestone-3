@@ -77,7 +77,12 @@ def profile(username):
     
     return redirect(url_for("login"))
 
-    
+
+@app.route("/logout")
+def logout():
+    flash("you have been logged out")
+    session.pop("user")
+    return redirect(url_for("get_recipes"))
 
 
 
