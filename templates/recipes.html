@@ -6,18 +6,19 @@
 <div class="row">
     {% for recipe in recipes%}
     <div class="col s12 m3">
-        <div class="card large">
+        <div class="card ">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ url_for('static', filename='images/glam.jpg') }}">
             </div>
             <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}<i
                         class="material-icons right"></i></span>
-                <p><a href="#">find out more?</a></p>
+                <p><a href="{{ url_for('show_recipe') }}">Full recipe...</a></p>
             </div>
             <div class="card-reveal">
                 <span class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}<i
                         class="material-icons right">close</i></span>
+                <!-- will need to remove ingredients and method-->
                 <p> Chef: {{ recipe.recipe_chef }}<br>
                     Cookbook: {{ recipe.recipe_cookbook }}<br>
                     Difficulty: {{ recipe.recipe_difficulty }}<br>
