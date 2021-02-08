@@ -46,6 +46,20 @@
 
     </header>
 
+    <section>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row flashes m6 center">
+            {{ message }}
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+    </section>
+
     <main>
 
         {% block content %}
