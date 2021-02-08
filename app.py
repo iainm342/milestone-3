@@ -22,9 +22,9 @@ mongo = PyMongo(app)
 def categories():
     return render_template("categories.html")
 
-    
-@app.route("/get_recipes")
-def get_recipes():
+
+@app.route("/all_recipes")
+def all_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
@@ -86,7 +86,7 @@ def profile(username):
 def logout():
     flash("you have been logged out")
     session.pop("user")
-    return redirect(url_for("get_recipes"))
+    return redirect(url_for("all_recipes"))
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
@@ -105,7 +105,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("recipe added")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("all_recipes"))
     
     categories = mongo.db.categories.find().sort("category_name, 1")
     return render_template("add_recipe.html", categories=categories)

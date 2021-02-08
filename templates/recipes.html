@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
+
+<div class="col s12 m4">all recipes</div>
 <div class="row">
-    <div class="col s12 m4">all recipes</div>
-    <div class="col s12 m4">
-        {% for recipe in recipes%}
+    {% for recipe in recipes%}
+    <div class="col s12 m3">
         <div class="card large">
             <div class="card-image waves-effect waves-block waves-light">
                 <img class="activator" src="{{ url_for('static', filename='images/glam.jpg') }}">
@@ -27,8 +28,8 @@
                 </p>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
 
 
 </div>
