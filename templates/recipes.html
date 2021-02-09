@@ -4,7 +4,7 @@
 <div class="container">
     <div class="col s12 m4">all recipes</div>
     <div class="row">
-        {% for recipe in recipes%}
+        {% for recipe in recipes %}
         <div class="col s12 m3">
             <div class="card ">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -19,7 +19,8 @@
                     <span class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}<i
                             class="material-icons right">close</i></span>
                     <!-- will need to remove ingredients and method-->
-                    <p> Chef: {{ recipe.recipe_chef }}<br>
+                    <p> Category: {{ recipe.category_name }}<br>
+                        Chef: {{ recipe.recipe_chef }}<br>
                         Cookbook: {{ recipe.recipe_cookbook }}<br>
                         Difficulty: {{ recipe.recipe_difficulty }}<br>
                         Cooking Time: {{ recipe.recipe_time }}<br>
