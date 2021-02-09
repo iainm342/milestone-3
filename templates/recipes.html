@@ -25,7 +25,7 @@
                     Cooking Time: {{ recipe.recipe_time }}<br>
                     {{ recipe.recipe_ingredients }}<br>
                     {{ recipe.recipe_method }}<br>
-                    <a href="#">find out more?</a>
+                    <a href="{{ url_for('show_recipe') }}">Full recipe...</a>
                 </p>
             </div>
         </div>
