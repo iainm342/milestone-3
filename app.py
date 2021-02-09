@@ -29,9 +29,11 @@ def all_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
-@app.route("/show_recipe")
-def show_recipe():
-    return render_template("show_recipe.html")
+@app.route("/show_recipe/<recipe_id>")
+def show_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find()
+    return render_template("show_recipe.html", recipe=recipe, categories=categories)
 
 
 @app.route("/register", methods=["GET", "POST"])
