@@ -11,7 +11,11 @@
                 <select id="category_name" name="course_name" class="validate" required>
                     <option value="" disabled selected>Which category does your recipe belong to?</option>
                     {% for category in categories %}
+                    {% if category.category_name == recipe.category_name %}
+                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                    {% else %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    {% endif %}
                     {% endfor %}
                 </select>
                 <input id="course_name" name="course_name" type="text" class="validate">
@@ -21,61 +25,70 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_name" name="recipe_name" type="text" class="validate">
+                <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text"
+                    class="validate">
                 <label for="recipe_name">recipe name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_chef" name="recipe_chef" type="text" class="validate">
+                <input id="recipe_chef" name="recipe_chef" value="{{ recipe.recipe_chef }}" type="text"
+                    class="validate">
                 <label for="recipe_chef">recipe chef</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_cookbook" name="recipe_cookbook" type="text" class="validate">
+                <input id="recipe_cookbook" name="recipe_cookbook" value="{{ recipe.recipe_cookbook }}" type="text"
+                    class="validate">
                 <label for="recipe_cookbook">recipe cookbook</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_image" name="recipe_image" type="text" class="validate">
+                <input id="recipe_image" name="recipe_image" value="{{ recipe.recipe_image }}" type="text"
+                    class="validate">
                 <label for="recipe_image">recipe image</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_difficulty" name="recipe_difficulty" type="text" class="validate">
+                <input id="recipe_difficulty" name="recipe_difficulty" value="{{ recipe.recipe_difficulty }}"
+                    type="text" class="validate">
                 <label for="recipe_difficulty">recipe difficulty</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_time" name="recipe_time" type="text" class="validate">
+                <input id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}" type="text"
+                    class="validate">
                 <label for="recipe_time">recipe time</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
+                <input id="recipe_ingredients" name="recipe_ingredients" value="{{ recipe.recipe_ingredients }}"
+                    type="text" class="validate">
                 <label for="recipe_ingredients">recipe ingredients</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user-circle prefix"></i>
-                <input id="recipe_method" name="recipe_method" type="text" class="validate">
+                <input id="recipe_method" name="recipe_method" value="{{ recipe.recipe_method }}" type="text"
+                    class="validate">
                 <label for="recipe_method">recipe method</label>
             </div>
         </div>
         <div class="row">
             <div class="col s12 center-align">
+                <a href="{{ url_for('categories') }}" class="btn-large red">cancel</a>
                 <button type="submit">edit recipe</button>
             </div>
         </div>

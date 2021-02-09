@@ -25,6 +25,8 @@
                     Cooking Time: {{ recipe.recipe_time }}<br>
                     {{ recipe.recipe_ingredients }}<br>
                     {{ recipe.recipe_method }}<br>
+                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large green">edit</a>
+                    <a href="" class="btn-large red">delete</a><br>
                     <a href="{{ url_for('show_recipe') }}">Full recipe...</a>
                 </p>
             </div>
