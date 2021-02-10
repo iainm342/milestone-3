@@ -11,9 +11,9 @@
     {{ recipe.recipe_cookbook }}<br>
     {{ recipe.recipe_image }}<br>
     {{ recipe.recipe_difficulty }}<br>
-    {% for ing in recipe.recipe_ingredients %}
+    {% for ingredient in recipe.recipe_ingredients %}
     <li>
-        {{ ing }}
+        {{ ingredient }}
     </li>
     {% endfor %}
     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large green">edit</a>
