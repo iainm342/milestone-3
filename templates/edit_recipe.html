@@ -7,8 +7,10 @@
     <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Which category does your recipe belong to?</option>
                         {% for category in categories %}
@@ -19,108 +21,104 @@
                         {% endif %}
                         {% endfor %}
                     </select>
-                    <label for="category_name"></label>
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text"
                         class="validate">
-                    <label for="recipe_name">recipe name</label>
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_chef" name="recipe_chef" value="{{ recipe.recipe_chef }}" type="text"
                         class="validate">
-                    <label for="recipe_chef">recipe chef</label>
+
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_cookbook" name="recipe_cookbook" value="{{ recipe.recipe_cookbook }}" type="text"
                         class="validate">
-                    <label for="recipe_cookbook">recipe cookbook</label>
+
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_image" name="recipe_image" value="{{ recipe.recipe_image }}" type="text"
                         class="validate">
-                    <label for="recipe_image">recipe image</label>
+
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_difficulty" name="recipe_difficulty" value="{{ recipe.recipe_difficulty }}"
                         type="text" class="validate">
-                    <label for="recipe_difficulty">recipe difficulty</label>
+
                 </div>
+                <div class="col s1"></div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
+                <div class="col s1">
                     <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10">
                     <input id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}" type="text"
                         class="validate">
-                    <label for="recipe_time">recipe time</label>
+
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1">
+                    <i class="fas fa-user-circle prefix"></i>
+                </div>
+                <div class="input-field col s10 input_ing_wrap">
+                    {% for ingredient in recipe.recipe_ingredients %}
+                    <div class="col s12">
+                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" value="{{ ingredient }}"
+                            class="validate"><a href="#" class="remove_field">Remove</a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="col s1">
+                    <button class="add_ing_button">Add</button>
                 </div>
             </div>
             <div class="row">
-                <div class="co s12 m6">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col s12">
-                                <label for="">Ingredients</label>
-                            </div>
-                        </div>
-                        <div class="input_ing_wrap">
-                            <div class="row">
-                                <div class="col s12">
-                                    <button class="add_ing_button">Add</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                {% for ingredient in recipe.recipe_ingredients %}
-                                <div class="col s12">
-                                    <div><input id="recipe_ingredients" name="recipe_ingredients" type="text"
-                                            value="{{ ingredient }}" class="validate"><a href="#"
-                                            class="remove_field">Remove</a></div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
+                <div class="col s1">
+                    <i class="fas fa-user-circle prefix"></i>
                 </div>
-            </div>
-            <div class="row">
-                <div class="co s12 m6">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="col s12">
-                                <label for="">Method</label>
-                            </div>
-                        </div>
-                        <div class="input_meth_wrap">
-                            <div class="row">
-                                <div class="col s12">
-                                    <button class="add_meth_button">Add</button>
-                                </div>
-                            </div>
-                            <div class="row">
-                                {% for step in recipe.recipe_method %}
-                                <div class="col s12">
-                                    <div><input id="recipe_method" name="recipe_method" type="text" value="{{ step }}"
-                                            class="validate"><a href="#" class="remove_field">Remove</a></div>
-                                </div>
-                                {% endfor %}
-                            </div>
-                        </div>
+                <div class="input-field col s10 input_meth_wrap">
+                    {% for step in recipe.recipe_method %}
+                    <div class="col s12">
+                        <input id="recipe_method" name="recipe_method" type="text" value="{{ step }}"
+                            class="validate"><a href="#" class="remove_field">Remove</a>
                     </div>
+                    {% endfor %}
+                </div>
+                <div class="col s1">
+                    <button class="add_meth_button">Add</button>
                 </div>
             </div>
             <div class="row">
