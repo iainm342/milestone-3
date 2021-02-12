@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+main, nav, footer {
+    font-family: 'Roboto Mono', monospace;
+}
+
+nav, .page-footer {
+    background-color: #abc141;
+}
