@@ -10,7 +10,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-user-circle prefix"></i>
                     <select id="category_name" name="course_name" class="validate" required>
-                        <option value="" disabled selected>Which category does your recipe belong to?</option>
+                        <option value="" disabled>Which category does your recipe belong to?</option>
                         {% for category in categories %}
                         {% if category.category_name == recipe.category_name %}
                         <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
@@ -72,19 +72,56 @@
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix"></i>
-                    <input id="recipe_ingredients" name="recipe_ingredients" value="{{ recipe.recipe_ingredients }}"
-                        type="text" class="validate">
-                    <label for="recipe_ingredients">recipe ingredients</label>
+                <div class="co s12 m6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col s12">
+                                <label for="">Ingredients</label>
+                            </div>
+                        </div>
+                        <div class="input_ing_wrap">
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="add_ing_button">Add</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                {% for ingredient in recipe.recipe_ingredients %}
+                                <div class="col s12">
+                                    <div><input id="recipe_ingredients" name="recipe_ingredients" type="text"
+                                            value="{{ ingredient }}" class="validate"><a href="#"
+                                            class="remove_field">Remove</a></div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix"></i>
-                    <input id="recipe_method" name="recipe_method" value="{{ recipe.recipe_method }}" type="text"
-                        class="validate">
-                    <label for="recipe_method">recipe method</label>
+                <div class="co s12 m6">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col s12">
+                                <label for="">Ingredients</label>
+                            </div>
+                        </div>
+                        <div class="input_ing_wrap">
+                            <div class="row">
+                                <div class="col s12">
+                                    <button class="add_ing_button">Add</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                {% for step in recipe.recipe_method %}
+                                <div class="col s12">
+                                    <div><input id="recipe_method" name="recipe_method" type="text" value="{{ step }}"
+                                            class="validate"><a href="#" class="remove_field">Remove</a></div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">

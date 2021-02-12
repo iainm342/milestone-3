@@ -130,8 +130,8 @@ def edit_recipe(recipe_id):
             "recipe_image": request.form.get("recipe_image"),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
             "recipe_time": request.form.get("recipe_time"),
-            "recipe_ingredients": request.form.get("recipe_ingredients"),
-            "recipe_method": request.form.get("recipe_method")
+            "recipe_ingredients": request.form.getlist("recipe_ingredients"),
+            "recipe_method": request.form.getlist("recipe_method")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("recipe updated")
