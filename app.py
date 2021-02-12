@@ -34,6 +34,11 @@ def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find()
     return render_template("show_recipe.html", recipe=recipe, categories=categories)
+
+
+@app.route("/show_starters")
+def show_starters():
+    return render_template("starters.html", recipes=mongo.db.recipes.find({"category_name": "Starters"}).sort("recipe_name"))
     
 
 @app.route("/register", methods=["GET", "POST"])
