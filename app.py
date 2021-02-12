@@ -39,6 +39,31 @@ def show_recipe(recipe_id):
 @app.route("/show_starters")
 def show_starters():
     return render_template("starters.html", recipes=mongo.db.recipes.find({"category_name": "Starters"}).sort("recipe_name"))
+
+
+@app.route("/show_mains")
+def show_mains():
+    return render_template("mains.html", recipes=mongo.db.recipes.find({"category_name": "Mains"}).sort("recipe_name"))
+
+
+@app.route("/show_desserts")
+def show_desserts():
+    return render_template("desserts.html", recipes=mongo.db.recipes.find({"category_name": "Desserts"}).sort("recipe_name"))
+
+
+@app.route("/show_sides")
+def show_sides():
+    return render_template("sides.html", recipes=mongo.db.recipes.find({"category_name": "Sides"}).sort("recipe_name"))
+
+
+@app.route("/show_cakes")
+def show_cakes():
+    return render_template("cakes.html", recipes=mongo.db.recipes.find({"category_name": "Cakes & Biscuits"}).sort("recipe_name"))
+
+
+@app.route("/show_drinks")
+def show_drinks():
+    return render_template("drinks.html", recipes=mongo.db.recipes.find({"category_name": "Drinks"}).sort("recipe_name"))
     
 
 @app.route("/register", methods=["GET", "POST"])
