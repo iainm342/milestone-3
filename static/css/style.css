@@ -7,3 +7,23 @@ main, nav, footer {
 nav, .page-footer {
     background-color: #abc141;
 }
+
+.bg-container {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    background: url("../images/page-background-crop.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.landing {
+    background-color: #abc141;
+    color: white;
+    opacity: 0.9;
+}
