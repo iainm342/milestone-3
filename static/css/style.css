@@ -46,7 +46,25 @@ nav .brand-logo {
     color: #2c642e;
 }
 
+.fa-times-circle::before {
+    color: #2c642e;
+}
+
 .cat-img {
     height: 200px;
     width: 200px;
+}
+
+#rec-style {
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.btn-large {
+    width: 100px;
+}
+
+.rec-card {
+    padding-top: 25px;
 }
