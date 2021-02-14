@@ -4,8 +4,21 @@ main, nav, footer {
     font-family: 'Roboto Mono', monospace;
 }
 
-nav, .page-footer {
-    background-color: #abc141;
+nav {
+    background-color: white;
+}
+
+nav ul a {
+    color: #2c642e;
+}
+
+nav .brand-logo {
+    color: #2c642e;
+}
+
+
+.page-footer {
+    background-color: #2c642e;
 }
 
 .bg-container {
@@ -23,7 +36,11 @@ nav, .page-footer {
 }
 
 .landing {
-    background-color: #abc141;
+    background-color: #2c642e;
     color: white;
     opacity: 0.9;
+}
+
+.fa-hamburger::before {
+    color: #2c642e;
 }
