@@ -1,60 +1,108 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">categories</h3>
-
 <div class="container">
     <div class="row">
+        <div class="col s12 xl3">
 
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_starters') }}">
-                <div class="card small green lighten-2">
-                    starters
-                </div>
-            </a>
-        </div>
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_mains') }}">
-                <div class="card small green lighten-2">
-                    mains
-                </div>
-            </a>
-        </div>
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_desserts') }}">
-                <div class="card small green lighten-2">
-                    desserts
-                </div>
-            </a>
-        </div>
+            <h3 class="center-align">categories</h3>
 
+        </div>
+        <div class="col s12 xl9">
+            <div class="row">
+
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="{{url_for('show_starters') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_starters') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>starters</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image hover">
+                            <a href="{{url_for('show_mains') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_mains') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>mains</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image hover">
+                            <a href="{{url_for('show_desserts') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_desserts') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>desserts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image hover">
+                            <a href="{{url_for('show_sides') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_sides') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>sides</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image hover">
+                            <a href="{{url_for('show_cakes') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_cakes') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>cakes & biscuits</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image hover">
+                            <a href="{{url_for('show_drinks') }}"><img src="/static/images/starter.jpg" alt=""></a>
+                            <a href="{{url_for('show_drinks') }}"
+                                class="btn-floating halfway-fab waves-effect waves-light green"><i
+                                    class="fas fa-plus"></i></a>
+                        </div>
+
+                        <div class="card-content center-align">
+                            <p>drinks</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="row">
-
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_sides') }}">
-                <div class="card small green lighten-2">
-                    sides
-                </div>
-            </a>
-        </div>
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_cakes') }}">
-                <div class="card small green lighten-2">
-                    cakes and biscuits
-                </div>
-            </a>
-        </div>
-        <div class="col s12 m4 center-align">
-            <a href="{{ url_for('show_drinks') }}">
-                <div class="card small green lighten-2">
-                    drinks
-                </div>
-            </a>
-        </div>
-
-    </div>
+</div>
 </div>
 
 {% endblock %}

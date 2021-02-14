@@ -2,6 +2,7 @@
 
 main, nav, footer {
     font-family: 'Roboto Mono', monospace;
+    color: #2c642e;
 }
 
 nav {
@@ -43,4 +44,9 @@ nav .brand-logo {
 
 .fa-hamburger::before {
     color: #2c642e;
+}
+
+.cat-img {
+    height: 250px;
+    width: 250px;
 }
