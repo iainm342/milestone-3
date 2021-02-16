@@ -9,7 +9,7 @@
     {{ recipe.recipe_name }}<br>
     {{ recipe.recipe_chef }}<br>
     {{ recipe.recipe_cookbook }}<br>
-    {{ recipe.recipe_image }}<br>
+    <img src="{{ recipe.recipe_image }}" alt="{{recipe.recipe_name}}"><br>
     {{ recipe.recipe_difficulty }}<br>
     <h4>Ingredients</h4>
     {% for ingredient in recipe.recipe_ingredients %}
