@@ -6,16 +6,36 @@
         <div class="col s12 xl4">
 
             <h3 class="center-align">
-                <h3 class="center-align"> {{ recipe.recipe_name }} </h3>
+                <h3 class="left-align"> {{ recipe.recipe_name }} </h3>
         </div>
 
         <div class="row">
             <div class="col s12 xl4">
                 <img src="{{ recipe.recipe_image }}" alt="{{recipe.recipe_name}}"><br>
-                <span>Category: {{ recipe.category_name }}</span><br>
-                <span>Chef: {{ recipe.recipe_chef }}</span><br>
-                <span>Cookbook: {{ recipe.recipe_cookbook }}</span><br>
-                <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
+                <div class="col s3">
+                    <span class="left-align">Category: </span>
+                </div>
+                <div class="col s9">
+                    <span> {{ recipe.category_name }}</span><br>
+                </div>
+                <div class="col s3">
+                    <span class="left-align">Chef: </span>
+                </div>
+                <div class="col s9">
+                    <span> {{ recipe.recipe_chef }}</span><br>
+                </div>
+                <div class="col s3">
+                    <span class="left-align">Cookbook: </span>
+                </div>
+                <div class="col s9">
+                    <span> {{ recipe.recipe_cookbook }}</span><br>
+                </div>
+                <div class="col s3">
+                    <span class="left-align">Difficulty: </span>
+                </div>
+                <div class="col s9">
+                    <span> {{ recipe.recipe_difficulty }}</span><br>
+                </div>
             </div>
             <div class="col s12 xl4">
                 <h4>Ingredients</h4>
