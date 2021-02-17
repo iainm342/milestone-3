@@ -70,7 +70,10 @@ nav .brand-logo {
 }
 
 .show-img {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
 }
 
+.card-image {
+    height: 20em;
+}
