@@ -77,3 +77,18 @@ nav .brand-logo {
 .card-image {
     height: 20em;
 }
+
+.fa-question-circle:before {
+    content: "\f059";
+    color: #2c642e;
+}
+
+#icon {
+    padding-top: 25px;
+}
+
+.icon-size {
+    height: 50px;
+    width: 50px;
+}
+
