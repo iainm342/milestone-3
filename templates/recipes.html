@@ -7,62 +7,63 @@
 
             <h3 class="center-align">recipes</h3>
         </div>
+    </div>
 
-        <div class="row card-panel">
-            <form action="{{ url_for('search') }}" method="post" class="col s12">
-                <div class="row valign-wrapper center-align">
-                    <div class="input-field col s12 m8">
-                        <i class="fas fa-search prefix"></i>
-                        <input type="text" name="query " id="query" class="validate">
-                        <label for="query">search recipes</label>
-                    </div>
-                    <div class="col s12 m4">
-                        <a href="{{ url_for('all_recipes') }}" class="red btn">reset</a>
-                        <button type="submit">
-                            <i class="fas fa-search left"></i>search
-                        </button>
-                    </div>
+    <div class="row card-panel">
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query " id="query" class="validate">
+                    <label for="query">search recipes</label>
                 </div>
-            </form>
-        </div>
+                <div class="col s12 m4">
+                    <button type="submit" class="btn green">
+                        <i class="fas fa-search left"></i>search
+                    </button>
+                    <a href="{{ url_for('all_recipes') }}" class="red btn">reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
 
-        <div class="row">
-            {% for recipe in recipes %}
-            <div class="col s12 m3">
-                <div class="card ">
-                    <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="{{ recipe.recipe_image }}">
+    <div class="row">
+        {% for recipe in recipes %}
+        <div class="col s12 m6 xl3">
+            <div class="card ">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{ recipe.recipe_image }}">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
+                            class="material-icons right"></i></span>
+                    <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
+                            class="far fa-times-circle right"></i></span>
+                    <!-- will need to remove ingredients and method-->
+                    <span>Category: {{ recipe.category_name }}</span><br>
+                    <span>Chef: {{ recipe.recipe_chef }}</span><br>
+                    <span>Cookbook: {{ recipe.recipe_cookbook }}</span><br>
+                    <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
+                    <span>Cooking Time: {{ recipe.recipe_time }}</span>
+                    <div class="row center-align rec-card">
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                            class="btn-large green waves-effect waves-light">edit</a>
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="btn-large red waves-effect waves-light">delete</a><br>
                     </div>
-                    <div class="card-content">
-                        <span class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
-                                class="material-icons right"></i></span>
-                        <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
-                    </div>
-                    <div class="card-reveal">
-                        <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
-                                class="far fa-times-circle right"></i></span>
-                        <!-- will need to remove ingredients and method-->
-                        <span>Category: {{ recipe.category_name }}</span><br>
-                        <span>Chef: {{ recipe.recipe_chef }}</span><br>
-                        <span>Cookbook: {{ recipe.recipe_cookbook }}</span><br>
-                        <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
-                        <span>Cooking Time: {{ recipe.recipe_time }}</span>
-                        <div class="row center-align rec-card">
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                                class="btn-large green waves-effect waves-light">edit</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                                class="btn-large red waves-effect waves-light">delete</a><br>
-                        </div>
-                        <div>
-                            <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a>
-                        </div>
+                    <div>
+                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a>
                     </div>
                 </div>
             </div>
-            {% endfor %}
-
-
         </div>
-    </div>
+        {% endfor %}
 
-    {% endblock %}
+
+    </div>
+</div>
+
+{% endblock %}
