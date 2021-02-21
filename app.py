@@ -41,6 +41,13 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/ingredient_search")
+def ingredient_search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
+    return render_template("recipes.html", recipes=recipes)
+
+
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})

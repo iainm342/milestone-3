@@ -9,12 +9,19 @@
                 <h3>larder</h3>
             </div>
             <div class="col s12 l6 center-align">
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos voluptatem non adipisci, deserunt minus
-                    ullam,
-                    dolor fugiat fugit quibusdam consectetur aperiam suscipit soluta qui sed, optio velit voluptates at?
-                    Officia!</p>
+                <ul>
+                    <li class="left-align"><a class="land-link" href="{{ url_for('all_recipes') }}">recipes galore!</a>
+                    </li>
+                    <li class="left-align"><a class="land-link" href="{{ url_for('add_recipe') }}">add your own
+                            favourites!</a></li>
+                    <li class="left-align"><a class="land-link" href="{{ url_for('ingredient_search') }}">search recipes
+                            by ingredient!</a></li>
+                </ul>
+
             </div>
+
         </div>
+
     </div>
 </div>
 
