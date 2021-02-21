@@ -142,7 +142,7 @@ def profile(username):
 def logout():
     flash("you have been logged out")
     session.pop("user")
-    return redirect(url_for("all_recipes"))
+    return redirect(url_for("landing"))
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
