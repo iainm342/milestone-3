@@ -6,25 +6,29 @@
 <div class="bg-container">
     <div class="container">
         <div class="row landing">
-            <h3 class="center-align">log in</h3>
-            <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-cog prefix"></i>
-                        <input id="username" name="username" type="text" class="validate">
-                        <label for="username">username</label>
+            <div class="col s12 m3">
+                <h4 class="center-align">log in</h4>
+            </div>
+            <div class="col s12 m9 offset-m4">
+                <form method="POST" action="{{ url_for('login') }}">
+                    <div class="row">
+                        <div class="input-field col s12 m10 center-align">
+                            <i class="fas fa-user-alt prefix"></i>
+                            <input id="username" name="username" type="text" class="validate">
+                            <label for="username">username</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix"></i>
-                        <input id="password" name="password" type="password" class="validate">
-                        <label for="password"></label>
+                    <div class="row">
+                        <div class="input-field col s12 m10 center-align">
+                            <i class="fas fa-lock prefix"></i>
+                            <input id="password" name="password" type="password" class="validate">
+                            <label for="password">password</label>
+                        </div>
                     </div>
-                </div>
-                <div class="row center-align">
-                    <button type="submit" class="btn btn-login">login</button>
-                </div>
+                    <div class="row center-align">
+                        <button type="submit" class="btn btn-login right-align">login</button>
+                    </div>
+            </div>
         </div>
     </div>
 </div>
