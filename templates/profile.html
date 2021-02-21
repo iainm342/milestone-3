@@ -1,26 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row">
-    <div class="col s12 m8 offset-m2">
-        <div class="card">
-            <h3 class="center-align">{{ user.username }}'s Profile</h3>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <h3 class="center-align">{{ user.username }}'s Profile</h3>
+            </div>
         </div>
     </div>
-</div>
-<div class="row">
     <div class="container">
-        <span>{{ user.username }}</span><br>
-        <span>{{ user.user_first }}</span><br>
-        <span>{{ user.user_last }}</span><br>
-        <span>{{ user.user_email }}</span><br>
-        <span>{{ user.password }}</span><br>
-    </div>
-</div>
+        <div class="row card-panel">
 
-{% if session.user|lower == user.username|lower %}
-<a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn-large green">edit</a>
-<a href="{{ url_for('delete_profile', username=user.username|lower) }}" class="btn-large red">delete</a><br>
-{% endif %}
+            <div class="col s4">
+                <span class="left-align">Username: </span>
+            </div>
+            <div class="col s8">
+                <span> {{ user.username }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left-align">First name: </span>
+            </div>
+            <div class="col s8">
+                <span> {{ user.user_first }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left-align">Last name: </span>
+            </div>
+            <div class="col s8">
+                <span> {{ user.user_last }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left-align">Email: </span>
+            </div>
+            <div class="col s8">
+                <span> {{ user.user_email }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left-align">Password: </span>
+            </div>
+            <div class="col s8">
+                <span> {{ user.password }}</span><br>
+            </div>
+        </div>
+    </div>
+
+    {% if session.user|lower == user.username|lower %}
+    <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn-large green">edit</a>
+    <a href="{{ url_for('delete_profile', username=user.username|lower) }}" class="btn-large red">delete</a><br>
+    {% endif %}
+</div>
 
 {% endblock %}
