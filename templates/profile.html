@@ -4,8 +4,17 @@
 <div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card">
-            <h3 class="center-align">{{ username }}'s Profile</h3>
+            <h3 class="center-align">{{ user.username }}'s Profile</h3>
         </div>
+    </div>
+</div>
+<div class="row">
+    <div class="container">
+        <span>{{ user.username }}</span><br>
+        <span>{{ user.user_first }}</span><br>
+        <span>{{ user.user_last }}</span><br>
+        <span>{{ user.user_email }}</span><br>
+        <span>{{ user.password }}</span><br>
     </div>
 </div>
 
