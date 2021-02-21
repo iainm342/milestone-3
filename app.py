@@ -139,6 +139,25 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+@app.route("/edit_profile/<username>", methods=["GET", "POST"])
+def edit_profile(username):
+        user = mongo.db.users.find_one({"username": username.lower()})
+        if request.method == "POST":
+            update = { 
+                "username": request.form.get("username").lower(),
+                "user_first": request.form.get("user_first"),
+                "user_last": request.form.get("user_last"),
+                "user_email": request.form.get("user_email"),
+                "password": generate_password_hash(request.form.get("password"))
+            }
+            mongo.db.users.update({"username": username.lower()}, update)
+            flash("user info updated")
+    
+        if "user" in session:
+            return render_template("edit_profile.html", user=user)
+
+        return redirect(url_for("login"))
+
 @app.route("/logout")
 def logout():
     flash("you have been logged out")
