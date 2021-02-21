@@ -158,6 +158,16 @@ def edit_profile(username):
 
         return redirect(url_for("login"))
 
+
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    mongo.db.users.remove({"username": username.lower()})
+    flash("user deleted")
+    session.pop("user")
+
+    return redirect(url_for("landing"))
+
+
 @app.route("/logout")
 def logout():
     flash("you have been logged out")
