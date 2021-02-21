@@ -91,10 +91,13 @@ def register():
 
         if existing_user:
             flash("username already exists")
-            return render_template(url_for("register"))
+            return render_template("register.html")
 
         register = {
             "username": request.form.get("username").lower(),
+            "user_first": request.form.get("user_first"),
+            "user_last": request.form.get("user_last"),
+            "user_email": request.form.get("user_email"),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
