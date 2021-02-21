@@ -25,7 +25,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(ing < max_meth) {
 			ing++; 
-			$(wrapper_meth).append('<div><input id="recipe_method" type="text" name="recipe_method"/><button class=""<a href="#" class="remove_field">Remove</a></div>'); 
+			$(wrapper_meth).append('<div><input id="recipe_method" type="text" name="recipe_method"/><a href="#" class="remove_field">Remove</a></div>'); 
 		}
 	});
 	
