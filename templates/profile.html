@@ -43,12 +43,13 @@
                 <span> {{ user.password }}</span><br>
             </div>
         </div>
+        <div class="row center-align">
+            {% if session.user|lower == user.username|lower %}
+            <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn-large green">edit</a>
+            <a href="{{ url_for('delete_profile', username=user.username|lower) }}" class="btn-large red">delete</a><br>
+            {% endif %}
+        </div>
     </div>
-
-    {% if session.user|lower == user.username|lower %}
-    <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn-large green">edit</a>
-    <a href="{{ url_for('delete_profile', username=user.username|lower) }}" class="btn-large red">delete</a><br>
-    {% endif %}
 </div>
 
 {% endblock %}
