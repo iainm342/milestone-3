@@ -1,6 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3>test</h3>
+<h3 class="center-align">edit profile</h3>
+
+<div class="container">
+    <div class="row card-panel">
+        <form class="col s12 m8 offset-m2" method="POST"
+            action="{{ url_for('edit_profile', username=user.username|lower) }}">
+
+            <div class="row">
+                <div class="col s4">
+                    <span class="left-align">Username: </span>
+                </div>
+                <div class="input-field col s8">
+                    <input value="{{ user.username }}" id="username" name="username" type="text" class="validate">
+                </div>
+                <div class="col s4">
+                    <span class="left-align">First name: </span>
+                </div>
+                <div class="input-field col s8">
+                    <input value="{{ user.user_first }}" id="user_first" name="user_first" type="text" class="validate">
+                </div>
+                <div class="col s4">
+                    <span class="left-align">Last name: </span>
+                </div>
+                <div class="input-field col s8">
+                    <input value="{{ user.user_last }}" id="user_last" name="user_last" type="text" class="validate">
+                </div>
+                <div class="col s4">
+                    <span class="left-align">Email: </span>
+                </div>
+                <div class="input-field col s8">
+                    <input value="{{ user.user_email }}" id="user_email" name="user_email" type="text" class="validate">
+                </div>
+                <div class="col s4">
+                    <span class="left-align">Password: </span>
+                </div>
+                <div class="input-field col s8">
+                    <input value="{{ user.password }}" id="password" name="password" type="text" class="validate">
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="btn-large red">cancel</a>
+                        <button type="submit">edit profile</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+</div>
 
 {% endblock %}
