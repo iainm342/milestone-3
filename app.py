@@ -157,6 +157,8 @@ def edit_profile(username):
         if "user" in session:
             return render_template("edit_profile.html", user=user)
 
+        return redirect(url_for("login"))
+
 
 
 @app.route("/delete_profile/<username>")
@@ -200,6 +202,8 @@ def add_recipe():
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name, 1")
     if request.method == "POST":
         submit = {
             "category_name": request.form.get("category_name"),
@@ -214,9 +218,8 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("recipe updated")
+        return render_template("show_recipe.html", recipe=recipe, categories=categories)
     
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    categories = mongo.db.categories.find().sort("category_name, 1")
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
