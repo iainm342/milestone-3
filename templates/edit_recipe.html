@@ -26,7 +26,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-bread-slice" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text"
@@ -36,7 +36,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-user" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_chef" name="recipe_chef" value="{{ recipe.recipe_chef }}" type="text"
@@ -47,7 +47,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-book" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_cookbook" name="recipe_cookbook" value="{{ recipe.recipe_cookbook }}" type="text"
@@ -58,7 +58,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-camera" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_image" name="recipe_image" value="{{ recipe.recipe_image }}" type="text"
@@ -69,7 +69,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-user-cog" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_difficulty" name="recipe_difficulty" value="{{ recipe.recipe_difficulty }}"
@@ -80,7 +80,7 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-clock" id="icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_time" name="recipe_time" value="{{ recipe.recipe_time }}" type="text"
@@ -91,34 +91,34 @@
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <i class="fas fa-list" id="icon"></i>
                 </div>
                 <div class="input-field col s10 input_ing_wrap">
                     {% for ingredient in recipe.recipe_ingredients %}
-                    <div class="col s12">
-                        <input id="recipe_ingredients" name="recipe_ingredients" type="text" value="{{ ingredient }}"
-                            class="validate"><a href="#" class="remove_field">Remove</a>
-                    </div>
+                    <input id="recipe_ingredients" name="recipe_ingredients" type="text" value="{{ ingredient }}"
+                        class="validate">
                     {% endfor %}
-                </div>
-                <div class="col s1">
-                    <button class="add_ing_button">Add</button>
                 </div>
             </div>
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-circle prefix"></i>
+                    <a href="#" class="add_ing_button"><i class="far fa-plus-square"></i></a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col s1">
+                    <i class="fas fa-list" id="icon"></i>
                 </div>
                 <div class="input-field col s10 input_meth_wrap">
                     {% for step in recipe.recipe_method %}
-                    <div class="col s12">
-                        <input id="recipe_method" name="recipe_method" type="text" value="{{ step }}"
-                            class="validate"><a href="#" class="remove_field">Remove</a>
-                    </div>
+                    <input id="recipe_method" name="recipe_method" type="text" value="{{ step }}" class="validate">
                     {% endfor %}
                 </div>
+            </div>
+            <div class="row">
                 <div class="col s1">
-                    <button class="add_meth_button">Add</button>
+                    <a href="#" class="add_meth_button"><i class="far fa-plus-square"></i></a>
                 </div>
             </div>
             <div class="row">
@@ -130,5 +130,5 @@
         </form>
     </div>
 </div>
-
+</div>
 {% endblock %}
