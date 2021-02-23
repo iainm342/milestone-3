@@ -11,8 +11,8 @@
 
         <div class="row">
             {% for recipe in recipes %}
-            <div class="col s12 m3">
-                <div class="card ">
+            <div class="col s12 m6 xl4">
+                <div class="card large">
                     <div class="card-image waves-effect waves-block waves-light">
                         <img class="activator" src="{{ recipe.recipe_image }}">
                     </div>
@@ -22,8 +22,7 @@
                         <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
                     </div>
                     <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}<i
-                                class="material-icons right">close</i></span>
+                        <span class="card-title">{{ recipe.recipe_name }}<i class="far fa-times-circle"></i></span>
                         <!-- will need to remove ingredients and method-->
                         <p> Category: {{ recipe.category_name }}<br>
                             Chef: {{ recipe.recipe_chef }}<br>
