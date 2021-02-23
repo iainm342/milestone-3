@@ -8,7 +8,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(ing < max_ing) { 
 			ing++; 
-			$(wrapper_ing).append('<div class="col s12" id="wrap"><input id="recipe_ingredients" type="text" name="recipe_ingredients"/><label for="recipe_ingredients"></label><a href="#" class="remove_field"><i class="far fa-trash-alt"></i></a></div>');
+			$(wrapper_ing).append('<div class="col s12" id="wrap"><input id="recipe_ingredients" type="text" name="recipe_ingredients"/><label for="recipe_ingredients"></label><a href="#" class="btn remove_field"><i class="far fa-trash-alt"></i></a></div>');
 		}
 	});
 	
@@ -25,7 +25,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(ing < max_meth) {
 			ing++; 
-			$(wrapper_meth).append('<div class="col s12" id="wrap"><textarea id="recipe_method" type="text" name="recipe_method"/></textarea><label for="recipe_method"></label><a href="#" class="remove_field"><i class="far fa-trash-alt"></i></a></div>'); 
+			$(wrapper_meth).append('<div class="col s12" id="wrap"><textarea id="recipe_method" type="text" name="recipe_method"/></textarea><label for="recipe_method"></label><a href="#" class="btn remove_field"><i class="far fa-trash-alt"></i></a></div>'); 
 		}
 	});
 	

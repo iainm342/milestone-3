@@ -55,6 +55,10 @@ nav .brand-logo {
     width: 200px;
 }
 
+.cat-card {
+    margin-top: 25px;
+}
+
 #rec-style {
     font-size: 18px;
     font-weight: 500;
