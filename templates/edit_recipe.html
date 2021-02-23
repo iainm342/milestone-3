@@ -112,7 +112,7 @@
                 </div>
                 <div class="input-field col s10 input_meth_wrap">
                     {% for step in recipe.recipe_method %}
-                    <textarea id="recipe_method" name="recipe_method" type="text" value="{{ step }}"></textarea>
+                    <textarea id="recipe_method" name="recipe_method" type="text">{{ step }}</textarea>
                     {% endfor %}
                 </div>
             </div>

@@ -3,5 +3,5 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('select').formSelect();
     $('#recipe_method').val();
-    M.textareaAutoResize($('#textarea1'));
+    M.textareaAutoResize($('#recipe_method'));
 });
