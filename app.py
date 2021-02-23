@@ -40,12 +40,11 @@ def search():
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
-#need to create function for searching by ingredient
-@app.route("/ing_search")
-def ing_search():
-    recipes = mongo.db.recipes.find()
-    return render_template("ingredients.html", recipes=recipes)
 
+@app.route("/cookbooks")
+def cookbooks():
+    cookbooks = mongo.db.cookbooks.find()
+    return render_template("cookbooks.html", cookbooks=cookbooks)
 
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
