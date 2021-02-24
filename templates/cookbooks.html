@@ -24,6 +24,7 @@
         </form>
     </div>
     <div class="row">
+        <p class="center-align">All books supplied via Amazon</p>
         {% for book in cookbooks %}
         <div class="col s12 m6 xl4">
             <div class="card large">
@@ -35,6 +36,9 @@
                             class="material-icons right"></i></span>
                     <span class="card-title" id="rec-style">{{ book.cookbook_name }}</span>
                     <span>by {{ book.cookbook_chef }}</span>
+                    <div class="row">
+                        <a href="{{ book.cookbook_amazon }}" class="btn">buy now</a>
+                    </div>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title" id="rec-style">{{ book.cookbook_name }}<i
