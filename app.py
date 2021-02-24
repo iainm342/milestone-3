@@ -34,17 +34,18 @@ def all_recipes():
     return render_template("recipes.html", recipes=recipes)
 
 
+@app.route("/all_books")
+def all_books():
+    cookbooks = mongo.db.cookbooks.find()
+    return render_template("cookbooks.html", cookbooks=cookbooks)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
-
-@app.route("/cookbooks")
-def cookbooks():
-    cookbooks = mongo.db.cookbooks.find()
-    return render_template("cookbooks.html", cookbooks=cookbooks)
 
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
