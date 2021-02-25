@@ -38,7 +38,7 @@
                     <span>by {{ book.cookbook_chef }}</span>
                     <hr>
                     <div>
-                        <a href="#" class="btn book">see recipes</a>
+                        <a href="{{ url_for('book_recipes') }}" class="btn book">see recipes</a>
                         <span> </span>
                         <a href="{{ book.cookbook_amazon }}" target="_blank" class="btn">buy now</a>
                     </div>
