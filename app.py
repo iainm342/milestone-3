@@ -51,7 +51,8 @@ def search():
 def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find()
-    return render_template("show_recipe.html", recipe=recipe, categories=categories)
+    cookbooks = mongo.db.cookbooks.find()
+    return render_template("show_recipe.html", recipe=recipe, categories=categories, cookbooks=cookbooks)
 
 
 @app.route("/show_starters")
@@ -185,7 +186,7 @@ def add_recipe():
         recipe_dict['category_name'] = request.form.get("category_name")
         recipe_dict['recipe_name'] = request.form.get("recipe_name")
         recipe_dict['recipe_chef'] = request.form.get("recipe_chef")
-        recipe_dict['recipe_cookbook'] = request.form.get("recipe_cookbook")
+        recipe_dict['cookbook_name'] = request.form.get("cookbook_name")
         recipe_dict['recipe_image'] = request.form.get("recipe_image")
         recipe_dict['recipe_difficulty'] = request.form.get("recipe_difficulty")
         recipe_dict['recipe_time'] = request.form.get("recipe_time")
@@ -209,7 +210,7 @@ def edit_recipe(recipe_id):
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "recipe_chef": request.form.get("recipe_chef"),
-            "recipe_cookbook": request.form.get("recipe_cookbook"),
+            "cookbook_name": request.form.get("cookbook_name"),
             "recipe_image": request.form.get("recipe_image"),
             "recipe_difficulty": request.form.get("recipe_difficulty"),
             "recipe_time": request.form.get("recipe_time"),
