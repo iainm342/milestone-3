@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3 class="center-align">add cookbook</h3>
+
+<div class="container">
+    <div class="row card-panel">
+        <form class="col s12" method="POST" action="{{ url_for('add_cookbook') }}">
+            <div class="row">
+                <div class="col s1">
+                    <i class="fas fa-bread-slice" id="icon"></i>
+                </div>
+                <div class="input-field col s10">
+                    <input id="cookbook_name" name="cookbook_name" type="text" class="validate">
+                    <label for="cookbook_name">cookbook name</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1">
+                    <i class="fas fa-user" id="icon"></i>
+                </div>
+                <div class="input-field col s10">
+                    <input id="cookbook_chef" name="cookbook_chef" type="text" class="validate">
+                    <label for="cookbook_chef">cookbook chef</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1" id="icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="input-field col s10">
+                    <input id="cookbook_image" name="cookbook_image" type="text" class="validate">
+                    <label for="cookbook_image">cookbook image</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s1">
+                    <i class="fas fa-camera" id="icon"></i>
+                </div>
+                <div class="input-field col s10">
+                    <input id="cookbook_amazon" name="cookbook_amazon" type="text" class="validate">
+                    <label for="cookbook_amazon">cookbook amazon</label>
+                </div>
+                <div class="col s1"></div>
+            </div>
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button class="btn" type="submit">add cookbook</button>
+                </div>
+            </div>
+    </div>
+    </form>
+</div>
+</div>
+
+{% endblock %}

@@ -205,6 +205,23 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+@app.route("/add_cookbook", methods=["GET", "POST"])
+def add_cookbook():
+    if request.method == "POST":
+        cookbooks = mongo.db.cookbooks
+        cookbook_dict = request.form.to_dict()
+        cookbook_dict['cookbook_name'] = request.form.get("cookbook_name")
+        cookbook_dict['cookbook_chef'] = request.form.get("cookbook_chef")
+        cookbook_dict['cookbook_image'] = request.form.get("cookbook_image")
+        cookbook_dict['cookbook_amazon'] = request.form.get("cookbook_amazon")
+
+        cookbooks.insert_one(cookbook_dict)
+        flash("cookbook added")
+        return redirect(url_for("all_books"))
+    
+    return render_template("add_cookbook.html")
+
+
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
