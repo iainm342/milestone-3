@@ -49,12 +49,14 @@
                     <span>Cookbook: {{ recipe.cookbook_name }}</span><br>
                     <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
                     <span>Cooking Time: {{ recipe.recipe_time }}</span>
+                    {% if session.user|lower == recipe.recipe_added|lower or "admin"|lower %}
                     <div class="row center-align rec-card">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
                             class="btn-large green waves-effect waves-light">edit</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                             class="btn-large red waves-effect waves-light">delete</a><br>
                     </div>
+                    {% endif %}
                     <div>
                         <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a>
                     </div>
