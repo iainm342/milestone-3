@@ -29,7 +29,7 @@
                         <li><a href="{{ url_for('categories') }}">categories</a></li>
                         <li><a href="#" class="dropdown-trigger" data-target="dropdown2">recipes</a></li>
                         <li><a href="{{ url_for('all_books') }}">bookshop</a></li>
-                        {% if session.user|lower == "admin"|lower %}
+                        {% if session.user|lower == "larder-admin"|lower %}
                         <li><a href="{{ url_for('add_cookbook') }}">add cookbook</a></li>
                         {% endif %}
                         {% if session.user %}
