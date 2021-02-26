@@ -4,6 +4,7 @@
 <h3 class="center-align">add cookbook</h3>
 
 <div class="container">
+    <p class="right-align">logged in: {{session.user}}</p>
     <div class="row card-panel">
         <form class="col s12" method="POST" action="{{ url_for('add_cookbook') }}">
             <div class="row">
