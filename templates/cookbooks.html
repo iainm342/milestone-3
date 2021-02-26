@@ -47,10 +47,12 @@
                     <span class="card-title" id="rec-style">{{ book.cookbook_name }}<i
                             class="far fa-times-circle right"></i></span>
                     <span>Chef: {{ book.cookbook_chef }}</span><br>
+                    {% if session.user|lower == "admin"|lower %}
                     <div class="row center-align rec-card">
                         <a href="#" class="btn-large green waves-effect waves-light">edit</a>
                         <a href="#" class="btn-large red waves-effect waves-light">delete</a><br>
                     </div>
+                    {% endif %}
 
                 </div>
             </div>
