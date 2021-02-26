@@ -196,6 +196,7 @@ def add_recipe():
         recipe_dict['recipe_time'] = request.form.get("recipe_time")
         recipe_dict['recipe_ingredients'] = request.form.getlist("recipe_ingredients")
         recipe_dict['recipe_method'] = request.form.getlist("recipe_method")
+        recipe_dict['recipe_added'] = session["user"]
 
         recipes.insert_one(recipe_dict)
         flash("recipe added")

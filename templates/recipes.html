@@ -38,6 +38,7 @@
                     <span class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
                             class="material-icons right"></i></span>
                     <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
+                    <span>added by {{ recipe.recipe_added}}</span>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
