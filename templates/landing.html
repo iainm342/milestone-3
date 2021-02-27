@@ -10,17 +10,17 @@
             </div>
             <div class="col s12 l6 center-align">
                 <ul>
-                    <li class="left-align"><a class="land-link" href="{{ url_for('all_recipes') }}">recipes from your
+                    <li class="center-align"><a class="land-link" href="{{ url_for('all_recipes') }}">recipes from your
                             favourite chef's!</a>
                     </li>
                     {% if session.user|lower %}
-                    <li class="left-align"><a class="land-link" href="{{ url_for('add_recipe') }}">add your own
+                    <li class="center-align"><a class="land-link" href="{{ url_for('add_recipe') }}">add your own
                             favourite recipes!</a></li>
                     {% else %}
-                    <li class="left-align"><a class="land-link" href="{{ url_for('login') }}">add your own
+                    <li class="center-align"><a class="land-link" href="{{ url_for('login') }}">add your own
                             favourite recipes!</a></li>
                     {% endif %}
-                    <li class="left-align"><a class="land-link" href="{{ url_for('all_books') }}">look for new
+                    <li class="center-align"><a class="land-link" href="{{ url_for('all_books') }}">look for new
                             cookbooks!</a></li>
                 </ul>
 
