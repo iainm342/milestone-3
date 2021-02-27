@@ -23,13 +23,14 @@
                     <p>added by {{ recipe.recipe_added}}</p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
-                            class="far fa-times-circle right"></i></span>
-                    <span>Category: {{ recipe.category_name }}</span><br>
-                    <span>Chef: {{ recipe.recipe_chef }}</span><br>
-                    <span>Cookbook: {{ recipe.cookbook_name }}</span><br>
-                    <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
-                    <span>Cooking Time: {{ recipe.recipe_time }}</span>
+                    <span class="card-title">
+                        <i class="far fa-times-circle right"></i></span><br>
+                    <span>{{ recipe.recipe_name }}</span><br><br>
+                    <span>Category:</span><span class="right">{{ recipe.category_name }}</span><br>
+                    <span>Chef:</span><span class="right">{{ recipe.recipe_chef }}</span><br>
+                    <span>Cookbook:</span><span class="right">{{ recipe.cookbook_name }}</span><br>
+                    <span>Difficulty:</span><span class="right">{{ recipe.recipe_difficulty }}</span><br>
+                    <span>Cooking Time:</span><span class="right">{{ recipe.recipe_time }}</span>
                     {% if session.user|lower == recipe.recipe_added|lower %}
                     <div class="row center-align rec-card">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
@@ -45,8 +46,8 @@
                             class="btn-large red waves-effect waves-light">delete</a><br>
                     </div>
                     {% endif %}
-                    <div class="divider"></div>
                     <div class="center-align">
+                        <br>
                         <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
                             recipe...</a>
                     </div>
