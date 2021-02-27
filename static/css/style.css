@@ -115,4 +115,7 @@ a.land-link {
     padding-right: 0px;
 }
 
+a.land-link:hover {
+    color: #9ad39c;
+}
 
