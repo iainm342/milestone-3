@@ -68,14 +68,24 @@
         </ul>
 
         <ul class="sidenav" id="mobile-demo">
+            <li>
+                <h3 class="h3">larder</h3>
+            </li>
+            <li class="divider"></li>
             <li><a href="{{ url_for('categories') }}">categories</a></li>
-            <li><a href="#" class="dropdown-trigger" data-target="dropdown1">recipes</a></li>
+            <li><a href="#" class="dropdown-trigger" data-target="dropdown2">recipes</a></li>
             <li><a href="{{ url_for('all_books') }}">bookshop</a></li>
+            {% if session.user|lower == "larder-admin"|lower %}
+            <li><a href="{{ url_for('add_cookbook') }}">add cookbook</a></li>
+            {% endif %}
+            {% if session.user %}
             <li><a href="{{ url_for('add_recipe') }}">add recipe</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
             <li><a href="{{ url_for('logout') }}">log out</a></li>
+            {% else %}
             <li><a href="{{ url_for('login') }}">log in</a></li>
             <li><a href="{{ url_for('register') }}">register</a></li>
+            {% endif %}
         </ul>
     </header>
 
