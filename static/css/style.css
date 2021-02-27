@@ -119,3 +119,14 @@ a.land-link:hover {
     color: #9ad39c;
 }
 
+.email:hover {
+    color: #9ad39c;
+}
+
+a.social {
+    color: white;
+}
+
+a.social:hover {
+    color: #9ad39c;
+}
