@@ -16,8 +16,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-search prefix"></i>
                     <input type="text" name="query" id="query" class="validate search">
-                    <label for="query" style="color: #2c642e">search by recipe name, chef, ingredients or
-                        difficulty</label>
+                    <label for="query" style="color: #2c642e">search</label>
                 </div>
             </div>
             <div class="row center-align">
@@ -48,7 +47,6 @@
                 <div class="card-reveal">
                     <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
                             class="far fa-times-circle right"></i></span>
-                    <!-- will need to remove ingredients and method-->
                     <span>Category: {{ recipe.category_name }}</span><br>
                     <span>Chef: {{ recipe.recipe_chef }}</span><br>
                     <span>Cookbook: {{ recipe.cookbook_name }}</span><br>
@@ -69,8 +67,10 @@
                             class="btn-large red waves-effect waves-light">delete</a><br>
                     </div>
                     {% endif %}
-                    <div>
-                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a>
+                    <div class="divider"></div>
+                    <div class="center-align">
+                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                            recipe...</a>
                     </div>
                 </div>
             </div>

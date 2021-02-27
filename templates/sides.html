@@ -11,29 +11,45 @@
     <div class="row">
         {% for recipe in recipes %}
         <div class="col s12 m6 xl4">
-            <div class="card large">
+            <div class="card ">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ recipe.recipe_image }}">
                 </div>
-                <div class="card-content">
-                    <span class="card-title activator grey-text text-darken-4">{{ recipe.recipe_name }}<i
-                            class="material-icons right"></i></span>
-                    <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
+                <div class="card-content center-align">
+                    <p class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
+                            class="material-icons right"></i></p>
+                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                            recipe...</a></p>
+                    <p>added by {{ recipe.recipe_added}}</p>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title grey-text text-darken-4">{{ recipe.recipe_name }}<i
-                            class="material-icons right">close</i></span>
-                    <!-- will need to remove ingredients and method-->
-                    <p> Category: {{ recipe.category_name }}<br>
-                        Chef: {{ recipe.recipe_chef }}<br>
-                        Cookbook: {{ recipe.cookbook_name }}<br>
-                        Difficulty: {{ recipe.recipe_difficulty }}<br>
-                        Cooking Time: {{ recipe.recipe_time }}<br>
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large green">edit</a>
+                    <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
+                            class="far fa-times-circle right"></i></span>
+                    <span>Category: {{ recipe.category_name }}</span><br>
+                    <span>Chef: {{ recipe.recipe_chef }}</span><br>
+                    <span>Cookbook: {{ recipe.cookbook_name }}</span><br>
+                    <span>Difficulty: {{ recipe.recipe_difficulty }}</span><br>
+                    <span>Cooking Time: {{ recipe.recipe_time }}</span>
+                    {% if session.user|lower == recipe.recipe_added|lower %}
+                    <div class="row center-align rec-card">
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                            class="btn-large green waves-effect waves-light">edit</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                            class="btn-large red">delete</a><br>
-                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a>
-                    </p>
+                            class="btn-large red waves-effect waves-light">delete</a><br>
+                    </div>
+                    {% elif session.user|lower == "larder-admin"|lower %}
+                    <div class="row center-align rec-card">
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                            class="btn-large green waves-effect waves-light">edit</a>
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="btn-large red waves-effect waves-light">delete</a><br>
+                    </div>
+                    {% endif %}
+                    <div class="divider"></div>
+                    <div class="center-align">
+                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                            recipe...</a>
+                    </div>
                 </div>
             </div>
         </div>
