@@ -27,7 +27,7 @@
                             class="fas fa-hamburger"></i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('categories') }}">categories</a></li>
-                        <li><a href="#" class="dropdown-trigger" data-target="dropdown2">recipes</a></li>
+                        <li><a href="#" class="dropdown-trigger" data-target="dropdown1">recipes</a></li>
                         <li><a href="{{ url_for('all_books') }}">bookshop</a></li>
                         {% if session.user|lower == "larder-admin"|lower %}
                         <li><a href="{{ url_for('add_cookbook') }}">add cookbook</a></li>
