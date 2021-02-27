@@ -144,6 +144,7 @@ a.social:hover {
     color: #9ad39c;
 }
 
+/* reg and login styles*/
 /* label color */
 .input-field label {
     color: #fff;
@@ -170,4 +171,10 @@ a.social:hover {
   /* icon prefix focus color */
   .input-field .prefix.active {
     color: #9ad39c;
+  }
+  
+  /* search label style */
+  /* label focus color */
+  .search {
+      color: #2c642e;
   }
