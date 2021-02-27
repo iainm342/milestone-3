@@ -1,44 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="center-align">register</h3>
+<div class="bg-container">
+    <div class="container">
+        <div class="row landing">
+            <div class="col s12 m3">
+                <h4 class="center-align">register</h4>
+            </div>
+            <div class="col s12 m9 offset-m4">
+                <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
 
-<div class="row">
-    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-        <div class="card">
-            <div class="input-field col s12">
-                <i class="fas fa-user-plus prefix"></i>
-                <input id="username" name="username" type="text" class="validate">
-                <label for="username">username</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-user-plus prefix"></i>
-                <input id="user_first" name="user_first" type="text" class="validate">
-                <label for="user_first">first name</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-user-plus prefix"></i>
-                <input id="user_last" name="user_last" type="text" class="validate">
-                <label for="user_last">last name</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-envelope prefix"></i>
-                <input id="user_email" name="user_email" type="text" class="validate">
-                <label for="user_email">user email</label>
-            </div>
-            <div class="input-field col s12">
-                <i class="fas fa-user-lock prefix"></i>
-                <input id="password" name="password" type="password" class="validate">
-                <label for="password">password</label>
-            </div>
-            <div class="row">
-                <div class="col s12">
-                    <button type="submit" class="col s12 btn">register</button>
-                </div>
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix"></i>
+                        <input id="username" name="username" type="text" class="validate">
+                        <label for="username">username</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix"></i>
+                        <input id="user_first" name="user_first" type="text" class="validate">
+                        <label for="user_first">first name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-plus prefix"></i>
+                        <input id="user_last" name="user_last" type="text" class="validate">
+                        <label for="user_last">last name</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="fas fa-envelope prefix"></i>
+                        <input id="user_email" name="user_email" type="text" class="validate">
+                        <label for="user_email">user email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <i class="fas fa-user-lock prefix"></i>
+                        <input id="password" name="password" type="password" class="validate">
+                        <label for="password">password</label>
+                    </div>
+                    <div class="row center-align">
+                        <button type="submit" class="btn btn-login">register</button>
+                    </div>
+                </form>
             </div>
         </div>
-    </form>
+    </div>
 </div>
-
-
+</div>
 {% endblock %}
