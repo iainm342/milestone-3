@@ -60,9 +60,21 @@ nav .brand-logo {
 }
 
 #rec-style {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 500;
-    
+}
+
+.btn {
+    background-color: #2c642e;
+}
+
+.btn:hover {
+    background-color: #9ad39c;
+    color: #2c642e;
+}
+
+p.recipe-p {
+    padding-bottom: 10px;
 }
 
 .btn-large {

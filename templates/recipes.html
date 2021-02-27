@@ -35,11 +35,12 @@
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ recipe.recipe_image }}">
                 </div>
-                <div class="card-content">
-                    <span class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
-                            class="material-icons right"></i></span>
-                    <p><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}">Full recipe...</a></p>
-                    <span>added by {{ recipe.recipe_added}}</span>
+                <div class="card-content center-align">
+                    <p class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
+                            class="material-icons right"></i></p>
+                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                            recipe...</a></p>
+                    <p>added by {{ recipe.recipe_added}}</p>
                 </div>
                 <div class="card-reveal">
                     <span class="card-title" id="rec-style">{{ recipe.recipe_name }}<i
