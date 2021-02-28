@@ -56,8 +56,8 @@
                 </li>
                 {% endfor %}
                 <hr>
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">edit</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red right">delete</a><br>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red left">delete</a><br>
             </div>
         </div>
     </div>
