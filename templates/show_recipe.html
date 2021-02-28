@@ -7,50 +7,55 @@
 
             <h3 class="center-align">
                 <h3 class="left-align"> {{ recipe.recipe_name }} </h3>
+                <hr>
                 <p class="left-align">logged in: {{session.user}}</p>
         </div>
 
         <div class="row">
-            <div class="col s12 xl4">
+            <div class="col s12 xl4 center-align">
                 <img class="show-img" src="{{ recipe.recipe_image }}" alt="{{recipe.recipe_name}}"><br>
+                <hr>
                 <div class="col s4">
-                    <span class="left-align">Category: </span>
+                    <span class="left">Category: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ recipe.category_name }}</span><br>
+                    <span class="right"> {{ recipe.category_name }}</span><br>
                 </div>
                 <div class="col s4">
-                    <span class="left-align">Chef: </span>
+                    <span class="left">Chef: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ recipe.recipe_chef }}</span><br>
+                    <span class="right"> {{ recipe.recipe_chef }}</span><br>
                 </div>
                 <div class="col s4">
-                    <span class="left-align">Cookbook: </span>
+                    <span class="left">Cookbook: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ recipe.cookbook_name }}</span><br>
+                    <span class="right"> {{ recipe.cookbook_name }}</span><br>
                 </div>
                 <div class="col s4">
-                    <span class="left-align">Difficulty: </span>
+                    <span class="left">Difficulty: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ recipe.recipe_difficulty }}</span><br>
+                    <span class="right"> {{ recipe.recipe_difficulty }}</span><br>
                 </div>
             </div>
             <div class="col s12 xl4">
                 <h4>Ingredients</h4>
+                <hr>
                 {% for ingredient in recipe.recipe_ingredients %}
                 <li>
                     {{ ingredient }}
                 </li>
                 {% endfor %}
                 <h4>Method</h4>
+                <hr>
                 {% for step in recipe.recipe_method %}
                 <li>
                     {{ step }}
                 </li>
                 {% endfor %}
+                <hr>
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">edit</a>
                 <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red right">delete</a><br>
             </div>
