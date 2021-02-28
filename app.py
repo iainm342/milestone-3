@@ -271,6 +271,13 @@ def delete_recipe(recipe_id):
     return redirect(url_for("categories"))
 
 
+@app.route("/delete_cookbook/<cookbook_id>")
+def delete_cookbook(cookbook_id):
+    mongo.db.cookbooks.remove({"_id": ObjectId(cookbook_id)})
+    flash("cookbook deleted")
+    return redirect(url_for("all_books"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
