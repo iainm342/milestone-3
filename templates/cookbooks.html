@@ -29,12 +29,12 @@
     <div class="row">
         <p class="center-align">All books supplied via Amazon</p>
         {% for book in cookbooks %}
-        <div class="col s12 m6 xl4 center-align">
-            <div class="card large">
+        <div class="col s12 m6 xl4">
+            <div class="card">
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ book.cookbook_image }}">
                 </div>
-                <div class="card-content">
+                <div class="card-content center-align">
                     <span class="card-title activator" id="rec-style">{{ book.cook_name }}<i
                             class="material-icons right"></i></span>
                     <span class="card-title" id="rec-style">{{ book.cookbook_name }}</span>
@@ -47,13 +47,15 @@
                     </div>
                 </div>
                 <div class="card-reveal">
-                    <span class="card-title" id="rec-style">{{ book.cookbook_name }}<i
-                            class="far fa-times-circle right"></i></span>
+                    <span class="card-title"><i class="far fa-times-circle right"></i></span><br>
+                    <span>{{ book.cookbook_name }}</span><br>
                     <span>Chef: {{ book.cookbook_chef }}</span><br>
-                    {% if session.user|lower == "admin"|lower %}
+                    <hr>
+                    <span>{{ book.cookbook_desc }}</span>
+                    {% if session.user|lower == "larder-admin"|lower %}
                     <div class="row center-align rec-card">
-                        <a href="#" class="btn-large green waves-effect waves-light">edit</a>
-                        <a href="#" class="btn-large red waves-effect waves-light">delete</a><br>
+                        <a href="#" class="btn right">edit</a>
+                        <a href="#" class="btn red left">delete</a><br>
                     </div>
                     {% endif %}
 
