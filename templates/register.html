@@ -8,7 +8,8 @@
                 <h4 class="center-align">register</h4>
             </div>
             <div class="col s12 m9 offset-m4">
-                <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+                <form onsubmit="return sendMail(this);" class="col s12 m8 offset-m2" id="contact" method="POST"
+                    action="{{ url_for('register') }}">
 
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>

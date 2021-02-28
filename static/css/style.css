@@ -140,6 +140,10 @@ a.land-link:hover {
     color: #9ad39c;
 }
 
+a.email {
+    color: white;
+}
+
 .email:hover {
     color: #9ad39c;
 }
