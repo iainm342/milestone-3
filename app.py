@@ -246,6 +246,24 @@ def edit_recipe(recipe_id):
     return render_template("edit_recipe.html", recipe=recipe, categories=categories)
 
 
+@app.route("/edit_cookbook/<cookbook_id>", methods=["GET", "POST"])
+def edit_cookbook(cookbook_id):
+    cookbook = mongo.db.cookbooks.find_one({"_id": ObjectId(cookbook_id)})
+    if request.method == "POST":
+        change = {
+            "cookbook_name": request.form.get("cookbook_name"),
+            "cookbook_chef": request.form.get("cookbook_chef"),
+            "cookbook_image": request.form.get("cookbook_image"),
+            "cookbook_amazon": request.form.get("cookbook_amazon"),
+            "cookbook_desc": request.form.get("cookbook_desc")
+        }
+        mongo.db.cookbooks.update({"_id": ObjectId(cookbook_id)}, change)
+        flash("cookbook updated")
+        return render_template("cookbooks.html", cookbook=cookbook)
+    
+    return render_template("edit_cookbook.html", cookbook=cookbook)
+
+
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
