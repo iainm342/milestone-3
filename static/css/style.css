@@ -36,6 +36,13 @@ nav .brand-logo {
 
 }
 
+.flashes h5 {
+    background-color: #9ad39c;
+    color: white;
+    opacity: 0.9;
+    line-height: 2;
+}
+
 .landing {
     background-color: #2c642e;
     color: white;
