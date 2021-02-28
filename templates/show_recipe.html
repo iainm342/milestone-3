@@ -51,8 +51,8 @@
                     {{ step }}
                 </li>
                 {% endfor %}
-                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-large green">edit</a>
-                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-large red">delete</a><br>
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn">edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red right">delete</a><br>
             </div>
         </div>
     </div>
