@@ -40,7 +40,7 @@ nav .brand-logo {
     background-color: #2c642e;
     color: white;
     opacity: 0.9;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .fa-hamburger::before {
@@ -90,6 +90,7 @@ p.recipe-p {
 .show-img {
     height: 300px;
     width: 300px;
+    margin-top: 10px;
 }
 
 .card-image {
