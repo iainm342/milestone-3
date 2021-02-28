@@ -95,13 +95,13 @@ p.recipe-p {
 }
 
 .show-img {
-    height: 300px;
+    height: 25em;
     width: 300px;
     margin-top: 10px;
 }
 
 .card-image {
-    height: 20em;
+    height: 28em;
 }
 
 .fa-question-circle:before {
