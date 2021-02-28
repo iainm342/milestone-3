@@ -17,38 +17,38 @@
                     <span class="left">Username: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ user.username }}</span><br>
+                    <span class="right"> {{ user.username }}</span><br>
                 </div>
                 <div class="col s4">
                     <span class="left">First name: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ user.user_first }}</span><br>
+                    <span class="right"> {{ user.user_first }}</span><br>
                 </div>
                 <div class="col s4">
                     <span class="left">Last name: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ user.user_last }}</span><br>
+                    <span class="right"> {{ user.user_last }}</span><br>
                 </div>
                 <div class="col s4">
                     <span class="left">Email: </span>
                 </div>
                 <div class="col s8">
-                    <span> {{ user.user_email }}</span><br>
+                    <span class="right"> {{ user.user_email }}</span><br>
                 </div>
                 <div class="col s4">
                     <span class="left">Password: </span>
                 </div>
                 <div class="col s8">
-                    <span> ******** </span><br>
+                    <span class="right"> ******** </span><br>
                 </div>
             </div>
             <div class="row center-align">
                 {% if session.user|lower == user.username|lower %}
-                <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn left">edit</a>
+                <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn right">edit</a>
                 <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
-                    class="btn red right">delete</a><br>
+                    class="btn red left">delete</a><br>
                 {% endif %}
             </div>
         </div>
