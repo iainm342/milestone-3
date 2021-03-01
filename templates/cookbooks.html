@@ -45,7 +45,7 @@
                         <span class="card-title-book" id="rec-style">{{ cookbook.cookbook_name }}</span>
                         <p class="book-chef">by {{ cookbook.cookbook_chef }}</p>
                         <hr>
-                        <form id="recipe-search" action="{{ url_for('search_recipe')}}" method="POST">
+                        <form class="hide" id="recipe-search" action="{{ url_for('search_recipe')}}" method="POST">
                             <input type="text" name="query2" value="{{ cookbook.cookbook_chef }}" id="query2">
                             <label for="query2"></label>
                             <input type="text" name="query3" value="{{ cookbook.cookbook_name }}" id="query3">
