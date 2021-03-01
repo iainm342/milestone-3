@@ -95,13 +95,13 @@ p.recipe-p {
 }
 
 .show-img {
-    height: 25em;
-    width: 300px;
+    height: 275px;
+    width: 275px;
     margin-top: 10px;
 }
 
 .card-image {
-    height: 28em;
+    height: 23em;
 }
 
 .fa-question-circle:before {
@@ -158,32 +158,7 @@ a.social:hover {
 
 /* reg and login styles*/
 /* label color */
-.input-field label {
-    color: #fff;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label {
-    color: #fff;
-  }
-  /* label underline focus color */
-  .input-field input[type=text]:focus {
-    border-bottom: 2px solid #9ad39c;
-    box-shadow: 0 1px 0 0 #9ad39c;
-  }
-  /* valid color */
-  .input-field input[type=text].valid {
-    border-bottom: 2px solid #9ad39c;
-    box-shadow: 0 1px 0 0 #9ad39c;
-  }
-  /* invalid color */
-  .input-field input[type=text].invalid {
-    border-bottom: 2px solid red;
-    box-shadow: 0 1px 0 0 red;
-  }
-  /* icon prefix focus color */
-  .input-field .prefix.active {
-    color: #9ad39c;
-  }
+
   
   /* search label style */
   /* label focus color */
