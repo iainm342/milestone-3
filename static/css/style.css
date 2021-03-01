@@ -165,3 +165,11 @@ a.social:hover {
   .search {
       color: #2c642e;
   }
+
+  .fa-plus-square::before {
+      color: #2c642e;
+  }
+
+  .fa-trash-alt::before {
+      color: #2c642e;
+  }
