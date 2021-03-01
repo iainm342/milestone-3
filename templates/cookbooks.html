@@ -39,15 +39,15 @@
                     <img class="activator" src="{{ cookbook.cookbook_image }}">
                 </div>
                 <div class="card-content center-align">
-                    <span class="card-title activator" id="rec-style">{{ cookbook.cook_name }}<i
-                            class="right"></i></span>
-                    <span class="card-title" id="rec-style">{{ cookbook.cookbook_name }}</span>
-                    <span>by {{ cookbook.cookbook_chef }}</span>
-                    <hr>
-                    <div>
-                        <a href="{{ url_for('book_recipes') }}" class="btn book">see recipes</a>
-                        <span> </span>
-                        <a href="{{ cookbook.cookbook_amazon }}" target="_blank" class="btn">buy now</a>
+                    <div class="row">
+                        <span class="card-title activator" id="rec-style">{{ cookbook.cook_name }}<i
+                                class="right"></i></span>
+                        <span class="card-title-book" id="rec-style">{{ cookbook.cookbook_name }}</span>
+                        <p class="book-chef">by {{ cookbook.cookbook_chef }}</p>
+                        <hr>
+
+                        <a href="{{ url_for('book_recipes') }}" class="btn left">recipes</a>
+                        <a href="{{ cookbook.cookbook_amazon }}" target="_blank" class="btn right">buy now</a>
                     </div>
                 </div>
                 <div class="card-reveal">

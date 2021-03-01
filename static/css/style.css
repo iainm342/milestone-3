@@ -173,3 +173,11 @@ a.social:hover {
   .fa-trash-alt::before {
       color: #2c642e;
   }
+
+  .book-chef {
+      font-size: 12px;
+  }
+
+  .card-title-chef {
+      font-weight: 600;
+  }
