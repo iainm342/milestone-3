@@ -63,11 +63,6 @@ def show_recipe(recipe_id):
     return render_template("show_recipe.html", recipe=recipe, categories=categories, cookbooks=cookbooks)
 
 
-@app.route("/book_recipes")
-def book_recipes():
-    return render_template("book_recipes.html")
-
-
 @app.route("/show_starters")
 def show_starters():
     return render_template("starters.html", recipes=mongo.db.recipes.find({"category_name": "Starters"}).sort("recipe_name"))
