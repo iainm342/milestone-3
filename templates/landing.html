@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--page background image container-->
 <div class="bg-container">
+    <!--content container-->
     <div class="container">
         <div class="row landing">
 
@@ -9,13 +11,16 @@
                 <h3>larder</h3>
             </div>
             <div class="col s12 l6 center-align">
+                <!--ul with links to various pages also included in nav-->
                 <ul>
                     <li class="center-align"><a class="land-link" href="{{ url_for('all_recipes') }}">recipes from your
                             favourite cooks and chefs!</a>
                     </li>
+                    <!--jinja for loop restriciting the addition of recipes unless the user is logged in to the site-->
                     {% if session.user|lower %}
                     <li class="center-align"><a class="land-link" href="{{ url_for('add_recipe') }}">add your own
                             favourite recipes!</a></li>
+                    <!--redirects user to log in page if they haven't logged in-->
                     {% else %}
                     <li class="center-align"><a class="land-link" href="{{ url_for('login') }}">add your own
                             favourite recipes!</a></li>
