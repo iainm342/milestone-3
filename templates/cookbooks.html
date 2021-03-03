@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--content container-->
 <div class="container">
     <div class="row">
         <h3 class="center-align">cookbooks</h3>
+        <!--show which user is logged in to the site-->
         <p class="right-align">logged in: {{session.user}}</p>
     </div>
-
+    <!--search bar-->
     <div class="row card-panel">
+        <!--form to allow user to input search parameters-->
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row valign-wrapper center-align">
                 <div class="input-field col s12">
@@ -32,9 +35,12 @@
                 class="message" href="mailto:larder-admin@larder.com">message</a>!
         </p>
 
+        <!--jinja for loop to retrieve all the cookbooks from the DB-->
         {% for cookbook in cookbooks %}
         <div class="col s12 m6 xl4">
+            <!--Materialize card format to show cookbooks-->
             <div class="card">
+                <!--Materialize card structure - image-->
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ cookbook.cookbook_image }}">
                 </div>
@@ -55,12 +61,14 @@
                         <a href="{{ cookbook.cookbook_amazon }}" target="_blank" class="btn right">buy now</a>
                     </div>
                 </div>
+                <!--Materialize card structure - on click of image-->
                 <div class="card-reveal">
                     <span class="card-title"><i class="far fa-times-circle right"></i></span><br>
                     <span>{{ cookbook.cookbook_name }}</span><br>
                     <span>Chef: {{ cookbook.cookbook_chef }}</span><br>
                     <hr>
                     <span>{{ cookbook.cookbook_desc }}</span>
+                    <!--if larder-admin is logged in they are able to edit or delete it from the DB-->
                     {% if session.user|lower == "larder-admin"|lower %}
                     <div class="row center-align rec-card">
                         <a href="{{ url_for('edit_cookbook', cookbook_id=cookbook._id) }}" class="btn right">edit</a>
