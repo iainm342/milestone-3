@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--page background image container-->
 <div class="bg-container">
+    <!--content container-->
     <div class="container">
         <div class="row">
             <div class="col s12">
                 <div class="card">
+                    <!--show which user is logged in to the site-->
                     <h3 class="center-align">{{ user.username }}'s profile</h3>
                 </div>
             </div>
         </div>
         <div class="container">
+            <!--Materialize card used for profile display-->
             <div class="row card-panel">
-
                 <div class="col s4">
                     <span class="left">Username: </span>
                 </div>
@@ -45,6 +48,7 @@
                 </div>
             </div>
             <div class="row center-align">
+                <!--if user is logged in they are able to edit or delete their profile from the DB-->
                 {% if session.user|lower == user.username|lower %}
                 <a href="{{ url_for('edit_profile', username=user.username|lower) }}" class="btn right">edit</a>
                 <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
