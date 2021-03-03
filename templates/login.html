@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
+<!--page background image container-->
 <div class="bg-container">
+    <!--content container-->
     <div class="container">
         <div class="row landing">
             <div class="col s12 m3">
                 <h4 class="center-align">log in</h4>
             </div>
             <div class="col s12 m9 offset-m4">
+                <!--form for processing log in actions-->
                 <form method="POST" action="{{ url_for('login') }}">
                     <div class="row">
                         <div class="input-field col s12 m10 center-align">
@@ -25,6 +26,7 @@
                             <label for="password">password</label>
                         </div>
                     </div>
+                    <!--submits login details -->
                     <div class="row center-align">
                         <button type="submit" class="btn btn-login">login</button>
                     </div>
