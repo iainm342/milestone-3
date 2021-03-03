@@ -1,43 +1,52 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--page background image container-->
 <div class="bg-container">
+    <!--content container-->
     <div class="container">
         <div class="row landing">
             <div class="col s12 m3">
                 <h4 class="center-align">edit profile</h4>
             </div>
             <div class="col s12 m9 offset-m4">
+                <!--form to organise DB info for profile-->
                 <form class="col s12 m8 offset-m2" method="POST"
                     action="{{ url_for('edit_profile', username=user.username|lower) }}">
+                    <!--display / edit username-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input value="{{ user.username }}" id="username" name="username" type="text" class="validate">
                         <label for="username">username</label>
                     </div>
+                    <!--display / edit first name-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input value="{{ user.user_first }}" id="user_first" name="user_first" type="text"
                             class="validate">
                         <label for="user_first">first name</label>
                     </div>
+                    <!--display / edit last name-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input value="{{ user.user_last }}" id="user_last" name="user_last" type="text"
                             class="validate">
                         <label for="user_last">last name</label>
                     </div>
+                    <!--display / edit user email-->
                     <div class="input-field col s12">
                         <i class="fas fa-envelope prefix"></i>
                         <input value="{{ user.user_email }}" id="user_email" name="user_email" type="text"
                             class="validate">
                         <label for="user_email">user email</label>
                     </div>
+                    <!--edit password-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix"></i>
                         <input value="********" id="password" name="password" type="text" class="validate">
                         <label for="password">password</label>
                     </div>
+                    <!--submit form info to DB-->
                     <div class="row">
                         <a href="{{ url_for('profile', username=session['user']) }}" class="btn red left">cancel</a>
                         <button type="submit" class="btn btn-login right">edit</button>
