@@ -181,3 +181,8 @@ a.social:hover {
   .card-title-chef {
       font-weight: 600;
   }
+
+  a.message {
+      text-decoration: underline;
+      color: #2c642e;
+  } 
