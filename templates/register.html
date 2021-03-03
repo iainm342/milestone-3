@@ -1,46 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--page background image container-->
 <div class="bg-container">
+    <!--content container-->
     <div class="container">
         <div class="row landing">
             <div class="col s12 m3">
                 <h4 class="center-align">register</h4>
             </div>
             <div class="col s12 m9">
+                <!--form to allow collection of user info-->
                 <form onsubmit="return sendMail(this);" class="col s12 m8 offset-m4" id="contact" method="POST"
                     action="{{ url_for('register') }}">
-
+                    <!--username info with pattern requirements and required-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="username" name="username" type="text" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="username">username</label>
                     </div>
+                    <!--user first name info with pattern requirements and required-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="user_first" name="user_first" type="text" minlength="3" maxlength="15"
                             pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
                         <label for="user_first">first name</label>
                     </div>
+                    <!--user last name info with pattern requirements and required-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-plus prefix"></i>
                         <input id="user_last" name="user_last" type="text" minlength="3" maxlength="15"
                             pattern="^[a-zA-Z0-9]{3,15}$" class="validate" required>
                         <label for="user_last">last name</label>
                     </div>
+                    <!--user email info with pattern requirements and required-->
                     <div class="input-field col s12">
                         <i class="fas fa-envelope prefix"></i>
                         <input id="user_email" name="user_email" type="text" minlength="5" maxlength="25"
                             pattern="^[a-zA-Z0-9@.]{5,25}*$" class="validate" required>
                         <label for="user_email">user email</label>
                     </div>
+                    <!--user password info with pattern requirements and required-->
                     <div class="input-field col s12">
                         <i class="fas fa-user-lock prefix"></i>
                         <input id="password" name="password" type="password" minlength="5" maxlength="15"
                             pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                         <label for="password">password</label>
                     </div>
+                    <!--submit form info to DB-->
                     <div class="row center-align">
                         <button type="submit" class="btn btn-login">register</button>
                     </div>
