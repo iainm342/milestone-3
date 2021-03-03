@@ -1,28 +1,35 @@
 {% extends "base.html" %}
 {% block content %}
 
-
+<!--content container-->
 <div class="container">
     <div class="row">
         <h3 class="center-align">sides</h3>
+        <!--show which user is logged in to the site-->
         <p class="right-align">logged in: {{session.user}}</p>
     </div>
 
     <div class="row">
+        <!--jinja for loop to pull individual recipes from DB-->
         {% for recipe in recipes %}
         <div class="col s12 m6 xl4">
+            <!--Materialize card strucure-->
             <div class="card ">
+                <!--Materialize card structure - clickable image to activate reveal-->
                 <div class="card-image waves-effect waves-block waves-light">
                     <img class="activator" src="{{ recipe.recipe_image }}">
                 </div>
+                <!--Materialize card structure - text below image-->
                 <div class="card-content center-align">
                     <p class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
                             class="material-icons right"></i></p>
                     <p>added by {{ recipe.recipe_added}}</p>
                     <hr>
+                    <!--<a> tag to activate the show_recipe function-->
                     <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
                             recipe...</a></p>
                 </div>
+                <!--Materialize card structure - reveal further info about recipe-->
                 <div class="card-reveal">
                     <span class="card-title">
                         <i class="far fa-times-circle right"></i></span><br>
@@ -32,12 +39,14 @@
                     <span>Cookbook:</span><span class="right">{{ recipe.cookbook_name }}</span><br>
                     <span>Difficulty:</span><span class="right">{{ recipe.recipe_difficulty }}</span><br>
                     <span>Cooking Time:</span><span class="right">{{ recipe.recipe_time }}</span>
+                    <!--jinja if statement to allow <a> tags to show if the user is created the recipe and is logged in-->
                     {% if session.user|lower == recipe.recipe_added|lower %}
                     <div class="row center-align rec-card">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                             class="btn red left">delete</a><br>
                     </div>
+                    <!--jinja if statement to allow <a> tags to show if larder-admin is logged in-->
                     {% elif session.user|lower == "larder-admin"|lower %}
                     <div class="row center-align rec-card">
                         <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
@@ -48,6 +57,7 @@
                     <div class="center-align">
                         <br>
                         <hr>
+                        <!--<a> tag to activate the show_recipe function-->
                         <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
                             recipe...</a>
                     </div>
