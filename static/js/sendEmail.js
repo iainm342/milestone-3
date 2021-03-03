@@ -2,7 +2,7 @@
 
 var emailjs;
 
-var form = document.getElementById("contact");
+let form = document.getElementById("contact");
 
 //function to activate EmailJS API
 function sendMail(contactForm) {
