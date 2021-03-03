@@ -2,19 +2,25 @@
 {% block content %}
 
 <h3 class="center-align">edit recipe</h3>
-
+<!--content container-->
 <div class="container">
+    <!--show which user is logged in to the site-->
     <p class="right-align">logged in: {{session.user}}</p>
+    <!--Materialize card-->
     <div class="row card-panel">
+        <!--form to allow display and editing of recipe info-->
         <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <!--display / edit recipe category-->
             <div class="row">
                 <div class="col s1" id="icon">
                     <i class="fas fa-question-circle icon-size fa-2x"></i>
                 </div>
                 <div class="input-field col s10">
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled>Which category does your recipe belong to?</option>
+                        <option value="" disabled>recipe category</option>
+                        <!--jinja loop to pull category names from DB-->
                         {% for category in categories %}
+                        <!--checks to see which category name is in the DB and displays it on the DOM-->
                         {% if category.category_name == recipe.category_name %}
                         <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
                         {% else %}
@@ -25,6 +31,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe name-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-bread-slice fa-2x" id="icon"></i>
@@ -35,6 +42,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe chef-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-user fa-2x" id="icon"></i>
@@ -46,6 +54,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe cookbook name-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-book fa-2x" id="icon"></i>
@@ -57,6 +66,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe image URL-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-camera fa-2x" id="icon"></i>
@@ -68,6 +78,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe difficulty-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-user-cog fa-2x" id="icon"></i>
@@ -79,6 +90,7 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe time-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-clock fa-2x" id="icon"></i>
@@ -90,38 +102,44 @@
                 </div>
                 <div class="col s1"></div>
             </div>
+            <!--display / edit recipe ingredients-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-list fa-2x" id="icon"></i>
                 </div>
                 <div class="input-field col s10 input_ing_wrap">
+                    <!--jinja for loop to display every ingredient entry in array-->
                     {% for ingredient in recipe.recipe_ingredients %}
                     <input id="recipe_ingredients" name="recipe_ingredients" type="text" value="{{ ingredient }}"
                         class="validate">
                     {% endfor %}
                 </div>
             </div>
+            <!--add extra ingredient button-->
             <div class="row">
                 <div class="col s1">
                     <a href="#" class="add_ing_button"><i class="far fa-plus-square"></i></a>
                 </div>
             </div>
-
+            <!--display / edit recipe method-->
             <div class="row">
                 <div class="col s1">
                     <i class="fas fa-list fa-2x" id="icon"></i>
                 </div>
                 <div class="input-field col s10 input_meth_wrap">
+                    <!--jinja for loop to display every method entry in array-->
                     {% for step in recipe.recipe_method %}
                     <textarea id="recipe_method" name="recipe_method" type="text">{{ step }}</textarea>
                     {% endfor %}
                 </div>
             </div>
+            <!--add extra method button-->
             <div class="row">
                 <div class="col s1">
                     <a href="#" class="add_meth_button"><i class="far fa-plus-square"></i></a>
                 </div>
             </div>
+            <!--submit form to DB-->
             <div class="row">
                 <a href="{{ url_for('all_recipes') }}" class="btn red left">cancel</a>
                 <button type="submit" class="btn right">edit</button>
