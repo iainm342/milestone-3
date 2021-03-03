@@ -19,28 +19,34 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# route to landing page
 @app.route("/")
 def landing():
     return render_template("landing.html")
 
 
+# route to categories page when categories is selected from nav
 @app.route("/categories.html")
 def categories():
     return render_template("categories.html")
 
 
+# route to all recipes page when categories is selected from nav
 @app.route("/all_recipes")
 def all_recipes():
     recipes = mongo.db.recipes.find()
     return render_template("recipes.html", recipes=recipes)
 
 
+# route to bookshop page when categories is selected from nav
 @app.route("/all_books")
 def all_books():
     cookbooks = mongo.db.cookbooks.find()
     return render_template("cookbooks.html", cookbooks=cookbooks)
 
 
+# route for search function on recipes and bookshop page - retrieves form
+# input and retrieves info from DB and renders the info
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -56,6 +62,7 @@ def search_recipe():
     return render_template("recipes.html", recipes=recipes)
 
 
+# retrieves one recipe from DB and renders the info on the show_recipe page
 @app.route("/show_recipe/<recipe_id>")
 def show_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -66,6 +73,7 @@ def show_recipe(recipe_id):
                            cookbooks=cookbooks)
 
 
+# route to show all starters listed in DB
 @app.route("/show_starters")
 def show_starters():
     return render_template(
@@ -74,6 +82,7 @@ def show_starters():
         .sort("recipe_name"))
 
 
+# route to show all mains listed in DB
 @app.route("/show_mains")
 def show_mains():
     return render_template(
@@ -82,6 +91,7 @@ def show_mains():
         .sort("recipe_name"))
 
 
+# route to show all desserts listed in DB
 @app.route("/show_desserts")
 def show_desserts():
     return render_template(
@@ -90,6 +100,7 @@ def show_desserts():
         .sort("recipe_name"))
 
 
+# route to show all sides listed in DB
 @app.route("/show_sides")
 def show_sides():
     return render_template(
@@ -98,6 +109,7 @@ def show_sides():
         .sort("recipe_name"))
 
 
+# route to show all cakes listed in DB
 @app.route("/show_cakes")
 def show_cakes():
     return render_template(
@@ -106,6 +118,7 @@ def show_cakes():
         .sort("recipe_name"))
 
 
+# route to show all drinks listed in DB
 @app.route("/show_drinks")
 def show_drinks():
     return render_template(
@@ -114,6 +127,9 @@ def show_drinks():
         .sort("recipe_name"))
 
 
+# route to check if user is already registered on site
+# if registered, user is told they are and redirected to login
+# if not registered, they are shown the registration form
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -122,7 +138,7 @@ def register():
 
         if existing_user:
             flash("username already exists")
-            return render_template("register.html")
+            return render_template("login.html")
 
         register = {
             "username": request.form.get("username").lower(),
@@ -139,6 +155,9 @@ def register():
     return render_template("register.html")
 
 
+# route to allow user to login
+# also checks if info matches DB, if not they are are
+# flashed a mesage and can try again
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -159,6 +178,7 @@ def login():
     return render_template("login.html")
 
 
+# route to take user to profile page after succesful login
 @app.route("/profile/<username>", methods={"GET", "POST"})
 def profile(username):
     user = mongo.db.users.find_one({"username": username.lower()})
@@ -169,6 +189,7 @@ def profile(username):
     return redirect(url_for("login"))
 
 
+# route to allow user to edit their profile details
 @app.route("/edit_profile/<username>", methods=["GET", "POST"])
 def edit_profile(username):
     user = mongo.db.users.find_one({"username": username.lower()})
@@ -189,6 +210,7 @@ def edit_profile(username):
         return redirect(url_for("login"))
 
 
+# route to allow user to delete their profile completely
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
     mongo.db.users.remove({"username": username.lower()})
@@ -198,6 +220,7 @@ def delete_profile(username):
     return redirect(url_for("landing"))
 
 
+# route to log user out of the site
 @app.route("/logout")
 def logout():
     flash("you have been logged out")
@@ -205,6 +228,8 @@ def logout():
     return redirect(url_for("landing"))
 
 
+# route to allow user to add recipe to DB
+# on completion, returns user to the recipes.html page
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
@@ -230,6 +255,8 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+# route to allow larder-admin to add recipe to DB
+# on completion, returns larder-admin to the cookbooks.html page
 @app.route("/add_cookbook", methods=["GET", "POST"])
 def add_cookbook():
     if request.method == "POST":
@@ -246,6 +273,8 @@ def add_cookbook():
     return render_template("add_cookbook.html")
 
 
+# route to allow user to edit a recipe
+# retrieves recipe from DB using recipe_id and populates form for editing
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
@@ -270,6 +299,8 @@ def edit_recipe(recipe_id):
                            recipe=recipe, categories=categories)
 
 
+# route to allow larder-admin to edit a cookbook
+# retrieves cookbook from DB using cookbook_id and populates form for editing
 @app.route("/edit_cookbook/<cookbook_id>", methods=["GET", "POST"])
 def edit_cookbook(cookbook_id):
     cookbook = mongo.db.cookbooks.find_one({"_id": ObjectId(cookbook_id)})
@@ -287,6 +318,8 @@ def edit_cookbook(cookbook_id):
     return render_template("edit_cookbook.html", cookbook=cookbook)
 
 
+# allows user to delete a recipe from the DB
+# retrieves info from DB using recipe_id
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
@@ -294,6 +327,8 @@ def delete_recipe(recipe_id):
     return redirect(url_for("categories"))
 
 
+# allows lardr-admin to delete a cookbook from the DB
+# retrieves info from DB using cookbook_id
 @app.route("/delete_cookbook/<cookbook_id>")
 def delete_cookbook(cookbook_id):
     mongo.db.cookbooks.remove({"_id": ObjectId(cookbook_id)})
