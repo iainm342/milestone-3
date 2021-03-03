@@ -58,17 +58,21 @@ nav .brand-logo {
     color: #2c642e;
 }
 
-.cat-img {
-    height: 200px;
+/* .card-img {
+    height: 250px;
     width: 200px;
-}
+} */
 
 .cat-card {
     margin-top: 25px;
 }
 
-#rec-style {
+.card .card-content p {
     font-size: 14px;
+}
+
+#rec-style {
+    font-size: 20px;
     font-weight: 500;
 }
 
