@@ -1,73 +1,78 @@
 {% extends "base.html" %}
 {% block content %}
 
+<!--content container-->
 <div class="container">
     <div class="row">
+        <!--col with name and-->
         <div class="col s12 xl4">
 
             <h3 class="center-align">
                 <h3 class="left-align"> {{ recipe.recipe_name }} </h3>
                 <hr>
+                <!--show which user is logged in to the site-->
                 <p class="left-align">logged in: {{session.user}}</p>
         </div>
-
-        <div class="row">
-            <div class="col s12 xl4 center-align">
-                <img class="show-img" src="{{ recipe.recipe_image }}" alt="{{recipe.recipe_name}}"><br>
-                <hr>
-                <div class="col s4">
-                    <span class="left">Category: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.category_name }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Chef: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.recipe_chef }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Cookbook: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.cookbook_name }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Difficulty: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.recipe_difficulty }}</span><br>
-                </div>
+        <!--col with image and recipe info-->
+        <div class="col s12 xl4 center-align">
+            <img class="show-img" src="{{ recipe.recipe_image }}" alt="{{recipe.recipe_name}}"><br>
+            <hr>
+            <div class="col s4">
+                <span class="left">Category: </span>
             </div>
-            <div class="col s12 xl4">
-                <h4>Ingredients</h4>
-                <hr>
-                {% for ingredient in recipe.recipe_ingredients %}
-                <li>
-                    {{ ingredient }}
-                </li>
-                {% endfor %}
-                <h4>Method</h4>
-                <hr>
-                {% for step in recipe.recipe_method %}
-                <li>
-                    {{ step }}
-                </li>
-                {% endfor %}
-
-                {% if session.user|lower == recipe.recipe_added|lower %}
-                <div class="row center-align rec-card">
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red left">delete</a><br>
-                </div>
-                {% elif session.user|lower == "larder-admin"|lower %}
-                <div class="row center-align rec-card">
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
-                    <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red left">delete</a><br>
-                </div>
-                {% endif %}
+            <div class="col s8">
+                <span class="right"> {{ recipe.category_name }}</span><br>
             </div>
+            <div class="col s4">
+                <span class="left">Chef: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.recipe_chef }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Cookbook: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.cookbook_name }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Difficulty: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.recipe_difficulty }}</span><br>
+            </div>
+        </div>
+        <!--col with ingredients and method-->
+        <div class="col s12 xl4">
+            <h4>Ingredients</h4>
+            <hr>
+            <!--jinja for loop to pull indiviual ingredients from DB-->
+            {% for ingredient in recipe.recipe_ingredients %}
+            <li>
+                {{ ingredient }}
+            </li>
+            {% endfor %}
+            <h4>Method</h4>
+            <hr>
+            <!--jinja for loop to pull each stop of the method from DB-->
+            {% for step in recipe.recipe_method %}
+            <li>
+                {{ step }}
+            </li>
+            {% endfor %}
+            <!--if user is logged in and user added the recipe they are able to edit or delete it from the DB-->
+            {% if session.user|lower == recipe.recipe_added|lower %}
+            <div class="row center-align rec-card">
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red left">delete</a><br>
+            </div>
+            <!--if larder-admin is logged in they are able to edit or delete it from the DB-->
+            {% elif session.user|lower == "larder-admin"|lower %}
+            <div class="row center-align rec-card">
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
+                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn red left">delete</a><br>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>
