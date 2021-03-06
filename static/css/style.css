@@ -190,3 +190,35 @@ a.social:hover {
       text-decoration: underline;
       color: #2c642e;
   } 
+
+  /* label color */
+  .input-field label {
+    color: white;
+  }
+
+  input[type=text]:not(.browser-default) {
+      color: white;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: white;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 #000;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid red;
+    box-shadow: 0 1px 0 0 red;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: white;
+  }
