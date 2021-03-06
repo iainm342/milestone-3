@@ -197,10 +197,18 @@ a.social:hover {
   }
 
   input[type=text]:not(.browser-default) {
-      color: white;
+      color: #2c642e;
   }
+
+  .reglog input[type=text]:not(.browser-default) {
+    color: white;
+}
   /* label focus color */
   .input-field input[type=text]:focus + label {
+    color: white;
+  }
+  
+  .reglog .input-field input[type=text]:focus + label {
     color: white;
   }
   /* label underline focus color */
@@ -222,3 +230,5 @@ a.social:hover {
   .input-field .prefix.active {
     color: white;
   }
+
+  
