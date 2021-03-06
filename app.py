@@ -204,10 +204,11 @@ def edit_profile(username):
         mongo.db.users.update({"username": username.lower()}, update)
         flash("user info updated")
         return redirect(url_for('profile', username=session['user']))
-        if "user" in session:
-            return render_template("edit_profile.html", user=user)
 
-        return redirect(url_for("login"))
+    if "user" in session:
+        return render_template("edit_profile.html", user=user)
+
+    return redirect(url_for("profile"))
 
 
 # route to allow user to delete their profile completely
