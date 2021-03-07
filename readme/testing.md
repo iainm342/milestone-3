@@ -4,7 +4,7 @@
 
 # Testing
 
-[back to README.md file](https://github.com/iainm342/milestone-3/blob/master/README.md/#testing)
+[back to README.md file](https://github.com/iainm342/milestone-3/blob/main/README.md/#testing)
 
 ---
 
@@ -46,7 +46,7 @@ HTML Errors:
 
 - Persistent warning on all pages due to the section on every page for flash messages
 
-![HTML Error](https://github.com/iainm342/milestone-3/blob/master/readme/images/section-warning.png)
+![HTML Error](https://github.com/iainm342/milestone-3/blob/main/readme/images/section-warning.png)
 
 - alt missing from most images. Resolved and passed.
 - recipes.html had an extra " on line 45 which caused multiple errors. Resolved and passed.
@@ -55,7 +55,7 @@ CSS Errors:
 
 - CSS passed with no errors.
 
-![CSS Validation](https://github.com/iainm342/milestone-3/blob/master/readme/images/CSS-validated.png)
+![CSS Validation](https://github.com/iainm342/milestone-3/blob/main/readme/images/CSS-validated.png)
 
 JShint Errors:
 
@@ -67,7 +67,7 @@ PEP8 Errors:
 
 - Python passed with no errors.
 
-![Python Validation](https://github.com/iainm342/milestone-3/blob/master/readme/images/python-validate.png)
+![Python Validation](https://github.com/iainm342/milestone-3/blob/main/readme/images/python-validate.png)
 
 
 ### <ins>ACCESIBILITY VALIDATION</ins>
@@ -82,15 +82,15 @@ The site was tested on the following browsers that I have access to:
 
 - Google Chrome
 
-![Chrome](https://github.com/iainm342/milestone-3/blob/master/readme/images/chrome.png)
+![Chrome](https://github.com/iainm342/milestone-3/blob/main/readme/images/chrome.png)
 
 - Mozilla Firefox
 
-![Firefox](https://github.com/iainm342/milestone-3/blob/master/readme/images/firefox.png)
+![Firefox](https://github.com/iainm342/milestone-3/blob/main/readme/images/firefox.png)
 
 - Microsoft Edge
 
-![Edge](https://github.com/iainm342/milestone-3/blob/master/readme/images/edge.png)
+![Edge](https://github.com/iainm342/milestone-3/blob/main/readme/images/edge.png)
 
 [Back to Contents](#contents)
 
