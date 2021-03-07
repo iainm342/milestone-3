@@ -82,15 +82,15 @@ The site was tested on the following browsers that I have access to:
 
 - Google Chrome
 
-![Chrome]((https://github.com/iainm342/milestone-3/blob/master/readme/images/chrome.png)
+![Chrome](https://github.com/iainm342/milestone-3/blob/master/readme/images/chrome.png)
 
 - Mozilla Firefox
 
-![Firefox]((https://github.com/iainm342/milestone-3/blob/master/readme/images/firefox.png)
+![Firefox](https://github.com/iainm342/milestone-3/blob/master/readme/images/firefox.png)
 
 - Microsoft Edge
 
-![Edge]((https://github.com/iainm342/milestone-3/blob/master/readme/images/edge.png)
+![Edge](https://github.com/iainm342/milestone-3/blob/master/readme/images/edge.png)
 
 [Back to Contents](#contents)
 
@@ -111,18 +111,19 @@ I asked my fellow May 2020'ers to have a look and the feedback was generally pos
 
 ### <ins>USER TESTING</ins> ###
 
-- As a **user**, I want to be able to register as a new user on the site.
-- As a **user**, I want to be able to log on and off the site after I have registered.
-- As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
-- As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
-- As a **user**, I want to be able to update any of the recipes that I have added to the site.
-- As a **user**, I want to be able to delete any of the recipes that I have added to the site.
-- As a **user**, I want to be able to search the site for recipes based key words.
-- As a **user**, I want to be able to favourite/like any recipe in the site for easy future reference.
-- As a **user**, I want the site navigation to be intuitive and easy to use.
-- As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
-- As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
-- As a **site owner**, I want to be able to promote cookbook sales.
-- As a **site owner**, I want to be able to contact **users** using their profile information with offers.
+As a **user**, I want to be able to register as a new user on the site.
+-
+As a **user**, I want to be able to log on and off the site after I have registered.
+As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
+As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
+As a **user**, I want to be able to update any of the recipes that I have added to the site.
+As a **user**, I want to be able to delete any of the recipes that I have added to the site.
+As a **user**, I want to be able to search the site for recipes based key words.
+As a **user**, I want to be able to favourite/like any recipe in the site for easy future reference.
+As a **user**, I want the site navigation to be intuitive and easy to use.
+As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
+As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
+As a **site owner**, I want to be able to promote cookbook sales.
+As a **site owner**, I want to be able to contact **users** using their profile information with offers.
 
 [Back to Contents](#contents)
