@@ -34,7 +34,7 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
 
 ## **UX** ##
 
-### <ins>PROJECT GOALS</ins> ### 
+### <ins>PROJECT GOALS</ins> ###
 
 The main aim of this website was to provide a free-to-use recipe resource for the **user** which allows them to add (Create) recipes to the website, search (Read) for recipes on the website, amend (Update) their own recipes and delete (Delete) their own recipes. Their is also the bookshop page which will take the **user** to the appropriate Amazon webpage allowing them to purchase any cookbook that they are interested in.
 
@@ -284,9 +284,18 @@ If you wish to clone a copy of my project, feel free. You will need to:
 
 The images and card, text content used were sourced from various sites:
 
+- [Shutterstock](https://shutterstock.com) - background image used on landing, login and registration pages.
+- [Amazon](https://amazon.co.uk) - images and URL's for bookshop page.
+- Various cookbooks for recipes which are searchable online - Baking Made Easy, River Cottage - Veg Every Day, Jamie Oliver - Veg, Jamie Oliver - The Naked Chef
+
 ### <ins>IMAGE EDITING</ins> ###
 
+- [Paint 3D](https://www.microsoft.com/en-gb/p/paint-3d/9nblggh5fv99?activetab=pivot:overviewtab) - basic image cropping and editing
+
 ### <ins>CODING IDEAS</ins>
+
+- Knowledge, and inspiration, was taken from the Code Institute project - Task Manager - for the basic aspects of the site and then modified to finalise the project.
+- Code Snippet for adding and removing input fields was found [here](https://www.sanwebe.com/2013/03/addremove-input-fields-dynamically-with-jquery) and then modified.
 
 [Back to Contents](#contents)
 
