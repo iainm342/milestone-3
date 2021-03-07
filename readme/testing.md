@@ -45,7 +45,7 @@ All HTML and CSS was passed through [W3C Validator](https://validator.w3.org/), 
 HTML Errors:
 
 - Persistent warning on all pages due to the section on every page for flash messages
-![HTML Error](https://github.com/iainm342/milestone-3/blob/master/readme/images/section-warning.png)
+![HTML Error](readme/images/section-warning.png)
 - '<alt>' missing from most images. Resolved and passed.
 - recipes.html had an extra " on line 45 which caused multiple errors. Resolved and passed.
 
