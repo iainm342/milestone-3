@@ -42,12 +42,13 @@
             <div class="card">
                 <!--Materialize card structure - image-->
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ cookbook.cookbook_image }}">
+                    <img class="activator" src="{{ cookbook.cookbook_image }}"
+                        alt="image of {{ cookbook.cookbook_name }}">
                 </div>
                 <div class="card-content center-align">
                     <div class="row">
-                        <span class="card-title activator" id="rec-style">{{ cookbook.cook_name }}<i
-                                class="right"></i></span>
+                        <span class="card-title activator rec-style"></span>{{ cookbook.cook_name }}<i
+                            class="right"></i></span>
                         <span class="card-title-book" id="rec-style">{{ cookbook.cookbook_name }}</span>
                         <p class="book-chef">by {{ cookbook.cookbook_chef }}</p>
                         <hr>
