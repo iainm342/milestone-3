@@ -104,15 +104,15 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - used to create the site structure.
 - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - used to create the styling throughout the site.
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - this was used for the modal information, the Google Maps markers, the "back to top" button and the registration forms - user and business user.  
-- [jQuery](https://jquery.com/) - this was used for the image filtering function.
-- [Font-Awesome](https://fontawesome.com/icons?d=gallery) - icons were taken from this site for the footer and social buttons.
-- [Bootstrap](https://getbootstrap.com/) - I relied on Bootstrap for the responsive grid design and NavBar.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - this was used for the addition/deletion of ingredients and methods buttons
+- [jQuery](https://jquery.com/) - this was used to activate the Materialize functionality.
+- [Python](https://www.python.org/) - used to write the logic that operates the site.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - used to manage the HTML more efficiently through the use of templates.
+- [Font-Awesome](https://fontawesome.com/icons?d=gallery) - icons were taken from this site for the forms, header, footer and social buttons.
+- [Materialize](https://materializecss.com/) - I relied on Materialize for the responsive grid design, NavBar, Footer, Card and Form elements.
 - [Google fonts](https://fonts.google.com/) - as previously stated, the fonts used were taken from here.
-*-789+56123
-0.- [Popper](https://900-[popper.js.org/)
-- [Popper JS](https://popper.js.org/)
-- [Sweet Alert](https://sweetalert.js.org/) - used for the email modal confirming registration success or failure.
+- [Heroku](https://www.heroku.com/home) - used for hosting website.
+- [MongoDB](https://www.mongodb.com/3) - used for database functionality.
 
 ### <ins>API'S</ins> ###
 
@@ -121,18 +121,18 @@ Initial wireframes for each page can be found by clicking on the links below:
 ### <ins>TOOLS</ins> ###
 
 - [Git](https://git-scm.com/) - version control and recording of all changes to site during development process.
-- [GitHub](https://github.com/) - used for hosting website.
-- [GitPod](https://gitpod.io) - IDE used for code editing. 
+- [Visual Studio Code](https://code.visualstudio.com/) - IDE used for code editing. 
 - [Figma](https://figma.com/) - wireframing
 - [Google Fonts](https://fonts.google.com/) - used to select font families.
 - [W3C Validator](https://validator.w3.org/) - used to test my HTML to ensure there were no errors.
 - [W3C Validator CSS](https://jigsaw.w3.org/css-validator/) - used to test my CSS to ensure there were no errors.
 - [JSHint](https://https://jshint.com/) - used to test my JS to ensure there were no errors.
+- [PEP8 Online](http://pep8online.com/) - used to check my Python was PEP8 compliant.
 - [WAVE](https://wave.webaim.org/) - used to test accesibility of site.
+- [Chrome Developer](https://developers.google.com/web/tools/chrome-devtools) - used to test responsiveness of site throughout the developmnent process and also performance using Lighthouse.
 - [Free Formatter](https://freeformatter.com/html-formatter.html#ad-output) - html formatter to help keep things tidy!
 - [Am I Responsive](http://ami.responsivedesign.is/#) - used to create responsive image for readme.MD.
 - [Favicon](https://favicon.io/) - used to generate the Favicon on the webpage tab.
-- [Snazzy Maps](https://snazzymaps.com) - used to change the Google Map style.
 
 [Back to Contents](#contents)
 
