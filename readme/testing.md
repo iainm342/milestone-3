@@ -44,7 +44,8 @@ All HTML and CSS was passed through [W3C Validator](https://validator.w3.org/), 
 
 HTML Errors:
 
-
+- <alt> missing from most images. Resolved and passed.
+- recipes.html had an extra " on line 45 which caused multiple errors. Resolved and passed.
 
 CSS Errors:
 
