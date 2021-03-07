@@ -144,7 +144,66 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 ### ELEMENTS SEEN ON ALL PAGES ###
 
-### ELEMENTS SEEN ON ... PAGE ###
+- Grid system used to structure pages and make them responsive for various viewports.
+- Materialize NavBar with mobile sidebar to allow easy navigation throughout the web app. Able to reach all pages of the app from the NavBar.
+- Materialize Footer used with social links and email "contact us" link.
+- Favicon for the title tab in the browser.
+- Hover used on all buttons and web/email addresses.
+- Other than the landing page, the logged in user name is displayed in the top right of the viewport.
+- Section at top of page for all flashed messages after completion of an action.
+
+### ELEMENTS SEEN ON LANDING PAGE ###
+
+- Background image taking up the full viewport.
+- Container with site name in one column and hoverable links to recipe and the bookshop.
+- "Add your own..." link redirects the **user** to the login page as this needed be restricted to registered **users**.
+
+### ELEMENTS SEEN ON LOG IN PAGE ###
+
+- Background image taking up the full viewport.
+- Container with form allowing input from the **user**.
+- Form asks for username and password with "login" submit button which queries the User collection in the DB.
+- Successful input takes **user** to their profile page.
+- Unsuccessful input displays flash message and resets form.
+
+### ELEMENTS SEEN ON REGISTER PAGE ###
+
+- Background image taking up the full viewport.
+- Container with form allowing input from the **user**.
+- Form asks the **user** to supply the following: username, first name, last name, email address and password.
+- "Register" submit button sends info to DB and takes the **user** to the Categories page.
+
+### ELEMENTS SEEN ON PROFILE PAGE ###
+
+- Background image taking up the full viewport.
+- Container with card showing **user** information.
+- Information pulled from the DB and password is "popped" and replaced with "********" to highlight that information is masked.
+- Delete and Edit buttons are shown only to the logged in **user**.
+
+### ELEMENTS SEEN ON CATEGORIES PAGE ###
+
+- Materialize cards for the 6 categories used within the site.
+- Images and FAB onclick takes the **user** to the appropriate page which renders all the recipes that fall into that category.
+
+### ELEMENTS SEEN ON "ALL" RECIPES PAGE ###
+
+- Search bar linked to the MongoDB index file allowing the **user** to search the database using key words within the recipe collection.
+- Materialize cards to display all recipes in the database.
+- Button on each card to display full recipe information to the **user**.
+- Image onlcick shows the user some basic information about the recipe and, again, provides a button which will display full recipe information to the **user**.
+- If recipe was added by the logged in **user** a delete button is also displayed.
+
+### ELEMENTS SEEN ON INDIVIDUAL CATEGORY PAGES ###
+
+- Materialize cards to display all recipes in the database.
+- Button on each card to display full recipe information to the **user**.
+- Image onlcick shows the user some basic information about the recipe and, again, provides a button which will display full recipe information to the **user**.
+- If recipe was added by the logged in **user** a delete button is also displayed.
+
+### ELEMENTS SEEN ON INDIVIDUAL CATEGORY PAGES ###
+
+- 
+
 
 
 [Back to Contents](#contents)
