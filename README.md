@@ -36,6 +36,11 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
 
 ### <ins>PROJECT GOALS</ins> ### 
 
+The main aim of this website was to provide a free-to-use recipe resource for the **user** which allows them to add (Create) recipes to the website, search (Read) for recipes on the website, amend (Update) their own recipes and delete (Delete) their own recipes. Their is also the bookshop page which will take the **user** to the appropriate Amazon webpage allowing them to purchase any cookbook that they are interested in.
+
+- To allow the growth of a recipe database for the **user** and by the **user**.
+- To allow the **site owner** to encourage the **user** to purchase the cookbooks highlighted on the Bookshop page by directing them to the appropriate Amazon site.
+
 [Back to Contents](#contents)
 
 ### <ins>USER STORIES</ins> ###
@@ -51,8 +56,8 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
 - As a **user**, I want the site navigation to be intuitive and easy to use.
 - As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
 - As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
-- As a **site owner**, I want to be able to promote cookbook sales for **admin** added recipes.
-- As a **site owner**, I want to be able to contact **users** using their profile information with offers and on their birthdays.
+- As a **site owner**, I want to be able to promote cookbook sales.
+- As a **site owner**, I want to be able to contact **users** using their profile information with offers.
 
 [Back to Contents](#contents)
 
@@ -82,7 +87,8 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
 - [Font-Awesome](https://fontawesome.com/icons?d=gallery) - icons were taken from this site for the footer and social buttons.
 - [Bootstrap](https://getbootstrap.com/) - I relied on Bootstrap for the responsive grid design and NavBar.
 - [Google fonts](https://fonts.google.com/) - as previously stated, the fonts used were taken from here.
-- [Popper](https://popper.js.org/)
+*-789+56123
+0.- [Popper](https://900-[popper.js.org/)
 - [Popper JS](https://popper.js.org/)
 - [Sweet Alert](https://sweetalert.js.org/) - used for the email modal confirming registration success or failure.
 
