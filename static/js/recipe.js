@@ -23,13 +23,13 @@ $(document).ready(function() {
 	var meth = 1; 
 	$(add_meth_button).click(function(e){ 
 		e.preventDefault();
-		if(ing < max_meth) {
-			ing++; 
+		if(meth < max_meth) {
+			meth++; 
 			$(wrapper_meth).append('<div class="col s12" id="wrap"><textarea id="recipe_method" type="text" name="recipe_method"/></textarea><label for="recipe_method"></label><a href="#" class="remove_field"><i class="far fa-trash-alt"></i></a></div>'); 
 		}
 	});
 	
 	$(wrapper_meth).on("click",".remove_field", function(e){
-		e.preventDefault(); $(this).parent('div').remove(); ing--;
+		e.preventDefault(); $(this).parent('div').remove(); meth--;
 	});
 });
