@@ -83,6 +83,16 @@ I chose the Roboto Mono font family for the site as I liked the fact it looked l
 As previously mentioned, #abc141 (Celery) was initially chosen as the main colour for the site but was changed to #2c642e (Faux-Mughal green) for better readability. The nav bar started off as coloured with white text but this was changed to white with coloured text to give a more modern look. The footer was always full colour but changed from the original Celery to Faux-Murghal with white text.
 ### <ins>WIREFRAMES</ins> ###
 
+Initial wireframes for each page can be found by clicking on the links below:
+
+[Landing Page]()
+[Categories]()
+[Recipes]()
+[Bookshop]()
+[Log In]()
+[Register]()
+[Add Recipe]()
+[Add Cookbook]()
 
 [Back to Contents](#contents)
 
