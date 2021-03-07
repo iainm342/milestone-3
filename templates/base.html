@@ -15,9 +15,9 @@
     <!--Link to style.css using jinja template-->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <!--EmailJS script-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
     </script>
-    <script type="text/javascript">
+    <script>
         (function () {
             emailjs.init("user_DVkNxxKRBYWrwb59uZtBs");
         })();
@@ -109,17 +109,17 @@
 
     <!--flash message section for confirmation messages-->
     <section>
-
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        {% for message in messages %}
-        <div class="row flashes">
-            <h5 class="m6 center-align">{{ message }}</h5>
-        </div>
-        {% endfor %}
-        {% endif %}
-        {% endwith %}
-
+        <h5>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            {% for message in messages %}
+            <div class="row flashes">
+                <h5 class="m6 center-align">{{ message }}</h5>
+            </div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+        </h5>
     </section>
 
     <!--main content section for all templatge pages-->
