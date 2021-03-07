@@ -45,15 +45,30 @@ All HTML and CSS was passed through [W3C Validator](https://validator.w3.org/), 
 HTML Errors:
 
 - Persistent warning on all pages due to the section on every page for flash messages
+
 ![HTML Error](https://github.com/iainm342/milestone-3/blob/master/readme/images/section-warning.png)
+
 - alt missing from most images. Resolved and passed.
 - recipes.html had an extra " on line 45 which caused multiple errors. Resolved and passed.
 
 CSS Errors:
 
+- CSS passed with no errors.
+
+![CSS Validation](https://github.com/iainm342/milestone-3/blob/master/readme/images/CSS-validated.png)
+
 JShint Errors:
 
+- all JS and jQuery has been passed through the Validator, however, various warnings were presented with regards to the $ in jQuery. Searching has shown that some extra code should be added to the .jshintrc to remove these warnings - this is outwith my current knowledge and skill base and will need some further research on my part.
+
 [Back to Contents](#contents)
+
+PEP8 Errors:
+
+- Python passed with no errors.
+
+![Python Validation](https://github.com/iainm342/milestone-3/blob/master/readme/images/python-validate.png)
+
 
 ### <ins>ACCESIBILITY VALIDATION</ins>
 
