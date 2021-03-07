@@ -17,11 +17,11 @@
             <div class="card ">
                 <!--Materialize card structure - clickable image to activate reveal-->
                 <div class="card-image waves-effect waves-block waves-light">
-                    <img class="activator" src="{{ recipe.recipe_image }}">
+                    <img class="activator" src="{{ recipe.recipe_image }}" alt="image of {{ recipe.recipe_image }}">
                 </div>
                 <!--Materialize card structure - text below image-->
                 <div class="card-content center-align">
-                    <p class="card-title activator" id="rec-style">{{ recipe.recipe_name }}<i
+                    <p class="card-title activator rec-style">{{ recipe.recipe_name }}<i
                             class="material-icons right"></i></p>
                     <p>added by {{ recipe.recipe_added}}</p>
                     <hr>

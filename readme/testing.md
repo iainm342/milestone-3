@@ -44,6 +44,8 @@ All HTML and CSS was passed through [W3C Validator](https://validator.w3.org/), 
 
 HTML Errors:
 
+
+
 CSS Errors:
 
 JShint Errors:
