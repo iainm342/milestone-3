@@ -25,7 +25,7 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
 - [Testing](#testing)
 - [Deployment](#deployment)
   - [Hosting](#hosting)
-  - [Cloning](#cloning)
+  - [Local Hosting](#local-hosting)
 - [Credits](#credits)
   - [Images](#images)
   - [Image editing](#image-editing)
@@ -248,9 +248,29 @@ Deployment of the site was achieved by following the steps below (outlined in th
 - Clicked "Deploy Branch" - crossed my fingers and waited!
 - Once site was deployed, clicked "View" to launch the app and be able to view it within the browser.
 
-### <ins>CLONING</ins>
+### <ins>LOCAL HOSTING</ins>
 
+If you wish to clone a copy of my project, feel free. You will need to:
 
+- Navigate to my GitHub [repository](https://github.com/iainm342/milestone-3).
+- Click the "Code" button next to the Green Gitpod button.
+- Either, download the zip file or clone the repo using  gh repo clone iainm342/milestone-3 in the terminal.
+- Install the modules listed in the requirements.txt file using "python -m pip -r requirements.txt" in the terminal.
+- You will need to create a new project in [MongoDB](https://www.mongodb.com/3) called "milestone-3-larder" and create a new database called "larder".
+- This database will have 4 collections: categories, cookbooks, recipes and users. 
+- Create an env.py file in your application folder and add the following:
+
+    import os
+
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "[YOUR SECRET KEY]")
+    os.environ.setdefault("MONGO_URI", "mongodb+srv://[YOUR ROOT]@cluster0.fw1gk.mongodb.net/milestone-3-larder?retryWrites=true&w=majority")
+    os.environ.setdefault("MONGO_DNNAME", "milestone-3-larder")
+  
+  You will need to update the above with  your own SECRET_KEY and YOUR ROOT info.
+
+- The app can now be run locally by typing python app.py in the terminal and will be available in your browser using the address http://localhost:5000.
 
 [Back to Contents](#contents)
 
