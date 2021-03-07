@@ -63,6 +63,16 @@ The main aim of this website was to provide a free-to-use recipe resource for th
 
 ### <ins>DESIGN PROCESS</ins> ###
 
+1. As with my previous projects, this site is based on my hospitality background and love of cooking. It was also a suggested option by the Code Institute team as a viable project for this stage in the course. The site needed to be easy to navigate, provide the information required by the **users** and be flexible enough to grow as recipes etc were added by the (hopefully!) growing community.
+
+2. The colour scheme chosen was origingally based on a colour from the image used as the background image on the landing page - #abc141 (Celery) which is an almost lime green colour. Once I started building the site, and ran it through Lighthouse it was flagged as a bad colour to use for accessibility reasons. I then changed the primary colour used across the site to #2c642e (Faux-Mughal green) which improved the readability of the site.
+
+3. I used Figma(https://figma.com/) to create my wireframes and used it to organise the flow of the site and how the different pages would respond to the different screen sizes.
+
+4. As with my previous projects, the design changed as I was building the site. I am swiftly realising that design is not my strong point and that the way I build sites is very much based on a "trial and error" approach and that it makes things more complicated in the long run.
+
+5. I referreed to my User Stories and initial Wireframes throughout the process and all changes made were to improve the final "look and feel" of the site and to remove the initial design choices that were deemed as inappropriate.
+
 [Back to Contents](#contents)
 
 ### <ins>FONTS</ins> ###
