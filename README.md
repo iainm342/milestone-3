@@ -2,11 +2,11 @@
 
 # **larder** #
 
-![site display on different screens]
+![site display on different screens](static/images/readme/responsive.png)
 
 This is the third of four Milestone Projects required for the Full Stack Web Development course provided by Code Institute. The main goal for this project was to produce a "full-stack site that allows the user to manage a common data set about a particular domain" using HTML, CSS, JavaScript, Python+Flask, MongoDB and any other relevant libraries and external API's.
 
-A live version of the site can be found [here].
+A live version of the site can be found [here](https://milestone-3-larder.herokuapp.com/).
 
 ## **CONTENTS** ##
 
