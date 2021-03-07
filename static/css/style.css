@@ -196,6 +196,10 @@ a.social:hover {
     color: white;
   }
 
+  #add-label {
+      color: #2c642e;
+  }
+
   input[type=text]:not(.browser-default) {
       color: #2c642e;
   }
