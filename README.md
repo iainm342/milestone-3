@@ -77,8 +77,10 @@ The main aim of this website was to provide a free-to-use recipe resource for th
 
 ### <ins>FONTS</ins> ###
 
+I chose the Roboto Mono font family for the site as I liked the fact it looked like a typewriter had been used. This added a "bookiness" to the overall feel of the site and seeing as it is based on recipes from cookbooks, this felt appropriate. The font family was chosen from [Google Fonts](https://fonts.google.com) and was then imported in to the style.css file. 
 ### <ins>COLOURS</ins> ###
 
+As previously mentioned, #abc141 (Celery) was initially chosen as the main colour for the site but was changed to #2c642e (Faux-Mughal green) for better readability. The nav bar started off as coloured with white text but this was changed to white with coloured text to give a more modern look. The footer was always full colour but changed from the original Celery to Faux-Murghal with white text.
 ### <ins>WIREFRAMES</ins> ###
 
 
