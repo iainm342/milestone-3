@@ -113,7 +113,7 @@ p.recipe-p {
     color: #2c642e;
 }
 
-#icon {
+.icon {
     padding-top: 25px;
 }
 
@@ -196,7 +196,7 @@ a.social:hover {
     color: white;
   }
 
-  #add-label {
+  .add-label {
       color: #2c642e;
   }
 
