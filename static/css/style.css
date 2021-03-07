@@ -235,4 +235,27 @@ a.social:hover {
     color: white;
   }
 
+  /*----------------------------------------------------Back to Top Button*/
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border-radius: 15px;
+    outline: #2c642e;
+    background-color: #2c642e;
+    border-color: white;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    padding: 15px;
+  }
+  
+  #myBtn:hover {
+    background-color: #2c642e;
+    color: #fff;
+    border-color: #fff;
+  }
   
