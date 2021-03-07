@@ -81,12 +81,15 @@ The site was tested on the [WAVE](https://wave.webaim.org/) site.
 The site was tested on the following browsers that I have access to:
 
 - Google Chrome
+
 ![Chrome]((https://github.com/iainm342/milestone-3/blob/master/readme/images/chrome.png)
 
 - Mozilla Firefox
+
 ![Firefox]((https://github.com/iainm342/milestone-3/blob/master/readme/images/firefox.png)
 
 - Microsoft Edge
+
 ![Edge]((https://github.com/iainm342/milestone-3/blob/master/readme/images/edge.png)
 
 [Back to Contents](#contents)
