@@ -12,8 +12,8 @@
         <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
             <!--add category name fromn dropdown-->
             <div class="row">
-                <div class="col s1" id="icon">
-                    <i class="fas fa-question-circle icon-size fa-1x"></i>
+                <div class="col s1">
+                    <i class="fas fa-question-circle icon-size fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <select id="category_name" name="category_name" class="validate" required>
@@ -23,84 +23,84 @@
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label id="add-label" for="category_name"></label>
+                    <label class="add-label" for="category_name"></label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe name-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-bread-slice fa-1x" id="icon"></i>
+                    <i class="fas fa-bread-slice fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_name" name="recipe_name" type="text" class="validate">
-                    <label id="add-label" for="recipe_name">recipe name</label>
+                    <label class="add-label" for="recipe_name">recipe name</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe chef-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user fa-1x" id="icon"></i>
+                    <i class="fas fa-user fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_chef" name="recipe_chef" type="text" class="validate">
-                    <label id="add-label" for="recipe_chef">recipe chef</label>
+                    <label class="add-label" for="recipe_chef">recipe chef</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe cookbook name-->
             <div class="row">
-                <div class="col s1" id="icon">
-                    <i class="fas fa-book fa-1x"></i>
+                <div class="col s1">
+                    <i class="fas fa-book fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="cookbook_name" name="cookbook_name" type="text" class="validate">
-                    <label id="add-label" for="cookbook_name">recipe cookbook</label>
+                    <label class="add-label" for="cookbook_name">recipe cookbook</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe image URL-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-camera fa-1x" id="icon"></i>
+                    <i class="fas fa-camera fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_image" name="recipe_image" type="text" class="validate">
-                    <label id="add-label" for="recipe_image">recipe image - add URL here</label>
+                    <label class="add-label" for="recipe_image">recipe image - add URL here</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe difficulty-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-cog fa-1x" id="icon"></i>
+                    <i class="fas fa-user-cog fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_difficulty" name="recipe_difficulty" type="text" class="validate">
-                    <label id="add-label" for="recipe_difficulty">recipe difficulty</label>
+                    <label class="add-label" for="recipe_difficulty">recipe difficulty</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe time-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-clock fa-1x" id="icon"></i>
+                    <i class="fas fa-clock fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input id="recipe_time" name="recipe_time" type="text" class="validate">
-                    <label id="add-label" for="recipe_time">recipe time</label>
+                    <label class="add-label" for="recipe_time">recipe time</label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe ingredients-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-list fa-1x" id="icon"></i>
+                    <i class="fas fa-list fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10 input_ing_wrap">
                     <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate">
-                    <label id="add-label" for="recipe_ingredients">ingredients</label>
+                    <label class="add-label" for="recipe_ingredients">ingredients</label>
                 </div>
             </div>
             <!--add extra recipe ingredients button-->
@@ -112,11 +112,11 @@
             <!--add recipe method textarea-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-list fa-1x" id="icon"></i>
+                    <i class="fas fa-list fa-1x icon"></i>
                 </div>
                 <div class="input-field col s10 input_meth_wrap">
                     <textarea id="recipe_method" type="text" name="recipe_method"></textarea>
-                    <label id="add-label" for="recipe_method">method</label>
+                    <label class="add-label" for="recipe_method">method</label>
                 </div>
             </div>
             <!--add extra recipe method textarea-->
@@ -131,9 +131,8 @@
                     <button class="btn" type="submit">add recipe</button>
                 </div>
             </div>
+        </form>
     </div>
-    </form>
-</div>
 </div>
 
 {% endblock %}
