@@ -260,17 +260,17 @@ If you wish to clone a copy of my project, feel free. You will need to:
 - This database will have 4 collections: categories, cookbooks, recipes and users. 
 - Create an env.py file in your application folder and add the following:
 
-    import os
+    -import os
 
-    os.environ.setdefault("IP", "0.0.0.0")
-    os.environ.setdefault("PORT", "5000")
-    os.environ.setdefault("SECRET_KEY", "[YOUR SECRET KEY]")
-    os.environ.setdefault("MONGO_URI", "mongodb+srv://[YOUR ROOT]@cluster0.fw1gk.mongodb.net/milestone-3-larder?retryWrites=true&w=majority")
-    os.environ.setdefault("MONGO_DNNAME", "milestone-3-larder")
+    -os.environ.setdefault("IP", "0.0.0.0")
+    -os.environ.setdefault("PORT", "5000")
+    -os.environ.setdefault("SECRET_KEY", "[YOUR SECRET KEY]")
+    -os.environ.setdefault("MONGO_URI", "mongodb+srv://[YOUR ROOT]@cluster0.fw1gk.mongodb.net/milestone-3-larder?retryWrites=true&w=majority")
+    -os.environ.setdefault("MONGO_DNNAME", "milestone-3-larder")
   
   You will need to update the above with  your own SECRET_KEY and YOUR ROOT info.
 
-- The app can now be run locally by typing python app.py in the terminal and will be available in your browser using the address http://localhost:5000.
+- The app can now be run locally by typing python app.py in the terminal and will be available in your browser using the address "http://localhost:5000".
 
 [Back to Contents](#contents)
 
