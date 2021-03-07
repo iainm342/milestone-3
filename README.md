@@ -222,7 +222,35 @@ Testing information can be found [here](readme/testing.md).
 
 ### <ins>HOSTING</ins>
 
+The site is hosted on [Heroku](https://milestone-3-larder.herokuapp.com/).
+
+Deployment of the site was achieved by following the steps below (outlined in the CI Mini Project - Task Manager):
+
+- Created a new repository within GitHub.
+- Opened repository in my IDE of choice - Visual Studio Code - by cloning the repo from GitHub.
+- Created a requirements.txt file by typing "pip3 freeze --local > requirements.txt" in the terminal which tells Heroku what dependencies are required.
+- Created a Procfile for Heroku by typing "echo web: python app.py > Procfile" in the terminal.
+- Checked the Procfile to make sure there is no extra line after the first line as this can confuse Heroku.
+- Push the requirements.txt and Procfile to GitHub.
+- Logged in to Heroku and selected "Create New App".
+- Selected the input field "App Name" and gave app a unique name using dashes instead of spaces.
+- Selected the region closest to my location and which was free to use!
+- Clicked "Create App".
+- Selected "Deploy" from the Heroku App menu.
+- Selected "GitHub" from the "Deployment Method" section of the page.
+- Ensured my GitHub profile name was showing in the "Connect to GitHub" section and inserted my GitHub repo name in the input field and clicked "Search".
+- Once Heroku had found my repo, I clicked "Connect" to complete the link.
+- Selected "Settings" from the Heroku App menu.
+- Selected "Reveal Config Vars" and inputed the relevant key/value information from the my env.py (IP, PORT, MONGO_URI, MONGO_DBNAME, SECRET_KEY) file making sure that there were not quotation marks used.
+- Selected "Deploy" from the Heroku App menu.
+- Scrolled down the page and selected "Enable Automatic Deployment".
+- Selected Master Branch under "Branch Selected".
+- Clicked "Deploy Branch" - crossed my fingers and waited!
+- Once site was deployed, clicked "View" to launch the app and be able to view it within the browser.
+
 ### <ins>CLONING</ins>
+
+
 
 [Back to Contents](#contents)
 
