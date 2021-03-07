@@ -102,8 +102,27 @@ The site was tested on the following browsers that I have access to:
 
 I submitted the project for Peer Review on Slack. Due to the volume of projects being submitted at the same time, I received no feedback from the Slack Community.
 
+I asked my fellow May 2020'ers to have a look and the feedback was generally positive along with some feedback which helped:
+
+- "images not correct sizes throughout". This is now fixed so that the cards stay in position and it doesn't look "wonky".
+- "edit profile button doesn't work but delete does". This was down to me "fixing" one thing and inadvertently "breaking" another. This is now resolved as I had removed the "user=user" from the "return render_template("edit_profile", user=user) line of code.
+
 [Back to Contents](#contents)
 
 ### <ins>USER TESTING</ins> ###
+
+- As a **user**, I want to be able to register as a new user on the site.
+- As a **user**, I want to be able to log on and off the site after I have registered.
+- As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
+- As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
+- As a **user**, I want to be able to update any of the recipes that I have added to the site.
+- As a **user**, I want to be able to delete any of the recipes that I have added to the site.
+- As a **user**, I want to be able to search the site for recipes based key words.
+- As a **user**, I want to be able to favourite/like any recipe in the site for easy future reference.
+- As a **user**, I want the site navigation to be intuitive and easy to use.
+- As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
+- As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
+- As a **site owner**, I want to be able to promote cookbook sales.
+- As a **site owner**, I want to be able to contact **users** using their profile information with offers.
 
 [Back to Contents](#contents)
