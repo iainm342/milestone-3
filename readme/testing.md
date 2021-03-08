@@ -142,12 +142,12 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![Add Before](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-before.png)
 
--  On tabbing/moving through the form, the placeholder text now shows and turns red if not completed.
+-  On tabbing/moving through the form, the placeholder text now shows and turns red if not completed. **This requirement was deemed as being completed.**
 
 ![Add After](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-after.png)
 
 - As a **user**, I want to be able to update any of the recipes that I have added to the site.
-    - The **user** can edit their own recipes only. Larder-admin can edit any recipe that has been added to the site. The **user** must have logged in and will only see the "Edit" button on any of the recipe cards or show_recipe pages as a result. 
+    - The **user** can edit their own recipes only. Larderadmin can edit any recipe that has been added to the site. The **user** must have logged in and will only see the "Edit" button on any of the recipe cards or show_recipe pages as a result.
 
 ![Edit Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/edit-recipe.png)
 
@@ -155,12 +155,15 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![After Edit Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/no-added-by.png)
 
-- This was resolved by adding in an extra line on the form to contain that information, and retrieving the info from the DB in app.py, so that it would update correctly.
+- This was resolved by adding in an extra line on the form to contain that information, and retrieving the info from the DB in app.py, so that it would update correctly. **This requirement was deemed as being completed.**
 
 ![After Edit Recipe 2](https://github.com/iainm342/milestone-3/blob/main/readme/images/added-by.png)
 
+- As a **user**, I want to be able to delete any of the recipes that I have added to the site.
+    - The **user** can only delete their own recipes and must be logged in to achieve this. Larderadmin can delete any recipe that has been added to the site. The **user**, on showing the card summary or the full recipe, can click the "Delete" button and the recipe will be removed from the DB. A flash message is displayed confirming deletion and the **user** is redirected to the categories.html page.
 
-As a **user**, I want to be able to delete any of the recipes that I have added to the site.
+![Delete Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/delete-recipe.png)
+
 As a **user**, I want to be able to search the site for recipes based key words.
 As a **user**, I want the site navigation to be intuitive and easy to use.
 As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
