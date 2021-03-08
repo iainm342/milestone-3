@@ -6,42 +6,40 @@
     <div class="row">
         <!--col with name and-->
         <div class="col s12 xl6">
-
-            <h3 class="center-align">
-                <h3 class="center-align"> {{ recipe.recipe_name }} </h3>
-                <hr>
-                <div class="col s4">
-                    <span class="left">Category: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.category_name }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Chef: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.recipe_chef }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Cookbook: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.cookbook_name }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Difficulty: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.recipe_difficulty }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Time: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ recipe.recipe_time }}</span><br>
-                </div>
-                <!--show which user is logged in to the site-->
-                <!-- <p class="left-align">logged in: {{session.user}}</p> -->
+            <h4> {{ recipe.recipe_name }} </h4>
+            <hr>
+            <div class="col s4">
+                <span class="left">Category: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.category_name }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Chef: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.recipe_chef }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Cookbook: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.cookbook_name }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Difficulty: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.recipe_difficulty }}</span><br>
+            </div>
+            <div class="col s4">
+                <span class="left">Time: </span>
+            </div>
+            <div class="col s8">
+                <span class="right"> {{ recipe.recipe_time }}</span><br>
+            </div>
+            <!--show which user is logged in to the site-->
+            <!-- <p class="left-align">logged in: {{session.user}}</p> -->
         </div>
         <!--col with image and recipe info-->
         <div class="col s12 xl6 center-align">
@@ -61,7 +59,7 @@
         </li>
         {% endfor %}
     </div>
-    <div class="col s12 xl6">
+    <div class="col s12 xl6 method">
         <h4>Method</h4>
         <hr>
         <!--jinja for loop to pull each stop of the method from DB-->

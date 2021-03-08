@@ -99,9 +99,25 @@ p.recipe-p {
 }
 
 .show-img {
-    height: 275px;
-    width: 275px;
-    margin-top: 10px;
+    height: 350px;
+    width: 350px;
+    margin-top: 50px;
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+    .show-img {
+        height: 275px;
+        width: 275px;
+        margin-top: 20px;
+    }
+
+    h4 {
+        text-align: center;
+    }
+}
+
+.method {
+    padding-bottom: 15px;
 }
 
 .card-image {
