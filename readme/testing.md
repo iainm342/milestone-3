@@ -119,11 +119,15 @@ I asked my fellow May 2020'ers to have a look and the feedback was generally pos
 I asked various friends and family to test the site as **users** and not as coders to gain a different perspective. This happened towards the end of the project to ensure that the User Stories had been met. THe following feedback was given from the group:
 
 - As a **user**, I want to be able to register as a new user on the site.
-    - The **user** selects the "Register" button from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation!
+    - The **user** selects the "Register" option from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation! **This requirement was deemed as being completed.**
 
-[Register]![Image Size](https://github.com/iainm342/milestone-3/blob/main/readme/images/register.png)
+![Register](https://github.com/iainm342/milestone-3/blob/main/readme/images/register.png)
 
-As a **user**, I want to be able to log on and off the site after I have registered.
+- As a **user**, I want to be able to log on and off the site after I have registered.
+    - The **user** can log on to the website by selecting the "Log In" option from the NavBar. They are taken to a small form requiring input of the **user**'s username and password. It was pointed out that I had forgotten to add Form Validation to this page and, although, the **user** is uanable to log in, and flash message is provided, the form doesn't behave the same way as the registration form. This has now been amended. **This requirement was deemed as being completed.**
+
+![Log In](https://github.com/iainm342/milestone-3/blob/main/readme/images/login.png)
+
 As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
 As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
 As a **user**, I want to be able to update any of the recipes that I have added to the site.
