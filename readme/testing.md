@@ -128,13 +128,15 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![Log In](https://github.com/iainm342/milestone-3/blob/main/readme/images/login.png)
     
-    - The **user** can log off the website by selecting the "Log Off" option from the NavBar. They are returned to landing.html and a flash message is displayed confirming they have been logged out.
+- The **user** can log off the website by selecting the "Log Off" option from the NavBar. They are returned to landing.html and a flash message is displayed confirming they have been logged out.
 
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/logoff.png)
 
+- As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
+    - The **user** can view all the recipes in the database without being logged in. This is achieved by either selecting "Recipes from your favourite cooks and chefs" from the middle part of landing.html or selecting "Recipes" on the NavBar - this option shows a dropdown menu that allows the **user** to either choose "All Recipes", which in turn directs them to recipes.html, or select a category which will direct them to the appropriately filtered category page, ie desserts.html or sides.html. 
 
+![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/read.png)
 
-As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
 As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
 As a **user**, I want to be able to update any of the recipes that I have added to the site.
 As a **user**, I want to be able to delete any of the recipes that I have added to the site.
