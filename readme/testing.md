@@ -119,12 +119,12 @@ I asked my fellow May 2020'ers to have a look and the feedback was generally pos
 I asked various friends and family to test the site as **users** and not as coders to gain a different perspective. This happened towards the end of the project to ensure that the User Stories had been met. THe following feedback was given from the group:
 
 - As a **user**, I want to be able to register as a new user on the site.
-    - The **user** selects the "Register" option from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation! **This requirement was deemed as being completed.**
+    - The **user** selects the "Register" option from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation! **This requirement is deemed as being completed.**
 
 ![Register](https://github.com/iainm342/milestone-3/blob/main/readme/images/register.png)
 
 - As a **user**, I want to be able to log on and off the site after I have registered.
-    - The **user** can log on to the website by selecting the "Log In" option from the NavBar. They are taken to a small form requiring input of the **user**'s username and password. It was pointed out that I had forgotten to add Form Validation to this page and, although, the **user** is uanable to log in, and flash message is provided, the form doesn't behave the same way as the registration form. This has now been amended. **This requirement was deemed as being completed.**
+    - The **user** can log on to the website by selecting the "Log In" option from the NavBar. They are taken to a small form requiring input of the **user**'s username and password. It was pointed out that I had forgotten to add Form Validation to this page and, although, the **user** is uanable to log in, and flash message is provided, the form doesn't behave the same way as the registration form. This has now been amended. **This requirement is deemed as being completed.**
 
 ![Log In](https://github.com/iainm342/milestone-3/blob/main/readme/images/login.png)
     
@@ -133,7 +133,7 @@ I asked various friends and family to test the site as **users** and not as code
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/logoff.png)
 
 - As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
-    - The **user** can view all the recipes in the database without being logged in. This is achieved by either selecting "Recipes from your favourite cooks and chefs" from the middle part of landing.html or selecting "Recipes" on the NavBar - this option shows a dropdown menu that allows the **user** to either choose "All Recipes", which in turn directs them to recipes.html, or select a category which will direct them to the appropriately filtered category page, ie desserts.html or sides.html. **This requirement was deemed as being completed.**
+    - The **user** can view all the recipes in the database without being logged in. This is achieved by either selecting "Recipes from your favourite cooks and chefs" from the middle part of landing.html or selecting "Recipes" on the NavBar - this option shows a dropdown menu that allows the **user** to either choose "All Recipes", which in turn directs them to recipes.html, or select a category which will direct them to the appropriately filtered category page, ie desserts.html or sides.html. **This requirement is deemed as being completed.**
 
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/read.png)
 
@@ -142,7 +142,7 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![Add Before](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-before.png)
 
--  On tabbing/moving through the form, the placeholder text now shows and turns red if not completed. **This requirement was deemed as being completed.**
+-  On tabbing/moving through the form, the placeholder text now shows and turns red if not completed. **This requirement is deemed as being completed.**
 
 ![Add After](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-after.png)
 
@@ -155,16 +155,21 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![After Edit Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/no-added-by.png)
 
-- This was resolved by adding in an extra line on the form to contain that information, and retrieving the info from the DB in app.py, so that it would update correctly. **This requirement was deemed as being completed.**
+- This was resolved by adding in an extra line on the form to contain that information, and retrieving the info from the DB in app.py, so that it would update correctly. **This requirement is deemed as being completed.**
 
 ![After Edit Recipe 2](https://github.com/iainm342/milestone-3/blob/main/readme/images/added-by.png)
 
 - As a **user**, I want to be able to delete any of the recipes that I have added to the site.
-    - The **user** can only delete their own recipes and must be logged in to achieve this. Larderadmin can delete any recipe that has been added to the site. The **user**, on showing the card summary or the full recipe, can click the "Delete" button and the recipe will be removed from the DB. A flash message is displayed confirming deletion and the **user** is redirected to the categories.html page.
+    - The **user** can only delete their own recipes and must be logged in to achieve this. Larderadmin can delete any recipe that has been added to the site. The **user**, on showing the card summary or the full recipe, can click the "Delete" button and the recipe will be removed from the DB. A flash message is displayed confirming deletion and the **user** is redirected to the categories.html page. **This requirement is deemed as being completed.**
 
 ![Delete Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/delete-recipe.png)
 
-As a **user**, I want to be able to search the site for recipes based key words.
+- As a **user**, I want to be able to search the site for recipes using key words.
+    - The **user**, from the recipes.html and cookbook.html pages, can search the DB by entering keywords in to the search form. The index file in MongoDB has been created using the following dictionary keys: category_name, cookbook_name, recipe_chef, recipe_difficulty and recipe_ingredients. The user can reset the page by clicking the "Reset" button which redirects the **user** back to the recipes.html page. **This requirement is deemed as being completed.**
+
+![Search Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/search-recipe.png)
+
+
 As a **user**, I want the site navigation to be intuitive and easy to use.
 As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
 As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
