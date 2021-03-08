@@ -52,7 +52,6 @@ The main aim of this website was to provide a free-to-use recipe resource for th
 - As a **user**, I want to be able to update any of the recipes that I have added to the site.
 - As a **user**, I want to be able to delete any of the recipes that I have added to the site.
 - As a **user**, I want to be able to search the site for recipes based key words.
-- As a **user**, I want to be able to favourite/like any recipe in the site for easy future reference.
 - As a **user**, I want the site navigation to be intuitive and easy to use.
 - As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
 - As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.

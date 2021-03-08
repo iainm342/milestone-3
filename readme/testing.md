@@ -138,14 +138,17 @@ I asked various friends and family to test the site as **users** and not as code
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/read.png)
 
 - As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
-    - The **user** can add their own recipes to the database by selecting "Add your own favourite recipes!" from the middle part of landing.html or selecting "Add Recipe" from the NavBar once the **user** has logged in. My **Mentor** pointed out, during my mid-project call that selecting "Add your own favouite recipes!" took you straight to add_recipe.html without requiring to be logged in. This has now been rectified and the **user** is directed to the log in page if this option is selected. add_recipe.html presents the **user** with a Form with a dropdown category option and required fields that are needed before submission to the DB. JavaScript is used to add as many ingredient fields and method textareas as required. It was pointed out that it was unclear what each field was supposed to be for as the placeholder text wasn't showing. As the Materialize CSS was used to style the Form, and the text had been set to white, it obviously wasn't going to show up against a white background. 
+    - The **user** can add their own recipes to the database by selecting "Add your own favourite recipes!" from the middle part of landing.html or selecting "Add Recipe" from the NavBar once the **user** has logged in. My **Mentor** pointed out, during my mid-project call that selecting "Add your own favouite recipes!" took you straight to add_recipe.html without requiring to be logged in. This has now been rectified and the **user** is directed to the log in page if this option is selected. add_recipe.html presents the **user** with a Form with a dropdown category option and required fields that are needed before submission to the DB. JavaScript is used to add as many ingredient fields and method textareas as required. It was pointed out that it was unclear what each field was supposed to be for as the placeholder text wasn't showing. As the Materialize CSS was used to style the Form, and the text had been set to white, it obviously wasn't going to show up against a white background.
 
 ![Add Before](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-before.png)
+
+-  On tabbing/moving through the form, the placeholder text now shows and turns red if not completed.
+
+![Add After](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-after.png)
 
 As a **user**, I want to be able to update any of the recipes that I have added to the site.
 As a **user**, I want to be able to delete any of the recipes that I have added to the site.
 As a **user**, I want to be able to search the site for recipes based key words.
-As a **user**, I want to be able to favourite/like any recipe in the site for easy future reference.
 As a **user**, I want the site navigation to be intuitive and easy to use.
 As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
 As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
