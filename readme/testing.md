@@ -178,8 +178,10 @@ I asked various friends and family to test the site as **users** and not as code
 - As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
     - I feel that this has been achieved throughout the site. **Users** have said that the site is clean and fun to use. The "hamburger" icon used for the menu was mentioned as being a nice, humourous, touch! **This requirement is deemed as being completed.**
 
-As a **site owner**, I want to be able to promote cookbook sales.
-    - The **user** is able to see the cookbooks that have been added to the site by selecting "Bookshop" from the NavBar. The list is restricted to larderadmin only and any requests to add books can be made by the **user** by email. 
-As a **site owner**, I want to be able to contact **users** using their profile information with offers.
+- As a **site owner**, I want to be able to promote cookbook sales.
+    - The **user** is able to see the cookbooks that have been added to the site by selecting "Bookshop" from the NavBar. The list is restricted to larderadmin only and any requests to add books can be made by the **user** by email. The larderadmin is able to add/edit/delete cookbooks in similar manner to the CRUD functionality for recipes. **This is deemed as being partially completed**
+
+- As a **site owner**, I want to be able to contact **users** using their profile information with offers.
+    - The **user** has completed a profile page containing a contact email and this can be used to populate a mailing list for future site developments. **This is deemed as being partially completed**
 
 [Back to Contents](#contents)
