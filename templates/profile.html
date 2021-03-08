@@ -15,36 +15,46 @@
         </div>
         <div class="container">
             <!--Materialize card used for profile display-->
-            <div class="row card-panel">
-                <div class="col s4">
-                    <span class="left">Username: </span>
+            <div class="card-panel">
+                <div class="row">
+                    <div class="col s4">
+                        <span class="left">Username: </span>
+                    </div>
+                    <div class="col s8">
+                        <span class="right"> {{ user.username }}</span>
+                    </div>
                 </div>
-                <div class="col s8">
-                    <span class="right"> {{ user.username }}</span><br>
+                <div class="row">
+                    <div class="col s4">
+                        <span class="left">First name: </span>
+                    </div>
+                    <div class="col s8">
+                        <span class="right"> {{ user.user_first }}</span>
+                    </div>
                 </div>
-                <div class="col s4">
-                    <span class="left">First name: </span>
+                <div class="row">
+                    <div class="col s4">
+                        <span class="left">Last name: </span>
+                    </div>
+                    <div class="col s8">
+                        <span class="right"> {{ user.user_last }}</span>
+                    </div>
                 </div>
-                <div class="col s8">
-                    <span class="right"> {{ user.user_first }}</span><br>
+                <div class="row">
+                    <div class="col s4">
+                        <span class="left">Email: </span>
+                    </div>
+                    <div class="col s8">
+                        <span class="right"> {{ user.user_email }}</span>
+                    </div>
                 </div>
-                <div class="col s4">
-                    <span class="left">Last name: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ user.user_last }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Email: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> {{ user.user_email }}</span><br>
-                </div>
-                <div class="col s4">
-                    <span class="left">Password: </span>
-                </div>
-                <div class="col s8">
-                    <span class="right"> ******** </span><br>
+                <div class="row">
+                    <div class="col s4">
+                        <span class="left">Password: </span>
+                    </div>
+                    <div class="col s8">
+                        <span class="right"> ******** </span>
+                    </div>
                 </div>
                 <div class="row"></div>
                 <div class="row center-align">
