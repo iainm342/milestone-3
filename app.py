@@ -150,7 +150,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("registration successful!")
+        flash("welcome, {}!".format(request.form.get("username")) + " you are now logged in!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 

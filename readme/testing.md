@@ -169,15 +169,17 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![Search Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/search-recipe.png)
 
-
 - As a **user**, I want the site navigation to be intuitive and easy to use.
     - The **users** felt that the site was easy to navigate and that fulfilled the above requirement. **This requirement is deemed as being completed.**
 
 - As a **user**, I want the information to be displayed in a clear and organised manner to allow for quick decisions to be made.
     - The **users** felt that the contrast of white and #2c642e (Faux_mughal green) was clear and proves the contrast issue highlighted by Google Lightouse. **This requirement is deemed as being completed.**
 
-As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
+- As a **site owner**, I want the information on the site to be presented in a fun and attractive manner encouraging more **users** to register on the site.
+    - I feel that this has been achieved throughout the site. **Users** have said that the site is clean and fun to use. The "hamburger" icon used for the menu was mentioned as being a nice, humourous, touch! **This requirement is deemed as being completed.**
+
 As a **site owner**, I want to be able to promote cookbook sales.
+    - The **user** is able to see the cookbooks that have been added to the site by selecting "Bookshop" from the NavBar. The list is restricted to larderadmin only and any requests to add books can be made by the **user** by email. 
 As a **site owner**, I want to be able to contact **users** using their profile information with offers.
 
 [Back to Contents](#contents)
