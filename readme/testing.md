@@ -133,11 +133,15 @@ I asked various friends and family to test the site as **users** and not as code
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/logoff.png)
 
 - As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
-    - The **user** can view all the recipes in the database without being logged in. This is achieved by either selecting "Recipes from your favourite cooks and chefs" from the middle part of landing.html or selecting "Recipes" on the NavBar - this option shows a dropdown menu that allows the **user** to either choose "All Recipes", which in turn directs them to recipes.html, or select a category which will direct them to the appropriately filtered category page, ie desserts.html or sides.html. 
+    - The **user** can view all the recipes in the database without being logged in. This is achieved by either selecting "Recipes from your favourite cooks and chefs" from the middle part of landing.html or selecting "Recipes" on the NavBar - this option shows a dropdown menu that allows the **user** to either choose "All Recipes", which in turn directs them to recipes.html, or select a category which will direct them to the appropriately filtered category page, ie desserts.html or sides.html. **This requirement was deemed as being completed.**
 
 ![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/read.png)
 
-As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
+- As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
+    - The **user** can add their own recipes to the database by selecting "Add your own favourite recipes!" from the middle part of landing.html or selecting "Add Recipe" from the NavBar once the **user** has logged in. My **Mentor** pointed out, during my mid-project call that selecting "Add your own favouite recipes!" took you straight to add_recipe.html without requiring to be logged in. This has now been rectified and the **user** is directed to the log in page if this option is selected. add_recipe.html presents the **user** with a Form with a dropdown category option and required fields that are needed before submission to the DB. JavaScript is used to add as many ingredient fields and method textareas as required. It was pointed out that it was unclear what each field was supposed to be for as the placeholder text wasn't showing. As the Materialize CSS was used to style the Form, and the text had been set to white, it obviously wasn't going to show up against a white background. 
+
+![Add Before](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-before.png)
+
 As a **user**, I want to be able to update any of the recipes that I have added to the site.
 As a **user**, I want to be able to delete any of the recipes that I have added to the site.
 As a **user**, I want to be able to search the site for recipes based key words.
