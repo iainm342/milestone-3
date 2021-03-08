@@ -128,6 +128,16 @@ def show_drinks():
         .sort("recipe_name"))
 
 
+# route to show recipes added by user from profile.html
+@app.route("/my_recipes/<username>")
+def my_recipes(username):
+    user = mongo.db.users.find_one({"username": username.lower()})
+    return render_template(
+        "my_recipes.html",
+        recipes=mongo.db.recipes.find({"recipe_added": session["user"]})
+        .sort("recipe_name"))
+
+
 # route to check if user is already registered on site
 # if registered, user is told they are and redirected to login
 # if not registered, they are shown the registration form
