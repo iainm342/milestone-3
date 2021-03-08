@@ -100,7 +100,13 @@ The site was tested on the following browsers that I have access to:
 
 ### <ins>PEER TESTING</ins> ###
 
-I submitted the project for Peer Review on Slack. Due to the volume of projects being submitted at the same time, I received no feedback from the Slack Community.
+I submitted the project for Peer Review on Slack. The following comments were made:
+
+- @lucyjpjones - "If I am not logged in as a user 'logged in' is showing, I think it would be nicer if this wasn't visible unless a user is logged in"
+- @lucyjpjones - "Also when I was logged in and went on the profile page the repsonisveness for input fields was a bit off"
+- @Clint - "I really like the burger icon for the menu but it has no hover:state"
+- @Clint - "When I did register, I had no idea that I was logged in ... the only way I knew I was logged in was the logout tab in the menu"
+    - this has been resolved with the flash message now saying "welcome {user}! you are now logged in!"
 
 I asked my fellow May 2020'ers to have a look and the feedback was generally positive along with some feedback which helped:
 
