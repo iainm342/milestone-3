@@ -50,11 +50,12 @@ def all_books():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
-    
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
+# route for displaying the recipes from a specific cookbook on 
+# the cookbook.html page
 @app.route("/search_recipe", methods=["GET", "POST"])
 def search_recipe():
     query = request.form.get("query")
@@ -150,7 +151,7 @@ def register():
         mongo.db.users.insert_one(register)
 
         session["user"] = request.form.get("username").lower()
-        flash("welcome, {}!".format(
+        flash("Welcome, {}!".format(
             request.form.get("username")) + " you are now logged in!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
@@ -171,10 +172,10 @@ def login():
                 flash("Welcome, {}".format(request.form.get("username")))
                 return redirect(url_for("profile", username=session["user"]))
             else:
-                flash("incorrect username and/or password")
+                flash("Incorrect username and/or password")
                 return redirect(url_for("login"))
         else:
-            flash("incorrect username and/or password")
+            flash("Incorrect username and/or password")
             return redirect(url_for("login"))
     return render_template("login.html")
 
@@ -203,7 +204,7 @@ def edit_profile(username):
             "password": generate_password_hash(request.form.get("password"))
          }
         mongo.db.users.update({"username": username.lower()}, update)
-        flash("user info updated")
+        flash("User info updated")
         return redirect(url_for('profile', username=session['user']))
 
     if "user" in session:
@@ -216,7 +217,7 @@ def edit_profile(username):
 @app.route("/delete_profile/<username>")
 def delete_profile(username):
     mongo.db.users.remove({"username": username.lower()})
-    flash("user deleted")
+    flash("User deleted")
     session.pop("user")
 
     return redirect(url_for("landing"))
@@ -225,7 +226,7 @@ def delete_profile(username):
 # route to log user out of the site
 @app.route("/logout")
 def logout():
-    flash("you have been logged out")
+    flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("landing"))
 
@@ -251,7 +252,7 @@ def add_recipe():
         recipe_dict['recipe_added'] = session["user"]
 
         recipes.insert_one(recipe_dict)
-        flash("recipe added")
+        flash("Recipe added")
         return redirect(url_for("all_recipes"))
     categories = mongo.db.categories.find().sort("category_name, -1")
     return render_template("add_recipe.html", categories=categories)
@@ -270,7 +271,7 @@ def add_cookbook():
         cookbook_dict['cookbook_amazon'] = request.form.get("cookbook_amazon")
 
         cookbooks.insert_one(cookbook_dict)
-        flash("cookbook added")
+        flash("Cookbook added")
         return redirect(url_for("all_books"))
     return render_template("add_cookbook.html")
 
@@ -295,7 +296,7 @@ def edit_recipe(recipe_id):
             "recipe_added": request.form.get("recipe_added")
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("recipe updated")
+        flash("Recipe updated")
         return redirect(url_for("all_recipes"))
     return render_template("edit_recipe.html",
                            recipe=recipe, categories=categories)
@@ -315,7 +316,7 @@ def edit_cookbook(cookbook_id):
             "cookbook_desc": request.form.get("cookbook_desc")
         }
         mongo.db.cookbooks.update({"_id": ObjectId(cookbook_id)}, change)
-        flash("cookbook updated")
+        flash("Cookbook updated")
         return render_template("cookbooks.html", cookbook=cookbook)
     return render_template("edit_cookbook.html", cookbook=cookbook)
 
@@ -325,7 +326,7 @@ def edit_cookbook(cookbook_id):
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
-    flash("recipe deleted")
+    flash("Recipe deleted")
     return redirect(url_for("categories"))
 
 
@@ -334,7 +335,7 @@ def delete_recipe(recipe_id):
 @app.route("/delete_cookbook/<cookbook_id>")
 def delete_cookbook(cookbook_id):
     mongo.db.cookbooks.remove({"_id": ObjectId(cookbook_id)})
-    flash("cookbook deleted")
+    flash("Cookbook deleted")
     return redirect(url_for("all_books"))
 
 
