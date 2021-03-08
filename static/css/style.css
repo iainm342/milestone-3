@@ -17,6 +17,14 @@ nav .brand-logo {
     color: #2c642e;
 }
 
+.sidenav {
+    font-family: 'Roboto Mono', monospace;
+    color: #2c642e;
+}
+
+.sidenav li>a {
+    color: #2c642e;
+}
 
 .page-footer {
     background-color: #2c642e;
