@@ -146,7 +146,20 @@ I asked various friends and family to test the site as **users** and not as code
 
 ![Add After](https://github.com/iainm342/milestone-3/blob/main/readme/images/add-after.png)
 
-As a **user**, I want to be able to update any of the recipes that I have added to the site.
+- As a **user**, I want to be able to update any of the recipes that I have added to the site.
+    - The **user** can edit their own recipes only. Larder-admin can edit any recipe that has been added to the site. The **user** must have logged in and will only see the "Edit" button on any of the recipe cards or show_recipe pages as a result. 
+
+![Edit Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/edit-recipe.png)
+
+- Clicking the "Edit" button takes them to a form that contains the information held in the DB and will allow them to edit this information. Once any changes have been made, the **user** clicks the "Edit" button and the new information is submitted to the DB and the **user** is redirected to the recipes.html page with a flash message saying the recipe has been updated. Clicking the "Cancel" button takes the **user** to the recipes.html page. It was pointed out that once pressing the "Edit" button, the "added by" field on the recipe card was deleted as a result of the edit making it impossible to edit the recipe again. 
+
+![After Edit Recipe](https://github.com/iainm342/milestone-3/blob/main/readme/images/no-added-by.png)
+
+- This was resolved by adding in an extra line on the form to contain that information, and retrieving the info from the DB in app.py, so that it would update correctly.
+
+![After Edit Recipe 2](https://github.com/iainm342/milestone-3/blob/main/readme/images/added-by.png)
+
+
 As a **user**, I want to be able to delete any of the recipes that I have added to the site.
 As a **user**, I want to be able to search the site for recipes based key words.
 As a **user**, I want the site navigation to be intuitive and easy to use.
