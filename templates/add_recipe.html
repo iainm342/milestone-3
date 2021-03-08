@@ -13,9 +13,9 @@
             <!--add category name fromn dropdown-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-question-circle icon-size fa-1x icon"></i>
+                    <i class="fas fa-question-circle fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>recipe category</option>
                         <!--jinja loop to pull category names from DB-->
@@ -23,16 +23,16 @@
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
                     </select>
-                    <label class="add-label" for="category_name"></label>
+                    <label for="category_name"></label>
                 </div>
                 <div class="col s1"></div>
             </div>
             <!--add recipe name-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-bread-slice fa-1x icon"></i>
+                    <i class="fas fa-bread-slice fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="recipe_name" name="recipe_name" type="text" class="validate" required>
                     <label class="add-label" for="recipe_name">recipe name</label>
                 </div>
@@ -41,9 +41,9 @@
             <!--add recipe chef-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user fa-1x icon"></i>
+                    <i class="fas fa-user fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="recipe_chef" name="recipe_chef" type="text" class="validate" required>
                     <label for="recipe_chef">recipe chef</label>
                 </div>
@@ -52,9 +52,9 @@
             <!--add recipe cookbook name-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-book fa-1x icon"></i>
+                    <i class="fas fa-book fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="cookbook_name" name="cookbook_name" type="text" class="validate" required>
                     <label class="add-label" for="cookbook_name">recipe cookbook</label>
                 </div>
@@ -63,9 +63,9 @@
             <!--add recipe image URL-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-camera fa-1x icon"></i>
+                    <i class="fas fa-camera fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="recipe_image" name="recipe_image" type="text" class="validate" required>
                     <label class="add-label" for="recipe_image">recipe image - add URL here</label>
                 </div>
@@ -74,9 +74,9 @@
             <!--add recipe difficulty-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user-cog fa-1x icon"></i>
+                    <i class="fas fa-user-cog fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="recipe_difficulty" name="recipe_difficulty" type="text" class="validate" required>
                     <label class="add-label" for="recipe_difficulty">recipe difficulty</label>
                 </div>
@@ -85,9 +85,9 @@
             <!--add recipe time-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-clock fa-1x icon"></i>
+                    <i class="fas fa-clock fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10">
+                <div class="input-field col s11">
                     <input id="recipe_time" name="recipe_time" type="text" class="validate" required>
                     <label class="add-label" for="recipe_time">recipe time - in minutes</label>
                 </div>
@@ -96,9 +96,9 @@
             <!--add recipe ingredients-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-list fa-1x icon"></i>
+                    <i class="fas fa-list fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10 input_ing_wrap">
+                <div class="input-field col s11 input_ing_wrap">
                     <input id="recipe_ingredients" name="recipe_ingredients" type="text" class="validate" required>
                     <label class="add-label" for="recipe_ingredients">ingredients</label>
                 </div>
@@ -112,9 +112,9 @@
             <!--add recipe method textarea-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-list fa-1x icon"></i>
+                    <i class="fas fa-list fa-2x icon hide-on-small-only"></i>
                 </div>
-                <div class="input-field col s10 input_meth_wrap">
+                <div class="input-field col s11 input_meth_wrap">
                     <textarea id="recipe_method" name="recipe_method" required></textarea>
                     <label class="add-label" for="recipe_method">method</label>
                 </div>

@@ -58,11 +58,6 @@ nav .brand-logo {
     color: #2c642e;
 }
 
-/* .card-img {
-    height: 250px;
-    width: 200px;
-} */
-
 .cat-card {
     margin-top: 25px;
 }
@@ -130,7 +125,8 @@ p.recipe-p {
 }
 
 .icon {
-    padding-top: 25px;
+    padding-top: 30px;
+    padding-right: 20px;
 }
 
 .btn-login {
@@ -209,7 +205,7 @@ a.social:hover {
 
   /* label color */
   .input-field label {
-    color: white;
+    color: #5fb962;
   }
 
   input[type=text]:not(.browser-default) {
@@ -227,6 +223,8 @@ a.social:hover {
   .reglog .input-field input[type=text]:focus + label {
     color: white;
   }
+
+  /* label underline focus 
   /* label underline focus color */
   .input-field input[type=text]:focus {
     border-bottom: 1px solid white;
