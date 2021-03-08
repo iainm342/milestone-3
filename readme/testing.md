@@ -127,6 +127,12 @@ I asked various friends and family to test the site as **users** and not as code
     - The **user** can log on to the website by selecting the "Log In" option from the NavBar. They are taken to a small form requiring input of the **user**'s username and password. It was pointed out that I had forgotten to add Form Validation to this page and, although, the **user** is uanable to log in, and flash message is provided, the form doesn't behave the same way as the registration form. This has now been amended. **This requirement was deemed as being completed.**
 
 ![Log In](https://github.com/iainm342/milestone-3/blob/main/readme/images/login.png)
+    
+    - The **user** can log off the website by selecting the "Log Off" option from the NavBar. They are returned to landing.html and a flash message is displayed confirming they have been logged out.
+
+![Log Off](https://github.com/iainm342/milestone-3/blob/main/readme/images/logoff.png)
+
+
 
 As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
 As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
