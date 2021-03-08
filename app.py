@@ -50,15 +50,15 @@ def all_books():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
 @app.route("/search_recipe", methods=["GET", "POST"])
 def search_recipe():
-    query2 = request.form.get("query2")
-    # query3 = request.form.get("query3")
-    recipes = list(mongo.db.recipes.find({"$text": {"$search": query2}}))
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"recipe_chef": query}))
     return render_template("recipes.html", recipes=recipes)
 
 
