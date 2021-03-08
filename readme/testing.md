@@ -118,7 +118,7 @@ I asked my fellow May 2020'ers to have a look and the feedback was generally pos
 
 I asked various friends and family to test the site as **users** and not as coders to gain a different perspective. This happened towards the end of the project to ensure that the User Stories had been met. THe following feedback was given from the group:
 
-As a **user**, I want to be able to register as a new user on the site.
+- As a **user**, I want to be able to register as a new user on the site.
     - The **user** selects the "Register" button from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation!
 
 [Register]![Image Size](https://github.com/iainm342/milestone-3/blob/main/readme/images/register.png)
