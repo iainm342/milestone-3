@@ -105,14 +105,24 @@ I submitted the project for Peer Review on Slack. Due to the volume of projects 
 I asked my fellow May 2020'ers to have a look and the feedback was generally positive along with some feedback which helped:
 
 - "images not correct sizes throughout". This is now fixed so that the cards stay in position and it doesn't look "wonky".
+
+![Image Size](https://github.com/iainm342/milestone-3/blob/main/readme/images/image-size.png)
+
 - "edit profile button doesn't work but delete does". This was down to me "fixing" one thing and inadvertently "breaking" another. This is now resolved as I had removed the "user=user" from the "return render_template("edit_profile", user=user) line of code.
+
+![Edit Profile](https://github.com/iainm342/milestone-3/blob/main/readme/images/edit-profile.png)
 
 [Back to Contents](#contents)
 
 ### <ins>USER TESTING</ins> ###
 
+I asked various friends and family to test the site as **users** and not as coders to gain a different perspective. This happened towards the end of the project to ensure that the User Stories had been met. THe following feedback was given from the group:
+
 As a **user**, I want to be able to register as a new user on the site.
--
+    - The **user** selects the "Register" button from the NavBar and is taken to register.html. They are then able to complete the form that is displayed which has 5 fields that are required to be completed. Form validation is present with the **user** being unable to progress unless all fields are completed. Initially, on pressing the "Register" button, the **user** was taken to the categories.html page. This was seen as confusing as there was no confirmation that the registration process had been successful. I changed this so that the **user** is redirected to the profile.html page which shows a flash message that registration has been successful. I also added the EmailJS API to send a confirmation to the **user** email address - this appears to be intermittent and requires further investigation!
+
+[Register]![Image Size](https://github.com/iainm342/milestone-3/blob/main/readme/images/register.png)
+
 As a **user**, I want to be able to log on and off the site after I have registered.
 As a **user**, I want to be able to read all the recipes that have been added to the site by the **site owners** and other **users**.
 As a **user**, I want to be able to add my own recipes to the ste to help grow the recipes available and to be part of the "community".
