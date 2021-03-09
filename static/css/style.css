@@ -282,6 +282,14 @@ a.social:hover {
       width: 200px;
   }
 
-  .oh-no-btn {
-      margin-bottom: 20px;
-  }
+  /*----------------------------------------------------Media query to keep footer at bottom of page on iPad Pro*/
+
+  @media (min-width: 1024px) and (max-width: 1365px) {
+
+    .main-container {
+    min-height: 30vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 200px;
+}
