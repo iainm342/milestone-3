@@ -8,6 +8,27 @@
         <!--show which user is logged in to the site-->
         <p>logged in: {{session.user}}</p>
     </div>
+    <!--search bar-->
+    <div class="row card-panel">
+        <!--form to allow user to input search parameters-->
+        <form action="{{ url_for('search') }}" method="post" class="col s12">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12">
+                    <i class="fas fa-search prefix"></i>
+                    <input type="text" name="query" id="query" class="validate search">
+                    <label for="query" style="color: #2c642e">search</label>
+                </div>
+            </div>
+            <div class="row center-align">
+                <div class="col s12">
+                    <button type="submit" class="btn">
+                        <i class="fas fa-search left"></i>search
+                    </button>
+                    <a href="{{ url_for('all_recipes') }}" class="red btn">reset</a>
+                </div>
+            </div>
+        </form>
+    </div>
     {% if recipes.count()>0 %}
     <div class="row">
         <!--jinja for loop to pull individual recipes from DB-->
