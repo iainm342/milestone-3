@@ -33,6 +33,7 @@
         </form>
     </div>
 
+    {% if recipes.count()>0 %}
     <div class="row">
         <!--jinja for loop to retrieve all recipes from DB-->
         {% for recipe in recipes %}
@@ -87,6 +88,13 @@
         </div>
         {% endfor %}
     </div>
+    {% else %}
+    <div class="container center-align">
+        <h3>Oh No!</h3>
+        <img class="sad-face" src="static/images/sad-face.png" alt="sad face">
+        <h3>The larder is empty!</h2>
+    </div>
+    {% endif %}
 </div>
 
 {% endblock %}
