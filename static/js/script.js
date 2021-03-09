@@ -2,6 +2,7 @@ $(document).ready(function(){
     $(".dropdown-trigger").dropdown();
     $('.sidenav').sidenav({edge: "right"});
     $('select').formSelect();
+    $('.modal').modal();
 });
 
 // Sroll to top script

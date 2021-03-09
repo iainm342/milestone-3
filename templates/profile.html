@@ -61,9 +61,10 @@
                     <!--if user is logged in they are able to edit or delete their profile from the DB-->
                     {% if session.user|lower == user.username|lower %}
                     <div class="row">
+                        <!--modal a tag that calls the modal-->
                         <div class="col s4">
-                            <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
-                                class="btn red left">delete</a><br>
+                            <a href="#modal1"
+                                class="btn red left waves-effect waves-light btn modal-trigger">delete</a><br>
                         </div>
                         <div class="col s4">
                             <a href="{{ url_for('my_recipes', username=user.username.lower) }}" class="btn blue">my
@@ -74,11 +75,24 @@
                                 class="btn right">edit</a>
                         </div>
                     </div>
+                    <!--modal code that contains the url_for to action the delete_profile function-->
+                    <div id="modal1" class="modal">
+                        <div class="modal-content">
+                            <h4>Whoooa there!</h4>
+                            <p>Are you sure you want to delete me??</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close btn green left">No, I don't!</a>
+                            <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
+                                class="modal-close btn red right">Yes, I do!</a>
+                        </div>
+                    </div>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
+
 </div>
 
 {% endblock %}
