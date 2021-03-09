@@ -40,7 +40,8 @@
                             class="fas fa-hamburger"></i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url_for('categories') }}">categories</a></li>
-                        <li><a href="#" class="dropdown-trigger" data-target="dropdown1">recipes</a></li>
+                        <li><a href="#" class="dropdown-trigger" data-target="dropdown1">recipes<i
+                                    class="fas fa-caret-down fa-xs"></i></a></li>
                         <li><a href="{{ url_for('all_books') }}">bookshop</a></li>
                         <!--jinja if statement to restrict adding a cookbook to larder-admin only-->
                         {% if session.user|lower == "larderadmin"|lower %}
@@ -71,17 +72,6 @@
             <li><a href="{{ url_for('show_drinks') }}" class="center-align">drinks</a></li>
         </ul>
 
-        <!--dropdown content for side nav-->
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="{{ url_for('all_recipes') }}">all recipes</a></li>
-            <li class="divider"></li>
-            <li><a href="{{ url_for('show_starters') }}">starters</a></li>
-            <li><a href="{{ url_for('show_mains') }}">mains</a></li>
-            <li><a href="{{ url_for('show_desserts') }}">desserts</a></li>
-            <li><a href="{{ url_for('show_sides') }}">sides</a></li>
-            <li><a href="{{ url_for('show_cakes') }}">cakes and biscuits</a></li>
-            <li><a href="{{ url_for('show_drinks') }}">drinks</a></li>
-        </ul>
 
         <!--Materialize side nav bar for mobile/smaller devices-->
         <ul class="sidenav" id="mobile-demo">
@@ -106,6 +96,18 @@
             <li><a class="center-align" href="{{ url_for('register') }}">register</a></li>
             {% endif %}
         </ul>
+        <!--dropdown content for side nav-->
+        <ul id="dropdown2" class="dropdown-content">
+            <li><a href="{{ url_for('all_recipes') }}">all recipes</a></li>
+            <li class="divider"></li>
+            <li><a href="{{ url_for('show_starters') }}">starters</a></li>
+            <li><a href="{{ url_for('show_mains') }}">mains</a></li>
+            <li><a href="{{ url_for('show_desserts') }}">desserts</a></li>
+            <li><a href="{{ url_for('show_sides') }}">sides</a></li>
+            <li><a href="{{ url_for('show_cakes') }}">cakes and biscuits</a></li>
+            <li><a href="{{ url_for('show_drinks') }}">drinks</a></li>
+        </ul>
+
     </header>
 
     <!--flash message section for confirmation messages-->
