@@ -235,7 +235,13 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 - Form with individual input fields linked to the appropriate dictionary items in MongoDB.
 - Validation checks in place as all fields are required.
-- 
+
+### <ins>FUTURE FEATURES</ins> ###
+
+- Ability to favourite recipes once **user** has logged in.
+- **User** to be able to select ingredients, ie what is in their larder, and search for recipes that contain some of those ingredients.
+- Additional bookstores to be added.
+- Ability to leave reviews on each recipe and add a rating.
 
 [Back to Contents](#contents)
 
@@ -399,9 +405,9 @@ The images and card, text content used were sourced from various sites:
 
 Thank you to the following people:
 
-- My mentor Seun Owonikoko for her time, guidance and making things obvious...
+- My mentor Seun Owonikoko for her time, guidance and making things obvious...and this time for being a debugging Champion!!
 - The guys in the class of May 20 on Slack - always there for a chat when needed!
-    - special mentions to @nikkikobako, @Sara and @Pauld0051
+    - special mentions to @Adam, @Sara and @Pauld0051
 - My partner, Paul, for putting up with the growing obsession I have towards coding.
 
 [Back to Contents](#contents)
