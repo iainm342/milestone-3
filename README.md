@@ -77,7 +77,7 @@ The main aim of this website was to provide a free-to-use recipe resource for th
 
 2. The colour scheme chosen was origingally based on a colour from the image used as the background image on the landing page - #abc141 (Celery) which is an almost lime green colour. Once I started building the site, and ran it through Lighthouse it was flagged as a bad colour to use for accessibility reasons. I then changed the primary colour used across the site to #2c642e (Faux-Mughal green) which improved the readability of the site.
 
-3. I used Figma(https://figma.com/) to create my wireframes and used it to organise the flow of the site and how the different pages would respond to the different screen sizes.
+3. I used [Figma](https://figma.com/) to create my wireframes and used it to organise the flow of the site and how the different pages would respond to the different screen sizes.
 
 4. As with my previous projects, the design changed as I was building the site. I am swiftly realising that design is not my strong point and that the way I build sites is very much based on a "trial and error" approach and that it makes things more complicated in the long run.
 
@@ -204,7 +204,7 @@ Initial wireframes for each page can be found by clicking on the links below:
 - Image onlcick shows the user some basic information about the recipe and, again, provides a button which will display full recipe information to the **user**.
 - If recipe was added by the logged in **user** an Edit button is also displayed.
 
-### ELEMENTS SEEN ON COOKBOOKS PAGE ###
+### ELEMENTS SEEN ON COOKBOOK PAGE ###
 
 - Search bar linked to the MongoDB index file allowing the **user** to search the database using key words within the recipe collection.
 - Materialize cards to display all recipes in the database.
