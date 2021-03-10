@@ -8,6 +8,16 @@ This is the third of four Milestone Projects required for the Full Stack Web Dev
 
 A live version of the site can be found [here](https://milestone-3-larder.herokuapp.com/).
 
+**For testing purposes, please use the following login details:**
+
+  - general user:
+    - login: iainm342
+    - password: glasgow
+  
+  - admin:
+    - login: larderadmin
+    - password: l4rd3r
+
 ## **CONTENTS** ##
 
 - [UX](#ux)
@@ -219,11 +229,11 @@ There are associations with the following:
 - **categories** to **recipes**
   - category_name
 
-- ** cookbooks** to **recipes**
- - cookbook_name
+- **cookbooks** to **recipes**
+  - cookbook_name
 
 - **users** to **recipes**
- - username
+  - username
 
 ### categories ###
 
