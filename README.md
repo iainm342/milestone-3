@@ -22,6 +22,7 @@ A live version of the site can be found [here](https://milestone-3-larder.heroku
   - [API's](#API'S)
   - [Tools](#tools)
 - [Features](#features)
+- [Database Design](#database-design)
 - [Testing](#testing)
 - [Deployment](#deployment)
   - [Hosting](#hosting)
@@ -209,6 +210,54 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 ---
 
+## **DATABASE DESIGN** ##
+
+### categories ###
+
+| Field Desription | Collection Key | Data Type |
+| --- | --- | --- |
+| Unique ID | _id | ObjectId |
+| Category Name | category_name | string |
+
+### cookbooks ###
+
+| Field Desription | Collection Key | Data Type |
+| --- | --- | --- |
+| Unique ID | _id | ObjectId |
+| Cookbook Name | cookbook_name | string |
+| Cookbook Chef | cookbook_chef | string |
+| Cookbook Image | cookbook_image | string |
+| Cookbook Amazon URL | cookbook_amazon | string |
+| Cookbook Description | cookbook_desc | string |
+
+### recipes ###
+
+| Field Desription | Collection Key | Data Type |
+| --- | --- | --- |
+| Unique ID | _id | ObjectId |
+| Category that recipe belongs to | category_name | string |
+| Name of recipe | recipe_name | string |
+| Who wrote the recipe | recipe_chef | string |
+| Cookbook the recipe belongs to | cookbook_name | string |
+| Image of finished dish | recipe_image | string |
+| How hard is the recipe | recipe_difficulty | string |
+| Length of time to prepare | recipe_time | string |
+| Ingredients list | recipe_ingredients | array |
+| Recipe method | recipe_method | array |
+| Which user added the recipe | recipe_added | string |
+
+### users ###
+
+| Field Desription | Collection Key | Data Type |
+| --- | --- | --- |
+| Unique ID | _id | ObjectId |
+| Username | username | string |
+| First name of user | user_first | string |
+| Surname of user | user_last | string |
+| Email of user | user_email | string |
+| Salted password | password | string |
+
+[Back to Contents](#contents)
 ## **TESTING** ##
 
 Testing information can be found [here](readme/testing.md).
