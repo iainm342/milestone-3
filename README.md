@@ -95,7 +95,7 @@ As previously mentioned, #abc141 (Celery) was initially chosen as the main colou
 
 Initial wireframes for each page can be found by clicking on the links below:
 
-- [Landing Page]()
+- [Landing Page](readme/images/wireframes/landing.png)
 - [Categories]()
 - [Recipes]()
 - [Bookshop]()
