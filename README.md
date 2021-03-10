@@ -217,18 +217,18 @@ Initial wireframes for each page can be found by clicking on the links below:
 | Field Desription | Collection Key | Data Type |
 | --- | --- | --- |
 | Unique ID | _id | ObjectId |
-| Category Name | category_name | string |
+| Name of category | category_name | string |
 
 ### cookbooks ###
 
 | Field Desription | Collection Key | Data Type |
 | --- | --- | --- |
 | Unique ID | _id | ObjectId |
-| Cookbook Name | cookbook_name | string |
-| Cookbook Chef | cookbook_chef | string |
-| Cookbook Image | cookbook_image | string |
-| Cookbook Amazon URL | cookbook_amazon | string |
-| Cookbook Description | cookbook_desc | string |
+| Name of cookbook | cookbook_name | string |
+| Name of chef/author | cookbook_chef | string |
+| Front cover of cookbook | cookbook_image | string |
+| Amazon URL for cookbook | cookbook_amazon | string |
+| Short desctipion of cookbook | cookbook_desc | string |
 
 ### recipes ###
 
