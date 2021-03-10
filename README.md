@@ -156,7 +156,7 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 - Grid system used to structure pages and make them responsive for various viewports.
 - Materialize NavBar with mobile sidebar to allow easy navigation throughout the web app. Able to reach all pages of the app from the NavBar.
-- Materialize Footer used with social links and email "contact us" link.
+- Materialize Footer used with social links and email "contact us" link. rel="noreferrer noopener" has been added for security.
 - Favicon for the title tab in the browser.
 - Hover used on all buttons and web/email addresses.
 - Other than the landing page, the logged in user name is displayed in the top right of the viewport.
@@ -189,6 +189,7 @@ Initial wireframes for each page can be found by clicking on the links below:
 - Container with card showing **user** information.
 - Information pulled from the DB and password is "popped" and replaced with "********" to highlight that information is masked.
 - Delete and Edit buttons are shown only to the logged in **user**.
+- My Recipes button will show the **user** all the recipes that they have added to the site for easy reference/editing.
 
 ### ELEMENTS SEEN ON CATEGORIES PAGE ###
 
@@ -201,20 +202,40 @@ Initial wireframes for each page can be found by clicking on the links below:
 - Materialize cards to display all recipes in the database.
 - Button on each card to display full recipe information to the **user**.
 - Image onlcick shows the user some basic information about the recipe and, again, provides a button which will display full recipe information to the **user**.
-- If recipe was added by the logged in **user** a delete button is also displayed.
+- If recipe was added by the logged in **user** an Edit button is also displayed.
+
+### ELEMENTS SEEN ON COOKBOOKS PAGE ###
+
+- Search bar linked to the MongoDB index file allowing the **user** to search the database using key words within the recipe collection.
+- Materialize cards to display all recipes in the database.
+- Image onclick shows the **user** some basic information about the book and **larderadmin** will have the option to Edit or Delete the book from the DB.
+- Anchor tag will take the **user** to the appropriate Amazon page to allow them to purchase the book for themselves. This takes the **user** to a new tab to allow them to return to the site. rel="noreferrer noopener" has also been added for security.
 
 ### ELEMENTS SEEN ON INDIVIDUAL CATEGORY PAGES ###
 
 - Materialize cards to display all recipes in the database.
 - Button on each card to display full recipe information to the **user**.
 - Image onlcick shows the user some basic information about the recipe and, again, provides a button which will display full recipe information to the **user**.
-- If recipe was added by the logged in **user** a delete button is also displayed.
+- If recipe was added by the logged in **user** an Edit button is also displayed.
 
-### ELEMENTS SEEN ON INDIVIDUAL CATEGORY PAGES ###
+### ELEMENTS SEEN ON SHOW RECIPE PAGE ###
 
+- Full page with recipe information at the top along with image of completed dish.
+- Ingredients and Methods are listed in separate rows for clear reading.
+- Delete and Edit buttons are present, only if the **user**, or **larderadmin**, are viewing the page.
+- On pressing the Delete button, a modal will appear to confirm the **user** wishes to continue with deleting the process. If they don't the *user** is returned to the show_recipe.html page.
+
+### ELEMENTS SEEN ON ADD RECIPE PAGE ###
+
+- Form with individual input fields linked to the appropriate dictionary items in MongoDB.
+- Validation checks in place as all fields are required.
+- JS used to add input field/textarea for Ingredients and Methods, respectively. On addition if a field/textarea, a delete (trashcan) icon appears to allow quick removal of added information.
+
+### ELEMENTS SEEN ON ADD COOKBOOK PAGE - LARDERADMIN ONLY ###
+
+- Form with individual input fields linked to the appropriate dictionary items in MongoDB.
+- Validation checks in place as all fields are required.
 - 
-
-
 
 [Back to Contents](#contents)
 
