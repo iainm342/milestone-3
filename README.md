@@ -212,6 +212,19 @@ Initial wireframes for each page can be found by clicking on the links below:
 
 ## **DATABASE DESIGN** ##
 
+4 collections were used for the construction of the database in MongoDB.
+The collection used the most was **recipes** as it holds the majority of the information required to display information on the DOM.
+There are associations with the following:
+
+- **categories** to **recipes**
+  - category_name
+
+- ** cookbooks** to **recipes**
+ - cookbook_name
+
+- **users** to **recipes**
+ - username
+
 ### categories ###
 
 | Field Desription | Collection Key | Data Type |
@@ -258,6 +271,8 @@ Initial wireframes for each page can be found by clicking on the links below:
 | Salted password | password | string |
 
 [Back to Contents](#contents)
+
+---
 ## **TESTING** ##
 
 Testing information can be found [here](readme/testing.md).
