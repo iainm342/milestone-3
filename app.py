@@ -54,7 +54,7 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
-# route for displaying the recipes from a specific cookbook on 
+# route for displaying the recipes from a specific cookbook on
 # the cookbook.html page
 @app.route("/search_recipe", methods=["GET", "POST"])
 def search_recipe():

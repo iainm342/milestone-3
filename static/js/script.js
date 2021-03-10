@@ -3,13 +3,18 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('select').formSelect();
     $('.modal').modal();
+    $('.collapsible').collapsible({
+        accordion: true,
+        onOpen: function(el) { },
+        onClose: function(el) { }
+    });
 });
 
 // Sroll to top script
 var mybutton = document.getElementById("myBtn");
 
 window.onscroll = function() {
-    scrollFunction()
+    scrollFunction();
 };
 
 function scrollFunction() {

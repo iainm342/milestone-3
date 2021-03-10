@@ -79,34 +79,46 @@
                 <h3 class="h3 center-align">larder</h3>
             </li>
             <li class="divider"></li>
-            <li><a class="center-align" href="{{ url_for('categories') }}">categories</a></li>
-            <li><a class="center-align" href="#" class="dropdown-trigger" data-target="dropdown2">recipes</a></li>
-            <li><a class="center-align" href="{{ url_for('all_books') }}">bookshop</a></li>
+            <li class="center-align"><a href="{{ url_for('categories') }}">categories</a></li>
+            <!--Materialize accordion for dropdown menu to reach categories-->
+            <li class="center-align">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header">
+                            <span>recipes</span>
+                        </div>
+                        <div class="collapsible-body body-drop">
+                            <ul>
+                                <li><a href="{{ url_for('all_recipes') }}">all recipes</a></li>
+                                <li class="divider"></li>
+                                <li><a href="{{ url_for('show_starters') }}">starters</a></li>
+                                <li><a href="{{ url_for('show_mains') }}">mains</a></li>
+                                <li><a href="{{ url_for('show_desserts') }}">desserts</a></li>
+                                <li><a href="{{ url_for('show_sides') }}">sides</a></li>
+                                <li><a href="{{ url_for('show_cakes') }}">cakes and biscuits</a></li>
+                                <li><a href="{{ url_for('show_drinks') }}">drinks</a></li>
+                            </ul>
+                            <div class="divider"></div>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="center-align"><a href="{{ url_for('all_books') }}">bookshop</a></li>
             <!--jinja if statement to restrict adding a cookbook to larder-admin only-->
             {% if session.user|lower == "larderadmin"|lower %}
-            <li><a class="center-align" href="{{ url_for('add_cookbook') }}">add cookbook</a></li>
+            <li class="center-align"><a href="{{ url_for('add_cookbook') }}">add cookbook</a></li>
             {% endif %}
             <!-- jinja if statement to restrict access to site unless user is logged in-->
             {% if session.user|lower %}
-            <li><a class="center-align" href="{{ url_for('add_recipe') }}">add recipe</a></li>
-            <li><a class="center-align" href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
-            <li><a class="center-align" href="{{ url_for('logout') }}">log out</a></li>
+            <li class="center-align"><a href="{{ url_for('add_recipe') }}">add recipe</a></li>
+            <li class="center-align"><a href="{{ url_for('profile', username=session['user']) }}">profile</a></li>
+            <li class="center-align"><a href="{{ url_for('logout') }}">log out</a></li>
             {% else %}
-            <li><a class="center-align" href="{{ url_for('login') }}">log in</a></li>
-            <li><a class="center-align" href="{{ url_for('register') }}">register</a></li>
+            <li class="center-align"><a href="{{ url_for('login') }}">log in</a></li>
+            <li class="center-align"><a href="{{ url_for('register') }}">register</a></li>
             {% endif %}
         </ul>
         <!--dropdown content for side nav-->
-        <ul id="dropdown2" class="dropdown-content">
-            <li><a href="{{ url_for('all_recipes') }}">all recipes</a></li>
-            <li class="divider"></li>
-            <li><a href="{{ url_for('show_starters') }}">starters</a></li>
-            <li><a href="{{ url_for('show_mains') }}">mains</a></li>
-            <li><a href="{{ url_for('show_desserts') }}">desserts</a></li>
-            <li><a href="{{ url_for('show_sides') }}">sides</a></li>
-            <li><a href="{{ url_for('show_cakes') }}">cakes and biscuits</a></li>
-            <li><a href="{{ url_for('show_drinks') }}">drinks</a></li>
-        </ul>
 
     </header>
 
