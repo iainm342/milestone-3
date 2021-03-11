@@ -6,7 +6,7 @@
     <div class="row center-align">
         <h3>starters</h3>
         <!--show which user is logged in to the site-->
-        {{% if 'user' in session %}
+        {% if 'user' in session %}
         <p class="center-align">logged in: {{session.user}}</p>
         {% endif %}
     </div>

@@ -44,12 +44,32 @@ All HTML and CSS was passed through [W3C Validator](https://validator.w3.org/), 
 
 HTML Errors:
 
-- Persistent warning on all pages due to the section on every page for flash messages
+All pages passed through the Validator with the following results:
 
-![HTML Error](https://github.com/iainm342/milestone-3/blob/main/readme/images/testing/section-warning.png)
-
-- alt missing from most images. Resolved and passed.
-- recipes.html had an extra " on line 45 which caused multiple errors. Resolved and passed.
+| HTML Page | Warnings / Errors |
+| --- | --- | 
+| landing.html | **warning** Section lacks heading - jinja error from flash message section |
+| login.html | **warning** Section lacks heading - jinja error from flash message section |
+| register.html | **warning** Section lacks heading - jinja error from flash message section |
+| profile.html | **warning** Section lacks heading - jinja error from flash message section |
+| edit_profile.html | IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500. |
+| categories.html |  **warning** Section lacks heading - jinja error from flash message section |
+| recipes.html |  **warning** Section lacks heading - jinja error from flash message section |
+| starters.html |  **warning** Section lacks heading - jinja error from flash message section |
+| mains.html |  **warning** Section lacks heading - jinja error from flash message section |
+| desserts.html |  **warning** Section lacks heading - jinja error from flash message section |
+| sides.html |  **warning** Section lacks heading - jinja error from flash message section |
+| cakes.html |  **warning** Section lacks heading - jinja error from flash message section |
+| drinks.html |  **warning** Section lacks heading - jinja error from flash message section |
+| show_recipe.html | **warning** Section lacks heading - jinja error from flash message section |
+| my_recipes.html | IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500.
+| add_recipe.html | **warning** Section lacks heading - jinja error from flash message section |
+| edit_recipe.html | **warning** Section lacks heading - jinja error from flash message section |
+| | | **error** Duplicate ID recipe_ingredients. |
+| | | **error** Duplicate ID recipe_method. |
+| cookbooks.html | |
+| add_cookbook.html | **warning** Section lacks heading - jinja error from flash message section 
+| edit_cookbook.html | |
 
 CSS Errors:
 
