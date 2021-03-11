@@ -54,12 +54,14 @@
                         <span class="card-title-book rec-style">{{ cookbook.cookbook_name }}</span>
                         <p class="book-chef">by {{ cookbook.cookbook_chef }}</p>
                         <hr>
-                        <form class="hide" id="{{ cookbook.cookbook_chef }}"
-                            action="{{ url_for('search_recipe', searchquery=cookbook.cookbook_chef) }}" method="POST">
-                            <input type="text" name="query" value="{{ cookbook.cookbook_chef }}" id="query">
+                        <form class="hide search" id="{{ cookbook.cookbook_chef|replace(' ', '_') }}"
+                            action=" {{ url_for('search_recipe', searchquery=cookbook.cookbook_chef) }}" method="POST">
+                            <input type="text" name="query" value="{{ cookbook.cookbook_chef }}"
+                                id="{{ cookbook.cookbook_chef|replace(' ', '-') }}">
                             <label for="query"></label>
                         </form>
-                        <button type="submit" form="{{ cookbook.cookbook_chef }}" class="btn left">recipes</button>
+                        <button type="submit" form="{{ cookbook.cookbook_chef|replace(' ', '_') }}"
+                            class="btn left">recipes</button>
                         <a href="{{ cookbook.cookbook_amazon }}" target="_blank" rel="noreferrer noopener"
                             class="btn right">buy now</a>
                     </div>

@@ -30,14 +30,3 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
-// remove whitespace from ID's being created by jinja in cookbooks.html
-// https://stackoverflow.com/questions/54658907/remove-white-spaces-from-all-li-tag-ids/#answer-54659021
-document.querySelectorAll('form').forEach(form => {
-    form.id = form.id.replace(/\s*/g, '');
-  });
-  
-  console.log('ids:');
-  document.querySelectorAll('form').forEach(form => {
-    console.log(form.id);
-  });
