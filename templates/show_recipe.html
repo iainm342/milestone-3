@@ -75,13 +75,15 @@
         <!--if user is logged in and user added the recipe they are able to edit or delete it from the DB-->
         {% if session.user|lower == recipe.recipe_added|lower %}
         <div class="row center-align rec-card">
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
-            <a href="#modal1" class="btn red left modal-trigger">delete</a><br>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right"><i
+                    class="far fa-edit"></i>edit</a>
+            <a href="#modal1" class="btn red-btn left modal-trigger">delete</a><br>
         </div>
         <!--if larder-admin is logged in they are able to edit or delete it from the DB-->
         {% elif session.user|lower == "larderadmin"|lower %}
         <div class="row center-align rec-card">
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
+            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right"><i
+                    class="far fa-edit"></i>edit</a>
             <a href="#modal1" class="btn red-btn left modal-trigger">delete</a><br>
         </div>
         <!--modal code that contains the url_for to action the delete_profile function-->
