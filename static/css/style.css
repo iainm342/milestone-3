@@ -218,6 +218,7 @@ a.social:hover {
 
   input[type=text]:not(.browser-default) {
       color: #2c642e;
+      font-family: 'Roboto Mono', monospace;
   }
 
   .reglog input[type=text]:not(.browser-default) {
