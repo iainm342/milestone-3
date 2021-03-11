@@ -54,9 +54,11 @@
         <hr>
         <!--jinja for loop to pull indiviual ingredients from DB-->
         {% for ingredient in recipe.recipe_ingredients %}
-        <li>
-            {{ ingredient }}
-        </li>
+        <ul>
+            <li>
+                {{ ingredient }}
+            </li>
+        </ul>
         {% endfor %}
     </div>
     <div class="col s12 xl6 method">
@@ -64,9 +66,11 @@
         <hr>
         <!--jinja for loop to pull each stop of the method from DB-->
         {% for step in recipe.recipe_method %}
-        <li>
-            {{ step }}
-        </li>
+        <ul>
+            <li>
+                {{ step }}
+            </li>
+        </ul>
         {% endfor %}
         <!--if user is logged in and user added the recipe they are able to edit or delete it from the DB-->
         {% if session.user|lower == recipe.recipe_added|lower %}
@@ -97,7 +101,6 @@
             </div>
         </div>
     </div>
-</div>
 </div>
 
 {% endblock %}
