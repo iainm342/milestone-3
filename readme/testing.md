@@ -65,10 +65,10 @@ All pages passed through the Validator with the following results:
 | my_recipes.html | IO Error: HTTP resource not retrievable. The HTTP status from the remote server was: 500.
 | add_recipe.html | **warning** Section lacks heading - jinja error from flash message section |
 | edit_recipe.html | **warning** Section lacks heading - jinja error from flash message section |
-| | | **error** Duplicate ID recipe_ingredients. |
-| | | **error** Duplicate ID recipe_method. |
-| cookbooks.html | |
-| add_cookbook.html | **warning** Section lacks heading - jinja error from flash message section 
+| edit_recipe.html| **error** Duplicate ID recipe_ingredients. |
+| edit_recipe.html| **error** Duplicate ID recipe_method. |
+| cookbooks.html | **warning** Section lacks heading - jinja error from flash message section |
+| add_cookbook.html | **warning** Section lacks heading - jinja error from flash message section |
 | edit_cookbook.html | |
 
 CSS Errors:
