@@ -112,8 +112,11 @@
                 <div class="input-field col s10 input_ing_wrap">
                     <!--jinja for loop to display every ingredient entry in array-->
                     {% for ingredient in recipe.recipe_ingredients %}
-                    <input id="recipe_ingredients" name="recipe_ingredients" type="text" value="{{ ingredient }}"
-                        class="validate">
+                    {% if loop.index == 0 %}
+                    {% else %}
+                    <input id="recipe_ingredients{{ loop.index }}" name="recipe_ingredients" type="text"
+                        value="{{ ingredient }}" class="validate">
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -131,7 +134,10 @@
                 <div class="input-field col s10 input_meth_wrap">
                     <!--jinja for loop to display every method entry in array-->
                     {% for step in recipe.recipe_method %}
-                    <textarea id="recipe_method" name="recipe_method"></textarea>{{ step }}</textarea>
+                    {% if loop.index == 0 %}
+                    {% else %}
+                    <textarea id="recipe_method{{ loop.index }}" name="recipe_method">{{ step }}</textarea>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>
@@ -159,6 +165,5 @@
             </div>
         </form>
     </div>
-</div>
 </div>
 {% endblock %}

@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
     $('select').formSelect();
     $('.modal').modal();
+    M.textareaAutoResize($('#recipe_method'));
     $('.collapsible').collapsible({
         accordion: true,
         onOpen: function(el) { },
