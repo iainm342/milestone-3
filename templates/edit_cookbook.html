@@ -15,10 +15,10 @@
             <!--display / edit cookbook name-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-bread-slice fa-2x" id="icon"></i>
+                    <i class="fas fa-bread-slice fa-2x icon"></i>
                 </div>
                 <div class="input-field col s10">
-                    <input value="{{ cookbook.cookbook_name }}" id=" cookbook_name" name="cookbook_name" type="text"
+                    <input value="{{ cookbook.cookbook_name }}" id="cookbook_name" name="cookbook_name" type="text"
                         class="validate">
                     <label for="cookbook_name">cookbook name</label>
                 </div>
@@ -27,7 +27,7 @@
             <!--display / edit cookbook chef-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-user fa-2x" id="icon"></i>
+                    <i class="fas fa-user fa-2x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input value="{{ cookbook.cookbook_chef }}" id="cookbook_chef" name="cookbook_chef" type="text"
@@ -39,7 +39,7 @@
             <!--display / edit cookbook image-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-book fa-2x" id="icon"></i>
+                    <i class="fas fa-book fa-2x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input value="{{ cookbook.cookbook_image }}" id="cookbook_image" name="cookbook_image" type="text"
@@ -51,7 +51,7 @@
             <!--display / edit cookbook amazon URL-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-camera fa-2x" id="icon"></i>
+                    <i class="fas fa-camera fa-2x icon"></i>
                 </div>
                 <div class="input-field col s10">
                     <input value="{{ cookbook.cookbook_amazon }}" id="cookbook_amazon" name="cookbook_amazon"
@@ -63,11 +63,11 @@
             <!--display / edit cookbook description-->
             <div class="row">
                 <div class="col s1">
-                    <i class="fas fa-list fa-2x" id="icon"></i>
+                    <i class="fas fa-list fa-2x icon"></i>
                 </div>
                 <div class="input-field col s10">
-                    <textarea value="{{ cookbook.cookbook_desc }}" id="cookbook_desc" name="cookbook_desc" type="text"
-                        class="validate"></textarea>
+                    <textarea id="cookbook_desc" name="cookbook_desc"
+                        class="validate">{{ cookbook.cookbook_desc }}</textarea>
                     <label for="cookbook_desc">cookbook description</label>
                 </div>
                 <div class="col s1"></div>
@@ -77,9 +77,9 @@
                 <a href="{{ url_for('all_books') }}" class="btn red left">cancel</a>
                 <button type="submit" class="btn right">edit</button>
             </div>
+        </form>
     </div>
-    </form>
 </div>
-</div>
+
 
 {% endblock %}
