@@ -296,3 +296,8 @@ a.social:hover {
     padding-bottom: 200px;
     }
   }
+
+  .profile-btn {
+      margin-top: 5px;
+      margin-bottom: 5px;;
+  }

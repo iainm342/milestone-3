@@ -13,82 +13,75 @@
                 </div>
             </div>
         </div>
-        <div class="container">
-            <!--Materialize card used for profile display-->
-            <div class="card-panel">
-                <div class="row">
-                    <div class="col s4">
-                        <span class="left">Username: </span>
-                    </div>
-                    <div class="col s8">
-                        <span class="right"> {{ user.username }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <span class="left">First name: </span>
-                    </div>
-                    <div class="col s8">
-                        <span class="right"> {{ user.user_first }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <span class="left">Last name: </span>
-                    </div>
-                    <div class="col s8">
-                        <span class="right"> {{ user.user_last }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <span class="left">Email: </span>
-                    </div>
-                    <div class="col s8">
-                        <span class="right"> {{ user.user_email }}</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s4">
-                        <span class="left">Password: </span>
-                    </div>
-                    <div class="col s8">
-                        <span class="right"> ******** </span>
-                    </div>
-                </div>
-                <div class="row"></div>
-                <div class="row center-align">
-                    <!--if user is logged in they are able to edit or delete their profile from the DB-->
-                    {% if session.user|lower == user.username|lower %}
+        <div class="row">
+            <div class="container">
+                <!--Materialize card used for profile display-->
+                <div class="card-panel">
                     <div class="row">
-                        <!--modal a tag that calls the modal-->
-                        <div class="col s4">
-                            <a href="#modal1" class="btn red left modal-trigger">delete</a><br>
-                        </div>
-                        <div class="col s4">
-                            <a href="{{ url_for('my_recipes', username=user.username.lower) }}" class="btn blue">my
-                                recipes</a>
-                        </div>
-                        <div class="col s4">
-                            <a href="{{ url_for('edit_profile', username=user.username|lower) }}"
-                                class="btn right">edit</a>
+                        <div class="col s12">
+                            <span class="left">Username: </span>
+                            <span class="right"> {{ user.username }}</span>
                         </div>
                     </div>
-                    <!--modal code that contains the url_for to action the delete_profile function-->
-                    <div id="modal1" class="modal center-align">
-                        <div class="container">
-                            <div class="modal-content">
-                                <h4>Whoooa there!</h4>
-                                <p>Are you sure you want to delete me??</p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#!" class="modal-close btn left">No, I don't!</a>
-                                <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
-                                    class="modal-close btn red right">Yes, I do!</a>
-                            </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="left">First name: </span>
+                            <span class="right"> {{ user.user_first }}</span>
                         </div>
                     </div>
-                    {% endif %}
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="left">Last name: </span>
+                            <span class="right"> {{ user.user_last }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="left">Email: </span>
+                            <span class="right"> {{ user.user_email }}</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <span class="left">Password: </span>
+                            <span class="right"> ******** </span>
+                        </div>
+                    </div>
+                    <div class="row"></div>
+                    <div class="row center-align">
+                        <!--if user is logged in they are able to edit or delete their profile from the DB-->
+                        {% if session.user|lower == user.username|lower %}
+                        <div class="row">
+                            <!--modal a tag that calls the modal-->
+                            <div class="col s12 m4">
+                                <a href="#modal1" class="btn red modal-trigger profile-btn">delete</a><br>
+                            </div>
+                            <div class="col s12 m4">
+                                <a href="{{ url_for('my_recipes', username=user.username.lower) }}"
+                                    class="btn blue profile-btn">my
+                                    recipes</a>
+                            </div>
+                            <div class="col s12 m4">
+                                <a href="{{ url_for('edit_profile', username=user.username|lower) }}"
+                                    class="btn profile-btn">edit</a>
+                            </div>
+                        </div>
+                        <!--modal code that contains the url_for to action the delete_profile function-->
+                        <div id="modal1" class="modal center-align">
+                            <div class="container">
+                                <div class="modal-content">
+                                    <h4>Whoooa there!</h4>
+                                    <p>Are you sure you want to delete me??</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="#!" class="modal-close btn left">No, I don't!</a>
+                                    <a href="{{ url_for('delete_profile', username=user.username|lower) }}"
+                                        class="modal-close btn red right">Yes, I do!</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>
