@@ -103,8 +103,11 @@ The site was tested on the following browsers that I have access to:
 I submitted the project for Peer Review on Slack. The following comments were made:
 
 - @lucyjpjones - "If I am not logged in as a user 'logged in' is showing, I think it would be nicer if this wasn't visible unless a user is logged in"
+    - this has been resolved with an if statement checking to see if the **user** is logged in. Message now only shows when logged in.
 - @lucyjpjones - "Also when I was logged in and went on the profile page the repsonisveness for input fields was a bit off"
+    - this has been resolved with some formatting on the profile.html page.
 - @Clint - "I really like the burger icon for the menu but it has no hover:state"
+    - 
 - @Clint - "When I did register, I had no idea that I was logged in ... the only way I knew I was logged in was the logout tab in the menu"
     - this has been resolved with the flash message now saying "welcome {user}! you are now logged in!"
 
