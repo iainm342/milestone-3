@@ -6,7 +6,9 @@
     <div class="row center-align">
         <h3>categories</h3>
         <!--show which user is logged in to the site-->
+        {% if 'user' in session %}
         <p>logged in: {{session.user}}</p>
+        {% endif %}
 
     </div>
     <div class="col s12 xl9">

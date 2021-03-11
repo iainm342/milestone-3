@@ -6,7 +6,9 @@
     <div class="row center-align">
         <h3>my recipes</h3>
         <!--show which user is logged in to the site-->
+        {% if 'user' in session %}
         <p>logged in: {{session.user}}</p>
+        {% endif %}
     </div>
     <div class="row">
         <!--jinja for loop to pull individual recipes from DB-->

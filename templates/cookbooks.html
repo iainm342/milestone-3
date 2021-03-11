@@ -6,7 +6,9 @@
     <div class="row center-align">
         <h3>cookbooks</h3>
         <!--show which user is logged in to the site-->
+        {% if 'user' in session %}
         <p>logged in: {{session.user}}</p>
+        {% endif %}
     </div>
     <!--search bar-->
     <div class="row card-panel">

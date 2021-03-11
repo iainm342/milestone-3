@@ -5,7 +5,9 @@
 <!--content container-->
 <div class="container">
     <!--show which user is logged in to the site-->
-    <p class="center-align">logged in: {{session.user}}</p>
+    {% if 'user' in session %}
+    <p>logged in: {{session.user}}</p>
+    {% endif %}
     <!--Materialize card-->
     <div class="row card-panel">
         <!--form to allow input of new cookbook to DB-->
