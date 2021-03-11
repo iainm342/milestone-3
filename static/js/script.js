@@ -9,7 +9,6 @@ $(document).ready(function(){
         onOpen: function(el) { },
         onClose: function(el) { }
     });
-    // $("form[id]").prop('id', (i, id) => id.replace(/\W/g, '_'));
 });
 
 // Sroll to top script

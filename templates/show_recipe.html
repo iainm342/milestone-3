@@ -82,7 +82,7 @@
         {% elif session.user|lower == "larderadmin"|lower %}
         <div class="row center-align rec-card">
             <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn right">edit</a>
-            <a href="#modal1" class="btn red left modal-trigger">delete</a><br>
+            <a href="#modal1" class="btn red-btn left modal-trigger">delete</a><br>
         </div>
         <!--modal code that contains the url_for to action the delete_profile function-->
         {% endif %}

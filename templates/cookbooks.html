@@ -54,7 +54,7 @@
                         <span class="card-title-book rec-style">{{ cookbook.cookbook_name }}</span>
                         <p class="book-chef">by {{ cookbook.cookbook_chef }}</p>
                         <hr>
-                        <form class="hide search" id="{{ cookbook.cookbook_chef|replace(' ', '_') }}"
+                        <form class="hide" id="{{ cookbook.cookbook_chef|replace(' ', '_') }}"
                             action=" {{ url_for('search_recipe', searchquery=cookbook.cookbook_chef) }}" method="POST">
                             <input type="text" name="query" value="{{ cookbook.cookbook_chef }}"
                                 id="{{ cookbook.cookbook_chef|replace(' ', '-') }}">

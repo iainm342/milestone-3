@@ -57,6 +57,35 @@ main, nav, footer {
     background-color: #2c642e;
 }
 
+.red-btn {
+    background-color: red;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.red-btn:hover {
+    background-color:#fcc;
+    color: red;
+}
+
+.blue-btn {
+    background-color: blue;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blue-btn:hover {
+    background-color: #99f;
+    color: blue;
+}
+
+.btn-confirm {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /*----------------------------------------------------NavBar styling*/
 
 nav {

@@ -47,7 +47,7 @@ HTML Errors:
 All pages passed through the Validator with the following results:
 
 | HTML Page | Warnings / Errors |
-| --- | --- | 
+| --- | --- |
 | landing.html | **warning** Section lacks heading - jinja error from flash message section |
 | login.html | **warning** Section lacks heading - jinja error from flash message section |
 | register.html | **warning** Section lacks heading - jinja error from flash message section |

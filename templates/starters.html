@@ -71,7 +71,7 @@
                     <!--if larder-admin is logged in they are able to edit or delete it from the DB-->
                     {% elif session.user|lower == "larderadmin"|lower %}
                     <div class="row center-align rec-card">
-                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn center-align"><i
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="red-btn center-align"><i
                                 class="far fa-edit"></i>edit</a>
                     </div>
                     {% endif %}

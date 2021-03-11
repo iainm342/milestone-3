@@ -54,16 +54,16 @@
                         <div class="row">
                             <!--modal a tag that calls the modal-->
                             <div class="col s12 m4">
-                                <a href="#modal1" class="btn red modal-trigger profile-btn">delete</a><br>
+                                <a href="#modal1" class="btn modal-trigger red-btn">delete</a><br>
                             </div>
                             <div class="col s12 m4">
                                 <a href="{{ url_for('my_recipes', username=user.username.lower) }}"
-                                    class="btn blue profile-btn">my
+                                    class="btn blue-btn">my
                                     recipes</a>
                             </div>
                             <div class="col s12 m4">
                                 <a href="{{ url_for('edit_profile', username=user.username|lower) }}"
-                                    class="btn profile-btn">edit</a>
+                                    class="btn btn-confirm">edit</a>
                             </div>
                         </div>
                         <!--modal code that contains the url_for to action the delete_profile function-->
