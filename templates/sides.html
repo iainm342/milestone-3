@@ -50,7 +50,8 @@
                     <p>added by {{ recipe.recipe_added}}</p>
                     <hr>
                     <!--<a> tag to activate the show_recipe function-->
-                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}"
+                            class="btn full">Full
                             recipe...</a></p>
                 </div>
                 <!--Materialize card structure - reveal further info about recipe-->
@@ -77,7 +78,7 @@
                     </div>
                     {% endif %}
                     <div class="center-align">
-                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn full">Full
                             recipe...</a>
                     </div>
                 </div>

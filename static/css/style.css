@@ -93,6 +93,10 @@ main, nav, footer {
     margin-bottom: 5px;
 }
 
+.full {
+    margin-top: 20px;
+}
+
 /*----------------------------------------------------NavBar styling*/
 
 nav {
@@ -198,6 +202,7 @@ p.recipe-p {
 
 .rec-card {
     padding-top: 25px;
+    text-align: justify;
 }
 
 .show-img {

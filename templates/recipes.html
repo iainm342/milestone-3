@@ -51,7 +51,8 @@
                             class="material-icons right"></i></p>
                     <p>added by {{ recipe.recipe_added}}</p>
                     <hr>
-                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                    <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}"
+                            class="btn full">Full
                             recipe...</a></p>
                 </div>
                 <!--Materialize card structure - on click of image/FAB-->
@@ -77,8 +78,9 @@
                                 class="far fa-edit"></i>edit</a>
                     </div>
                     {% endif %}
+                    <hr>
                     <div class="center-align">
-                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn">Full
+                        <a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}" class="btn full">Full
                             recipe...</a>
                     </div>
                 </div>
