@@ -2,7 +2,7 @@
 {% block content %}
 <h3 class="center-align">add cookbook</h3>
 <!--content container-->
-<div class="container">
+<div class="container main-container">
     <!--show which user is logged in to the site-->
     {% if 'user' in session %}
     <p class="center-align">logged in: {{session.user}}</p>
@@ -40,7 +40,8 @@
                     <i class="fas fa-book fa-2x icon hide-on-small-only"></i>
                 </div>
                 <div class="input-field col s11">
-                    <input id="cookbook_image" name="cookbook_image" type="text" class="validate" required>
+                    <input id="cookbook_image" name="cookbook_image" value="https://" type="text" class="validate"
+                        required>
                     <label class="add-label" for="cookbook_image">cookbook image - add Amazon image URL here</label>
                 </div>
                 <div class="col s1"></div>
@@ -51,8 +52,9 @@
                     <i class="fas fa-camera fa-2x icon hide-on-small-only"></i>
                 </div>
                 <div class="input-field col s11">
-                    <input id="cookbook_amazon" name="cookbook_amazon" type="text" class="validate" required>
-                    <label class="add-label" for="cookbook_amazon">cookbook amazon</label>
+                    <input id="cookbook_amazon" name="cookbook_amazon" value="https://" type="text" class="validate"
+                        required>
+                    <label class="add-label" for="cookbook_amazon">cookbook amazon URL</label>
                 </div>
                 <div class="col s1"></div>
             </div>

@@ -216,8 +216,6 @@ p.recipe-p {
     width: 200px;
 }
 
-/*----------------------------------------------------show_recipe styling*/
-
 /*----------------------------------------------------media query to control image size*/
 
 @media (min-width: 320px) and (max-width: 568px) {
@@ -355,11 +353,11 @@ input[type=text]:not(.browser-default) {
 @media (min-width: 1024px) and (max-width: 1365px) {
 
     .main-container {
-    min-height: 30vh;
+    min-height: 50vh;
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 200px;
+    padding-bottom: 250px;
     }
 }
 
