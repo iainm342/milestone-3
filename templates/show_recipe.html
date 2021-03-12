@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!--content container-->
 <div class="container">
     <div class="row">
@@ -45,11 +44,9 @@
         <div class="col s12 xl6 center-align">
             <img class="show-img" src="{{ recipe.recipe_image }}" alt="image of {{recipe.recipe_name}}"><br>
         </div>
-
     </div>
     <div class="row">
         <!--col with ingredients and method-->
-
         <h4>Ingredients</h4>
         <hr>
         <!--jinja for loop to pull indiviual ingredients from DB-->
@@ -104,5 +101,4 @@
         </div>
     </div>
 </div>
-
 {% endblock %}

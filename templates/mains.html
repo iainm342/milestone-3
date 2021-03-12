@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!--content container-->
 <div class="main-container container">
     <div class="row center-align">
@@ -51,7 +50,8 @@
                     <!--<a> tag to activate the show_recipe function-->
                     <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}"
                             class="btn full">Full
-                            recipe...</a></p>
+                            recipe...</a>
+                    </p>
                 </div>
                 <!--Materialize card structure - reveal further info about recipe-->
                 <div class="card-reveal">
@@ -105,5 +105,4 @@
     </div>
     {% endif %}
 </div>
-
 {% endblock%}

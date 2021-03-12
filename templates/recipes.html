@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!--content container-->
 <div class="container">
     <div class="row">
@@ -12,7 +11,6 @@
             {% endif %}
         </div>
     </div>
-
     <!--search bar-->
     <div class="row card-panel">
         <!--form to allow user to input search parameters-->
@@ -34,7 +32,6 @@
             </div>
         </form>
     </div>
-
     {% if recipes.count()>0 %}
     <div class="row">
         <!--jinja for loop to retrieve all recipes from DB-->
@@ -53,7 +50,8 @@
                     <hr>
                     <p class="recipe-p"><a href="{{ url_for('show_recipe', recipe_id=recipe._id) }}"
                             class="btn full">Full
-                            recipe...</a></p>
+                            recipe...</a>
+                    </p>
                 </div>
                 <!--Materialize card structure - on click of image/FAB-->
                 <div class="card-reveal">
@@ -107,5 +105,4 @@
     </div>
     {% endif %}
 </div>
-
 {% endblock %}

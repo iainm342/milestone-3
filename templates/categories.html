@@ -1,6 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-
 <!--content container-->
 <div class="container">
     <div class="row center-align">
@@ -9,7 +8,6 @@
         {% if 'user' in session %}
         <p class="center-align">logged in: {{session.user}}</p>
         {% endif %}
-
     </div>
     <div class="col s12 xl9">
         <!--first row containing 3 Materialize cards-->
@@ -18,7 +16,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="prawn starter">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_starters') }}"><img src="/static/images/starter.jpg"
                                 alt="starter type food"></a>
                     </div>
@@ -31,7 +29,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="sea bass and potatoes">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_mains') }}"><img src="/static/images/mains.jpg"
                                 alt="main type food"></a>
                     </div>
@@ -44,7 +42,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="show desserts">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_desserts') }}"><img src="/static/images/dessert.jpg"
                                 alt="chocolate dessert"></a>
                     </div>
@@ -60,7 +58,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="show sides">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_sides') }}"><img src="/static/images/sides.jpg"
                                 alt="side of carrots"></a>
                     </div>
@@ -73,7 +71,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="show cakes">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_cakes') }}"><img src="/static/images/biscuits.jpg"
                                 alt="chocolate bourbon"></a>
                     </div>
@@ -86,7 +84,7 @@
             <div class="col s12 m4">
                 <div class="card cat-card">
                     <div class="card-image waves-effect waves-block waves-light" title="show drinks">
-                        <!--image and FAB links to show recipes-->
+                        <!--image link to show recipes-->
                         <a href="{{url_for('show_drinks') }}"><img src="/static/images/drink.jpg"
                                 alt="cocktail glass with manhattan"></a>
                     </div>
@@ -98,6 +96,4 @@
         </div>
     </div>
 </div>
-
-
 {% endblock %}
