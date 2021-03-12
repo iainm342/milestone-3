@@ -58,7 +58,7 @@
                             action=" {{ url_for('search_recipe', searchquery=cookbook.cookbook_chef) }}" method="POST">
                             <input type="text" name="query" value="{{ cookbook.cookbook_chef }}"
                                 id="{{ cookbook.cookbook_chef|replace(' ', '-') }}">
-                            <label for="query">cookbook</label>
+                            <label for="{{ cookbook.cookbook_chef|replace(' ', '-') }}">cookbook</label>
                         </form>
                         <button type="submit" form="{{ cookbook.cookbook_chef|replace(' ', '_') }}"
                             class="btn left">recipes</button>
