@@ -70,6 +70,10 @@ All pages passed through the Validator with the following results:
 | add_cookbook.html | **warning** Section lacks heading - jinja error from flash message section |
 | edit_cookbook.html | **warning** Section lacks heading - jinja error from flash message section |
 
+The **warnings** are persistent on all pages due to the section element present on all pages for the flash messages. As this is a **warning**, I have assumed that all pages have passed validation.
+
+
+
 CSS Errors:
 
 - CSS passed with no errors.

@@ -264,14 +264,14 @@ There are associations with the following:
 
 ### categories ###
 
-| Field Desription | Collection Key | Data Type |
+| Field Description | Collection Key | Data Type |
 | --- | --- | --- |
 | Unique ID | _id | ObjectId |
 | Name of category | category_name | string |
 
 ### cookbooks ###
 
-| Field Desription | Collection Key | Data Type |
+| Field Description | Collection Key | Data Type |
 | --- | --- | --- |
 | Unique ID | _id | ObjectId |
 | Name of cookbook | cookbook_name | string |
@@ -282,7 +282,7 @@ There are associations with the following:
 
 ### recipes ###
 
-| Field Desription | Collection Key | Data Type |
+| Field Description | Collection Key | Data Type |
 | --- | --- | --- |
 | Unique ID | _id | ObjectId |
 | Category that recipe belongs to | category_name | string |
