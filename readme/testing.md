@@ -95,7 +95,7 @@ PEP8 Errors:
 
 ### <ins>ACCESIBILITY VALIDATION</ins>
 
-The site was tested on the [WAVE](https://wave.webaim.org/) site.
+The site was tested on the [WAVE](https://wave.webaim.org/) site. Passed with minimal errors although Contrast errors were generated due to colour choices for the design of the site.
 
 [Back to Contents](#contents)
 
