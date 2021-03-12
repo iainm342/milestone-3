@@ -136,7 +136,8 @@
                     {% for step in recipe.recipe_method %}
                     {% if loop.index == 0 %}
                     {% else %}
-                    <textarea id="recipe_method{{ loop.index }}" name="recipe_method">{{ step }}</textarea>
+                    <textarea id="recipe_method{{ loop.index }}" name="recipe_method"
+                        class="materialize-textarea validate">{{ step }}</textarea>
                     {% endif %}
                     {% endfor %}
                 </div>

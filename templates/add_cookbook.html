@@ -18,7 +18,8 @@
                     <i class="fas fa-bread-slice fa-2x icon hide-on-small-only"></i>
                 </div>
                 <div class="input-field col s11">
-                    <input id="cookbook_name" name="cookbook_name" type="text" class="validate" required>
+                    <input id="cookbook_name" name="cookbook_name" type="text" pattern="^[a-zA-Z0-9] class=" validate"
+                        required>
                     <label class="add-label" for="cookbook_name">cookbook name</label>
                 </div>
                 <div class="col s1"></div>
@@ -62,7 +63,8 @@
                     <i class="fas fa-list fa-2x icon hide-on-small-only"></i>
                 </div>
                 <div class="input-field col s11">
-                    <textarea id="cookbook_desc" name="cookbook_desc" class="validate" required></textarea>
+                    <textarea id="cookbook_desc" name="cookbook_desc" class="materialize-textarea validate"
+                        required></textarea>
                     <label class="add-label" for="cookbook_desc">cookbook description</label>
                 </div>
                 <div class="col s1"></div>
