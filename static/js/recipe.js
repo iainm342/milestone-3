@@ -25,7 +25,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		if(meth < max_meth) {
 			meth++; 
-			$(wrapper_meth).append('<div class="col s12" id="wrap"><textarea id="recipe_method" type="text" class="materialize-textarea validate" name="recipe_method"/></textarea><label for="recipe_method"></label><a href="#" class="remove_field"><i class="far fa-trash-alt"></i></a></div>'); 
+			$(wrapper_meth).append('<div class="col s12" id="wrap"><textarea id="recipe_method" class="materialize-textarea validate" name="recipe_method"/></textarea><label for="recipe_method"></label><a href="#" class="remove_field"><i class="far fa-trash-alt"></i></a></div>'); 
 		}
 	});
 	
