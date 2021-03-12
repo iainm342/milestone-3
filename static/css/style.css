@@ -186,7 +186,7 @@ a.land-link:hover {
 }
 
 .rec-style {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
@@ -214,6 +214,10 @@ p.recipe-p {
 .sad-face {
     height: 200px;
     width: 200px;
+}
+
+.rec-btn {
+    margin-top: 15px;
 }
 
 /*----------------------------------------------------media query to control image size*/
