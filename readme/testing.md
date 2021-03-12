@@ -72,7 +72,7 @@ All pages passed through the Validator with the following results:
 
 The **warnings** are persistent on all pages due to the section element present on all pages for the flash messages. As this is a **warning**, I have assumed that all pages have passed validation.
 
-The **errors** in edit_profile.html and my_recipes.html are 
+The **errors** in edit_profile.html and my_recipes.html are linked to the Validator being unable to reach the server to check the code. I have Google's this and, unfortunately, am unable to work out how to fix this. Furhter research will be required in order to remove these errors.
 
 CSS Errors:
 
