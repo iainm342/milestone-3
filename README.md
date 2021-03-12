@@ -386,7 +386,7 @@ The images and card, text content used were sourced from various sites:
 
 - [Shutterstock](https://shutterstock.com) - background image used on landing, login and registration pages.
 - [Amazon](https://amazon.co.uk) - images and URL's for bookshop page.
-- Various cookbooks for recipes which are searchable online - Baking Made Easy, River Cottage - Veg Every Day, Jamie Oliver - Veg, Jamie Oliver - The Naked Chef
+- Various cookbooks for recipes which are searchable online - Baking Made Easy, River Cottage - Veg Every Day, Jamie Oliver - Veg, Jamie Oliver - The Naked Chef, Cook, Eat, Repeat - Nigella Lawson, Fresh India - Meera Sodha, Secret France - Rick Stein
 
 ### <ins>IMAGE EDITING</ins> ###
 
@@ -407,7 +407,7 @@ Thank you to the following people:
 
 - My mentor Seun Owonikoko for her time, guidance and making things obvious...and this time for being a debugging Champion!!
 - The guys in the class of May 20 on Slack - always there for a chat when needed!
-    - special mentions to @Adam, @Sara and @Pauld0051
+    - special mentions to @Adam, @Sara, @Kamil Zok and @Pauld0051
 - My partner, Paul, for putting up with the growing obsession I have towards coding.
 
 [Back to Contents](#contents)
