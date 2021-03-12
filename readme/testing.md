@@ -92,10 +92,12 @@ PEP8 Errors:
 
 ![Python Validation](https://github.com/iainm342/milestone-3/blob/main/readme/images/testing/python-validate.png)
 
-
 ### <ins>ACCESIBILITY VALIDATION</ins>
 
-The site was tested on the [WAVE](https://wave.webaim.org/) site. Passed with minimal errors although Contrast errors were generated due to colour choices for the design of the site.
+The site was tested on the [WAVE](https://wave.webaim.org/) site. Passed with minimal errors although Contrast errors were generated due to the amount of input fields with placeholder text.
+The main site color choices passsed contrast testing.
+
+![Webaim Validation](https://github.com/iainm342/milestone-3/blob/main/readme/images/testing/webaim.png)
 
 [Back to Contents](#contents)
 
