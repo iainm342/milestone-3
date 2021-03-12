@@ -84,13 +84,22 @@
         </div>
         {% endfor %}
     </div>
+    <!--else statement if no search results are found-->
     {% else %}
-    <div class="container center-align">
+    <div class="center-align">
         <h3>Oh No!</h3>
         <img class="sad-face" src="static/images/sad-face.png" alt="sad face">
         <h3>The larder is empty!</h3>
         <h3>You should restock it!</h3>
-        <h3>Why not add a recipe?</h3>
+        <!--checks to see if user is logged in-->
+        {% if 'user' in session %}
+        <!--sends user to add_recipe.html-->
+        <h3>Why not <a class="btn-large" href="{{ url_for('add_recipe') }}">add</a> a recipe?</h3>
+        <!--sends user to login.html or register.html-->
+        {% else %}
+        <h3>Why not <a class="btn-large" href="{{ url_for('login') }}">login</a> / <a class="btn-large"
+                href="{{ url_for('register') }}">register</a> and add a recipe?</h3>
+        {% endif %}
     </div>
     {% endif %}
 </div>
